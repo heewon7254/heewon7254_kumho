@@ -104,6 +104,7 @@ header{
     transition:0.3s;
     padding: 28px 0;
     height: 105px;
+    box-sizing: border-box;
 }
 header .container{
     display: flex;
