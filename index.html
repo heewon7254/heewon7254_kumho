@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2차 포트폴리오-금호석유화학</title>
+    <meta name="keywords" content="html, css, jquery , responsive">
+    <meta name="description" content="웹 접근성을 준수하는 포트폴리오">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+    @font-face {
+    font-family: 'MinSans-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'MinSans-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'MinSans-Thin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="#">logo</a></h1>
+            <nav>
+                <ul class="main_menu">
+                    <li><a href="#">company</a>
+                        <ul>
+                            <li><a href="#">회사개요</a></li>
+                            <li><a href="#">CEO인사말</a></li>
+                            <li><a href="#">비전</a></li>
+                            <li><a href="#">CI</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">R&BD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">product</a>
+                        <ul>
+                            <li><a href="#">합성고무</a></li>
+                            <li><a href="#">합성수지</a></li>
+                            <li><a href="#">정밀화학</a></li>
+                            <li><a href="#">나노탄소</a></li>
+                            <li><a href="#">에너지</a></li>
+                            <li><a href="#">건자재</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">investment</a>
+                        <ul>
+                            <li><a href="#">재무정보</a></li>
+                            <li><a href="#">공시정보</a></li>
+                            <li><a href="#">IR자료실</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">recruit</a>
+                        <ul>
+                            <li><a href="#">인재상</a></li>
+                            <li><a href="#">인사제도</a></li>
+                            <li><a href="#">직무소개</a></li>
+                            <li><a href="#">채용FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">sustainability</a>
+                        <ul>
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">환경보건경영</a></li>
+                            <li><a href="#">사회공헌</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="top_links">  
+                    <li>
+                        <a class="material-symbols-outlined">pin_drop</a>
+                    </li>
+                    <li>
+                        <a class="material-symbols-outlined">person</a>
+                    </li>
+                    <li>
+                        <a class="material-symbols-outlined">search</a>
+                    </li>
+                    <li>
+                        <a class="language">kor</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+    <div class="slide_wrapper">
+         <ul class="slide container">
+             <li class="slide1" id="slide1">
+                 <div class="slide_content">
+                     <h2 class="slide_tt"><em>화학</em>, 그 이상의 가치로 공동의 미래를 창조하는 솔루션 파트너</h2>
+                 </div>
+             </li>
+             <li class="slide2" id="slide2">
+                 <div class="slide_content">
+                     <h2 class="slide_tt">화학, 그 이상의 가치로 공동의 미래를 창조하는 솔루션 파트너</h2>
+                 </div>
+             </li>
+             <li class="slide3" id="slide3">
+                 <div class="slide_content">
+                     <h2 class="slide_tt">화학, 그 이상의 가치로 공동의 미래를 창조하는 솔루션 파트너</h2>
+                 </div>
+             </li>
+         </ul>
+         <div class="bar_wrap">
+            <ul class="slideinfo_list">
+                <li>
+                    <a href="#slide1" class="content_desc">01 금호석유의 슬로건</a>
+                </li>
+                <li>
+                    <a href="#slide2" class="content_desc">02 금호석유의 가치관</a>
+                </li>
+                <li>
+                    <a href="#slide3" class="content_desc">03 금호석유 인재상</a>
+                </li>
+            </ul>
+            <p class="autoplay_btn">
+                <a class="material-symbols-outlined">play_arrow</a>
+                <a class="material-symbols-outlined">pause</a>
+            </p>
+        </div>
+        <p class="controls">
+            <a href="" class="prev">prev</a>
+            <a href="" class="next">next</a>
+        </p>
+        <p class="scroll_down">
+            <span class="material-symbols-outlined">keyboard_double_arrow_down</span>
+            <span>scroll down</span>
+        </p>
+    </div>
+    <main>
+        <section class="product con_top_pd">
+            <div class="product container">
+                <h2 class="main_tt">product</h2>
+                <ul class="product_slide">
+                    <li>
+                        <img src="images/합성고무.png" alt="합성고무"> 
+                        <span>합성고무</span>
+                    </li>
+                    <li>
+                        <img src="images/합성수지.png" alt="합성수지">
+                        <span>합성수지</span>
+                    </li>
+                    <li>
+                        <img src="images/나노탄소.png" alt="나노탄소">
+                        <span>나노탄소</span>
+                    </li>
+                    <li>
+                        <img src="images/건자재.png" alt="건자재">
+                        <span>건자재</span>
+                    </li>
+                    <li">
+                        <img src="images/에너지.png" alt="에너지">
+                        <span>에너지</span>
+                    </li>
+                    <li>
+                        <img src="images/정밀화학.png" alt="정밀화학">
+                        <span>정밀화학</span>
+                    </li>
+                </ul>
+                <p class="controls">
+                    <a href="#" class="prev">prev</a>
+                    <a href="#" class="next">next</a>
+                </p>
+            </div>
+            <div class="product_desc primary_bg">
+                <div class="container active">
+                    <div class="product_desc_content">
+                        <h2 class="main_tt">합성고무</h2>
+                        <div class="product_summary">
+                            <h3 class="content_tt">개요</h3>
+                            <span class="content_desc">합성고무 글로벌 리더로서 타이어효율등급제에 최적화된 고기능성 제품인 SSBR과 NdBR에 이르기까지 
+                                최고의 품질의 합성고무를 제공합니다.
+                            </span>
+                        </div>
+                        <div class="product_select">
+                            <h3 class="content_tt">제품</h3>
+                            <label for="select" class="hidden">choose product</label>
+                            <select name="product1" id="product1_select">
+                                <option value="SBR">SBR</option>
+                                <option value="LBR">LBR</option>
+                                <option value="SSBR">SSBR</option>
+                                <option value="NdBR">NdBR</option>
+                                <option value="NBR">NBR</option>
+                                <option value="HSR">HSR</option>
+                                <option value="Latex">Latex</option>
+                                <option value="SBS">SBS</option>
+                                <option value="STE">STE</option>
+                                <option value="LEADCAP">LEADCAP</option>
+                            </select>
+                        </div>
+                        <p class="btns">
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                카탈로그
+                            </a>
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                제품문의
+                            </a>
+                        </p>
+                    </div>
+                    <div class="product_desc_img">
+                        <img src="images/합성고무desc.png" alt="합성고무">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="product_desc_content">
+                        <h2 class="main_tt">합성수지</h2>
+                        <div class="product_summary">
+                            <h3 class="content_tt">개요</h3>
+                            <span class="content_desc">일상 생활에 필요한 대부분의 수지 제품을 제공합니다.
+                                에너지 효율성 및 친환경성 등 속성이 강화된 고기능성 제품군으로 영역을 확대하고 있습니다.
+                            </span>
+                        </div>
+                        <div class="product_select">
+                            <h3 class="content_tt">제품</h3>
+                            <label for="select" class="hidden">choose product</label>
+                            <select name="product2" id="product2_select">        
+                                <option value="GPPS">GPPS</option>
+                                <option value="HIPS">HIPS</option>
+                                <option value="ABS">ABS</option>
+                                <option value="EP">EP</option>
+                                <option value="EPS">EPS</option>
+                                <option value="ENERPOR">ENERPOR</option>
+                                <option value="PPG">PPG</option>
+                                <option value="SAN">SAN</option>
+                            </select>
+                        </div>
+                        <p class="btns">
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                카탈로그
+                            </a>
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                제품문의
+                            </a>
+                        </p>
+                    </div>
+                    <div class="product_desc_img">
+                        <img src="images/합성수지desc.png" alt="합성수지">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="product_desc_content">
+                        <h2 class="main_tt">정밀화학</h2>
+                        <div class="product_summary">
+                            <h3 class="content_tt">개요</h3>
+                            <span class="content_desc">타이어 등 고무 제품의 안정성과 내구성을 높이는 고무 약품을 제공합니다. 
+                                산화방지제와 노화방지제를 중심으로 세계적인 품질과 생산능력을 보유하고 있습니다.
+                            </span>
+                        </div>
+                        <div class="product_select">
+                            <h3 class="content_tt">제품</h3>
+                            <label for="select" class="hidden">choose product</label>
+                            <select name="product3" id="product3_select">      
+                                <option value="antioxidant">노화방지제</option>
+                                <option value="vulcanization_accelerator">가황촉진제</option>
+                                <option value="paint_additive">페인트첨가제</option>
+                            </select>
+                        </div>
+                        <p class="btns">
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                카탈로그
+                            </a>
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                제품문의
+                            </a>
+                        </p>
+                    </div>
+                    <div class="product_desc_img">
+                        <img src="images/정밀화학desc.png" alt="정밀화학">
+                    </div>
+                </div>  
+                <div class="container">
+                    <div class="product_desc_content">
+                        <h2 class="main_tt">나노탄소</h2>
+                        <div class="product_summary">
+                            <h3 class="content_tt">개요</h3>
+                            <span class="content_desc">철의 100배 인장강도와 구리의 1천배 전기전도성을 가진 탄소나노튜브를 공급합니다. 
+                                합성수지, 합성고무 제품과의 복합소재 개발을 통해 소재 혁신을 주도하고 있습니다.
+                            </span>
+                        </div>
+                        <div class="product_select">
+                            <h3 class="content_tt">제품</h3>
+                            <label for="select" class="hidden">choose product</label>
+                            <select name="product4" id="product4_select"> 
+                                <option value="carbon_nanotubes">탄소나노튜브</option>
+                            </select>
+                        </div>
+                        <p class="btns">
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                카탈로그
+                            </a>
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                제품문의
+                            </a>
+                        </p>
+                    </div>
+                    <div class="product_desc_img">
+                        <img src="images/나노desc.png" alt="나노탄소">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="product_desc_content">
+                        <h2 class="main_tt">에너지</h2>
+                        <div class="product_summary">
+                            <h3 class="content_tt">개요</h3>
+                            <span class="content_desc">집단에너지사업자로서 열병합발전소 운영을 통해 생산한 스팀과 전기를 공급합니다. 
+                                태양열, 태양광, TDF, 바이오매스 등 신재생에너지 영역으로 범위를 확대하고 있습니다.
+                            </span>
+                        </div>
+                        <div class="product_select">
+                            <h3 class="content_tt">제품</h3>
+                            <label for="select" class="hidden">choose product</label>
+                            <select name="product5" id="product5_select"> 
+                                <option value="cogeneration">열병합발전</option>
+                            </select>
+                        </div>
+                        <p class="btns">
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                카탈로그
+                            </a>
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                제품문의
+                            </a>
+                        </p>
+                    </div>
+                    <div class="product_desc_img">
+                        <img src="images/에너지desc.png" alt="에너지">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="product_desc_content">
+                        <h2 class="main_tt">건자재</h2>
+                        <div class="product_summary">
+                            <h3 class="content_tt">개요</h3>
+                            <span class="content_desc">친환경 건자재 브랜드 ‘휴그린’을 통해 친환경 주거환경을 제공합니다. 
+                            유해 중금속과 독성 물질이 없는 ABS 창호를 중심으로 창호 시스템의 기준을 높여가고 있습니다.
+                            </span>
+                        </div>
+                        <div class="product_select">
+                            <h3 class="content_tt">제품</h3>
+                            <label for="select" class="hidden">choose product</label>
+                            <select name="product6" id="product6_select"> 
+                                <option value="building_materials">건자재</option>
+                            </select>
+                        </div>
+                        <p class="btns">
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                카탈로그
+                            </a>
+                            <a href="#" class="primary btn">
+                                <span class="material-symbols-outlined">add</span>
+                                제품문의
+                            </a>
+                        </p>                      
+                    </div>
+                    <div class="product_desc_img">
+                        <img src="images/건자재desc.png" alt="건자재">
+                    </div>
+                </div>          
+            </div>
+        </section>
+        <section class="business_news container con_top_pd">
+            <h2 class="main_tt">news</h2>
+            <div class="business_content">
+                <ul>
+                    <li><a href="#news_slide01"><h3 class="content_tt">business</h3></a></li>
+                    <li><a href="#news_slide02"><h3 class="content_tt">developement</h3></a></li>
+                    <li class="active"><a href="#news_slide03"><h3 class="content_tt">award</h3></a></li>
+                </ul>
+            </div>
+            <div class="news_slides">
+                <div class="news_slide01" id="news_slide01">
+                    <ul>
+                        <li>
+                            <span>안전환경 전담조직, 대표이사 직속으로 격상</span>
+                        </li>
+                        <li>
+                            <span>ESG비전 탄소중립 성장 청사진 수립</span>
+                        </li>
+                        <li>
+                            <span>ESG 비전 발표 “Let’s AAA for ESG!”</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn">        
+                        <span class="material-symbols-outlined">add</span>
+                        view more
+                    </a>                       
+                </div>
+                <div class="news_slide02" id="news_slide02">
+                    <ul>
+                        <li>
+                            <span>폐플라스틱으로 친환경 원료 제조 사업 추진</span>
+                        </li>
+                        <li>
+                            <span>금호폴리켐 지분 인수로 ‘합성고무 리더’ 입지 강화</span>
+                        </li>
+                        <li>
+                            <span>에너지 폐기물 제로에 도전</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn">        
+                        <span class="material-symbols-outlined">add</span>
+                        view more
+                    </a> 
+                </div>
+                <div class="news_slide03" id="news_slide03">
+                    <ul>
+                        <li>
+                            <span>휴그린, 창호 핸들 ‘굿 디자인(GD)’ 선정</span>
+                        </li>
+                        <li>
+                            <span>세계일류상품 20개 달성</span>
+                        </li>
+                        <li>
+                            <span>고기능 합성고무(SBS) 세계일류상품 선정</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn">        
+                        <span class="material-symbols-outlined">add</span>
+                        view more
+                    </a> 
+                </div>
+            </div>    
+        </section>
+        <section class="esg container con_top_pd">
+            <h2 class="main_tt">책임감있는 ESG 경영을 실현 하겠습니다.</h2>
+            <ul class="esg_list">
+                <li class="esg_item1">
+                    <h2 class="main_tt">E</h2>
+                    <p class="content_desc">환경은 경영에 우선한다는 기업철학을 바탕으로 모든 경영계획을 
+                        수립 및 운영하고 있습니다.
+                    </p>
+                </li>
+                <li class="esg_item2">
+                    <h2 class="main_tt">S</h2>
+                    <p class="content_desc">기업활동이 벌어지는 지역사회는 물론 
+                        사회소외계층이 스스로 자립할 수 있도록 
+                        지원하고 있습니다.
+                    </p> 
+                </li>
+                <li class="esg_item3">
+                    <h2 class="main_tt">G</h2>
+                    <p class="content_desc">올바른 기업윤리로 공정하고 
+                        투명한 관계에 대한 약속을 지키기 위해 
+                        항상 노력하겠습니다.
+                    </p> 
+                </li>
+            </ul>
+        </section>
+        <section class="recruit container con_top_pd">
+            <h2 class="main_tt">도전하는 글로벌 리더를 기다립니다</h2>
+            <p>with us</p>
+            <ul class="recruit_list">
+                <li class="recruit_item1">
+                    <h3 class="main_sm_tt">인재상</h2>
+                    <p class="content_tt">도전하는 글로벌 리더를 기다립니다</p>
+                </li>
+                <li class="recruit_item2">
+                    <h3 class="main_sm_tt">채용문의</h3>
+                    <p class="content_tt">채용문의를 등록하기 전에 FAQ를 
+                        먼저 찾아보시면 궁금증을 
+                        빠르게 해결하실 수 있습니다.
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section class="company_info con_top_pd">
+            <h2 class="main_tt">기업정보</h2>
+            <ul class="counters_list container">
+                <li>
+                    <span class="material-symbols-outlined">signal_cellular_alt</span>
+                    <h3 data-target="8" class="main_sm_tt">0</h3>
+                    <h4 class="content_tt">매출액</h4>
+                    <p>(조원,연결기준)</p>
+                </li>
+                <li>
+                    <span class="material-symbols-outlined">monetization_on</span>
+                    <h3 data-target="5" class="main_sm_tt">0</h3>
+                    <h4 class="content_tt">시가총액</h4>
+                    <p>(조원 / 보통주 기준)</p>
+                </li>
+                <li>
+                    <span class="material-symbols-outlined">thumb_up</span>
+                    <h3 data-target="2500" class="main_sm_tt">20</h3>
+                    <h4 class="content_tt">세계1등제품</h4>
+                    <p>(그룹전체)</p>
+                </li>
+                <li>
+                    <span class="material-symbols-outlined">apartment</span>
+                    <h3 data-target="873" class="main_sm_tt">13</h3>
+                    <h4 class="content_tt">계열사</h4>
+                </li>
+            </ul>
+        </section>
+        <section class="promotion container con_pd">
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YQthfq2Gof4" title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="letter">
+                <p>우리가 만든 소재에서</p> 
+                <p>더 편리한 세상과 더 안전한 일상이 시작되기에,</p>
+                <p> 소재의 혁신이 곧 일상의 혁신을 만든다는 믿음으로</p>
+                <p>금호석유화학그룹은 생활의 가장 가까운 곳에서 함께하고 있습니다.</p>
+                <p>-금호석유화학그룹-</p>
+            </div>
+        </section>
+    </main>
+    <a class="material-symbols-outlined top">arrow_upward</a>
+    <footer>
+        <div class="container ">
+            <div class="logo">
+                <h2 class="logo">
+                    <a href="#">logo</a>
+                </h2>
+            </div>
+            <div class="footer_content">
+                <ul class="footer_menu">
+                    <li><a href="#"></a>개인정보 처리방침</a></li>
+                    <li>법적고지</li>
+                    <li>사회공헌 임직원공간</li>
+                    <li><a href="#">온라인 제보실</a></li>
+                </ul>
+                <p>서울시 중구 청계천로 100(수표동) 시그니쳐타워 동관 10-14층 TEL. 02-6961-1114</p>
+                <p>Copyright &copy; 2014 KUMHO PETROCHEMICAL. ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
