@@ -1,1 +1,121 @@
 @import url(common.css);
+/*메인슬라이드*/
+.slide_wrapper{
+    height: 100vh;
+}
+.slide{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slide_container{
+    position: absolute;
+    height: 100%;
+    left: 0;
+    transition: left 0.4s ease-out;
+    display: flex;
+}
+.slide li{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+.slide > li:after{
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index:-1;
+}
+.slide #slide1{
+    background-image: url(../images/mainslide3.png);
+}
+.slide #slide2{
+    background-image: url(../images/mainslide2.png);
+}
+.slide #slide3{
+    background-image: url(../images/mainsilde1.png);
+}
+#slide1 .slide_content{
+    display: flex;
+}
+#slide1 h2{
+    width: 462px;
+}
+.slide_wrapper .controls a{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    width: 22px;
+    height: 36px;
+    background-repeat:no-repeat;
+    text-indent: -9999em;
+}
+.slide_wrapper .controls .prev{
+    background-image: url(../images/chevron\ left.png);
+    margin-left: -580px;
+}
+.slide_wrapper .controls .next{
+    background-image: url(../images/chervron\ right.png);
+    margin-left: 580px;
+}
+.slide_wrapper .bar_wrap{
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    gap: 100px;
+}
+.bar_wrap .slideinfo_list{
+    display: flex;
+    gap: 200px;
+}
+.bar_wrap .bar_indicator{
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 100%;
+    height: 5px;
+    background: #fff;
+}
+.autoplay_btn{
+    display: flex;
+}
+.scroll_down{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+
+
+
+.inner_circle ul:before{
+    content: '';
+    background-image: url(../images/원570.png);
+}
+.inner_circle ul:after{
+    content: '';
+    background-image: url(../images/원600.png);
+}
+
+/*product*/
+.product_slide{
+    display: flex;
+}
