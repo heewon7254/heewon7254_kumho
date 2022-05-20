@@ -117,7 +117,7 @@ header{
     box-sizing: border-box;
     transition:0.3s;
     overflow: hidden;
-    background:rgba(0,0,0,0.6);
+    background:transparent;
 }
 header .container{
     display: flex;
