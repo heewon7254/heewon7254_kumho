@@ -114,13 +114,13 @@
     content: '';
     width: 600px;
     height: 600px;
-    background-image: url(../images/sm_circle.png);
+    background-image: url(../images/sm_circle.png) no-repeat;
 }
 .inner_circle ul:after{
     content: '';
     width: 620px;
     height: 620px;
-    background-image: url(../images/bg_circle.png);
+    background-image: url(../images/bg_circle.png) no-repeat;
 }
 
 /*product*/
