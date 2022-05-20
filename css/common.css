@@ -1,6 +1,5 @@
 @import url(normalize.min.css);
 @import url(reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@500;600;800&display=swap');
 
 :root {
     --body-ff:'MinSans-Regular';
@@ -147,6 +146,7 @@ header nav > .main_menu > li ul li{
 header nav .top_links{
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 header li a{
     color: var(--white);
