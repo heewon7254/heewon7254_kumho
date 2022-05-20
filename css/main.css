@@ -108,10 +108,14 @@
 
 .inner_circle ul:before{
     content: '';
+    width: 600px;
+    height: 600px;
     background-image: url(../images/원570.png);
 }
 .inner_circle ul:after{
     content: '';
+    width: 620px;
+    height: 620px;
     background-image: url(../images/원600.png);
 }
 
