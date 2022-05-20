@@ -111,39 +111,46 @@ header{
     z-index:1;
     left: 0;
     right: 0;
-    padding: var(--line-height) 0;
     height: calc(var(--line-height)*4);
     box-sizing: border-box;
     transition:0.3s;
     overflow: hidden;
-    background:transparent;
+}
+header:hover{
+    background: rgba(0, 0, 0, 0.6);
 }
 header .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-header nav{
-    overflow: hidden;
-    display: flex;
-    gap: 60px;
-}
 header nav > .main_menu{
     display: flex;
-    gap: 100px;
+    width: 775px;
 }
 header nav > .main_menu > li{
-    line-height: calc(var(--line-height)*2);
     position: relative;
+    line-height: calc(var(--line-height)*4);
+    padding: 0 40px;
+}
+header nav > .main_menu > li > a{
+    padding: calc(var(--line-height)*2) 0;
 }
 header nav > .main_menu > li ul{
     width: 100%;
     position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
 }
 header nav > .main_menu > li ul li{
     white-space: nowrap;
+    line-height: calc(var(--line-height)*2);
 }
-header nav .top_links{
+header nav > .main_menu > li ul li a{
+    padding: 0 40px;
+}
+header .top_links{
     display: flex;
     gap: 30px;
     align-items: center;
