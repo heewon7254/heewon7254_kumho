@@ -79,6 +79,7 @@
     bottom: 0;
     gap: 100px;
     margin: 0 auto 50px;
+    align-items: center;
 }
 .bar_wrap .bar_indicator{
     position: relative;
