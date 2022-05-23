@@ -491,11 +491,12 @@
 .recruit_list .recruit_content{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5vh;
     justify-content: center;
     opacity: 0;
     color: var(--white);
-    transition: 0.3s;
+    transition: flex 0.3s;
 }
 .recruit_list h3{
     margin-top: calc(var(--line-height)*2);
@@ -509,9 +510,9 @@
     bottom: 0;
     background: rgba(0,0,0,.5);
     opacity: 0;
-    transition: 0.3s;
+    transition:0.3s;
 }
 .recruit_list li:hover .recruit_content,
-.recruit_list li:hover:after{
+.recruit_list li:hover::before{
     opacity: 1;
 }
