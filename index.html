@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -22,6 +22,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <link rel="stylesheet" href="css/main.css">
+
     <style>
     @font-face {
     font-family: 'MinSans-Bold';
@@ -118,8 +119,8 @@
             </div>
         </div>
     </header>  
-    <div class="slide_wrapper">
-         <ul class="slide container">
+    <div class="slide_wrapper control">
+         <ul class="slide">
              <li id="slide1">
                  <div class="slide_content">
                      <h2 class="slide_tt w_color"><em>화학</em>, 그 이상의 가치로 공동의 미래를 창조하는 솔루션 파트너</h2>
@@ -167,14 +168,14 @@
                  </ul>
             </div>
             <p class="autoplay_btn">
-                <a class="material-symbols-outlined w_color">play_arrow</a>
-                <a class="material-symbols-outlined w_color">pause</a>
+                <a class="material-symbols-outlined w_color play">play_arrow</a>
+                <a class="material-symbols-outlined w_color stop">pause</a>
             </p>
         </div>
-        <p class="controls">
+        <!-- <p class="controls">
             <a href="" class="prev">prev</a>
             <a href="" class="next">next</a>
-        </p>
+        </p> -->
         <p class="scroll_down">
             <span class="material-symbols-outlined w_color">keyboard_double_arrow_down</span>
             <span class="w_color">scroll down</span>
@@ -182,41 +183,46 @@
     </div>
     <main>
         <section class="products con_top_pd">
-            <div class="product container">
+            <div class="product_bg">
                 <h2 class="main_tt">product</h2>
-                <ul class="product_slide">
-                    <li>
-                        <img src="images/합성고무.png" alt="합성고무"> 
-                        <span>합성고무</span>
-                    </li>
-                    <li>
-                        <img src="images/합성수지.png" alt="합성수지">
-                        <span>합성수지</span>
-                    </li>
-                    <li>
-                        <img src="images/나노탄소.png" alt="나노탄소">
-                        <span>나노탄소</span>
-                    </li>
-                    <li>
-                        <img src="images/건자재.png" alt="건자재">
-                        <span>건자재</span>
-                    </li>
-                    <li">
-                        <img src="images/에너지.png" alt="에너지">
-                        <span>에너지</span>
-                    </li>
-                    <li>
-                        <img src="images/정밀화학.png" alt="정밀화학">
-                        <span>정밀화학</span>
-                    </li>
-                </ul>
-                <p class="controls">
-                    <a href="#" class="prev">prev</a>
-                    <a href="#" class="next">next</a>
-                </p>
+                <div class="product">
+                    <ul class="product_slide container">
+                        <li>
+                            <a href="#item1"><img src="images/합성고무.png" alt="합성고무"></a>
+                            <a href="#item1"><h3 class="content_desc">합성고무</h3></a>
+                        </li>
+                        <li>
+                            <a href="#item2"><img src="images/합성수지.png" alt="합성수지"></a>
+                            <a href="item2"><h3 class="content_desc">합성수지</h3></a>
+                        </li>
+                        <li>
+                            <a href="#item3"><img src="images/나노탄소.png" alt="나노탄소"></a>
+                            <a href="#item3"><h3 class="content_desc">나노탄소</h3></a>    
+                        </li>
+                        <li>
+                            <a href="#item4"><img src="images/건자재.png" alt="건자재"></a>
+                            <a href="#item4"><h3 class="content_desc">건자재</h3></a>    
+                        </li>
+                        <li>
+                            <a href="#item5"><img src="images/에너지.png" alt="에너지"></a>
+                            <a href="#item5"><h3 class="content_desc">에너지</h3></a>    
+                            
+                        </li>
+                        <li>
+                            <a href="#item6"><img src="images/정밀화학.png" alt="정밀화학"></a>
+                            <a href="#item6"><h3 class="content_desc">정밀화학</h3></a>    
+                       </li>
+                    </ul>
+                    <!-- <p class="controls">
+                        <a href="#" class="prev">prev</a>
+                        <a href="#" class="next">next</a>
+                    </p> -->
+                </div>
             </div>
-            <div class="product_desc primary_bg">
-                <div class="container active">
+        </section>
+        <section class="products_desc">
+            <div class="product_desc primary_bg active" id="item1">
+                <div class="container">
                     <div class="product_desc_content">
                         <h2 class="main_tt">합성고무</h2>
                         <div class="product_summary">
@@ -256,6 +262,8 @@
                         <img src="images/합성고무desc.png" alt="합성고무">
                     </div>
                 </div>
+            </div>
+            <div class="product_desc primary_bg" id="item2">
                 <div class="container">
                     <div class="product_desc_content">
                         <h2 class="main_tt">합성수지</h2>
@@ -294,6 +302,8 @@
                         <img src="images/합성수지desc.png" alt="합성수지">
                     </div>
                 </div>
+            </div>
+            <div class="product_desc primary_bg" id="item3">
                 <div class="container">
                     <div class="product_desc_content">
                         <h2 class="main_tt">정밀화학</h2>
@@ -327,6 +337,8 @@
                         <img src="images/정밀화학desc.png" alt="정밀화학">
                     </div>
                 </div>  
+            </div>
+            <div class="product_desc primary_bg" id="item4">
                 <div class="container">
                     <div class="product_desc_content">
                         <h2 class="main_tt">나노탄소</h2>
@@ -358,6 +370,8 @@
                         <img src="images/나노desc.png" alt="나노탄소">
                     </div>
                 </div>
+            </div>
+            <div class="product_desc primary_bg" id="item5">
                 <div class="container">
                     <div class="product_desc_content">
                         <h2 class="main_tt">에너지</h2>
@@ -389,6 +403,8 @@
                         <img src="images/에너지desc.png" alt="에너지">
                     </div>
                 </div>
+            </div>
+            <div class="product_desc primary_bg" id="item6">
                 <div class="container">
                     <div class="product_desc_content">
                         <h2 class="main_tt">건자재</h2>
@@ -510,12 +526,16 @@
             <p>with us</p>
             <ul class="recruit_list">
                 <li class="recruit_item1">
-                    <h3 class="main_sm_tt">인재상</h2>
-                    <p class="content_tt">도전하는 글로벌 리더를 기다립니다</p>
+                    <div class="recruit_content">
+                        <h3 class="main_sm_tt">인재상</h2>
+                        <p class="content_tt">도전하는 글로벌 리더를 기다립니다</p>
+                    </div>
                 </li>
                 <li class="recruit_item2">
-                    <h3 class="main_sm_tt">채용문의</h3>
-                    <p class="content_tt">채용문의를 등록하기 전에 FAQ를 먼저 찾아보시면 궁금증을 빠르게 해결하실 수 있습니다.
+                    <div class="recruit_content">
+                        <h3 class="main_sm_tt">채용문의</h3>
+                        <p class="content_tt">채용문의를 등록하기 전에 FAQ를 먼저 찾아보시면<br> 궁금증을 빠르게 해결하실 수 있습니다.
+                    </div>
                     </p>
                 </li>
             </ul>
@@ -583,6 +603,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+
 </body>
 </html>
