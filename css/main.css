@@ -4,28 +4,21 @@
     height: 100vh;
 }
 .slide{
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
+    height: 100vh;
 }
+/*
 .slide_container{
     position: absolute;
     height: 100%;
     left: 0;
     transition: left 0.4s ease-out;
     display: flex;
-}
+}*/
 .slide li{
-    position: relative;
-    width: 100%;
-    height: 100%;
+    height: 100vh;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 0;
 }
 .slide > li:after{
@@ -42,17 +35,23 @@
     background-image: url(../images/mainslide3.png);
 }
 .slide #slide2{
-    background-image: url(../images/mainslide2.png);
+    background-image: url(../images/mainslide4.png);
+    background-position-y:30%;
 }
 .slide #slide3{
     background-image: url(../images/mainsilde1.png);
 }
-#slide1 .slide_content{
-    display: flex;
-}
 #slide1 h2{
     width: 462px;
-}
+    position: absolute;
+    left: 15%;
+    top: 40%;
+}/*
+#slide1 .inner_circle{
+    position: absolute;
+    right: 15%;
+    width: 620px;
+}*/
 .slide_wrapper .controls a{
     position: absolute;
     left: 50%;
@@ -62,14 +61,6 @@
     height: 36px;
     background-repeat:no-repeat;
     text-indent: -9999em;
-}
-.slide_wrapper .controls .prev{
-    background-image: url(../images/chevron\ left.png);
-    margin-left: -580px;
-}
-.slide_wrapper .controls .next{
-    background-image: url(../images/chervron\ right.png);
-    margin-left: 580px;
 }
 .slide_wrapper .bar_wrap{
     display: flex;
@@ -106,9 +97,38 @@
     transform: translateX(-50%);
     display: flex;
 }
+/* .control{
+    position: relative;
+} */
+.control .bx-controls a{
+    width: 22px;
+    height: 36px;
+    background: no-repeat 0 0 / 100% 100%;
+    /* display: inline-block; pos absoulte로 하면 크기가 잡히므로 없애도됨*/
+    text-indent: -9999em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-
-
+.control .bx-controls .bx-prev{
+    background-image: url(../images/chevron\ left.png);
+    right: 87%;
+}
+.control .bx-controls .bx-next{
+    background-image: url(../images/chervron\ right.png);
+    left: 87%;
+}
+.autoplay_btn.active .play{
+    display: block;
+}
+.autoplay_btn.active .stop{
+    display: none;
+}
+.autoplay_btn .play{
+    display: none;
+}
+/*
 
 .inner_circle ul:before{
     content: '';
@@ -122,8 +142,375 @@
     height: 620px;
     background-image: url(../images/bg_circle.png) no-repeat;
 }
-
+*/
 /*product*/
-.product_slide{
+.product_bg{
+    background: url(../images/product_bg.jpg) no-repeat center center/cover;
+    position: relative;
+}
+.product_bg> h2{
+    margin-bottom: calc(var(--line-height)*2);
+}
+.product{
     display: flex;
+    justify-content: center;
+}
+.product .bx-wrapper{
+    position: relative;
+}
+.product li{
+    position: relative;
+}
+.product li img{
+    border-radius: 30px;
+    z-index: 2;
+}
+.product li h3{
+    padding: var(--line-height) 0;
+    transition: 0.3s;
+}
+.product li h3:after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: var(--body-tc);
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: var(--line-height);
+    transition: 0.3s;
+}
+.product li:hover h3{
+    color: var(--primary-c);
+}
+.product li:hover :after{
+    background-color: var(--secondary-c);
+}
+.product .bx-wrapper .bx-viewport{
+    overflow: visible;
+}
+.product li h3{
+    text-align: center;
+    padding-top: var(--line-height);
+}
+.product .bx-controls a{
+    width: 22px;
+    height: 36px;
+    background: no-repeat 0 0 / 100% 100%;
+    /* display: inline-block; pos absoulte로 하면 크기가 잡히므로 없애도됨*/
+    text-indent: -9999em;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+}
+.product .bx-controls .bx-prev{
+    background-image: url(../images/product_chevron_left.png);
+    left: 90%;
+}
+.product .bx-controls .bx-next{
+    background-image: url(../images/product_chervron_right.png);
+    left: 95%;
+}
+
+
+
+
+.product_desc h2{
+    text-align: left;
+    padding-top: var(--line-height);
+    margin-bottom: calc(var(--line-height)*2);
+}
+.product_desc .container{
+    display: flex;
+    justify-content: space-between;
+}
+.product_desc .product_summary{
+    display: flex;
+    gap: 25px;
+    margin-bottom: calc(var(--line-height)*2);
+}
+.product_desc .product_summary .content_desc{
+    width: 525px;
+}
+.product_desc .product_select{
+    display: flex;
+    gap: 25px;
+    margin-bottom: calc(var(--line-height)*2);
+}
+.product_desc img{
+    padding-top: calc(var(--line-height)*5);
+}
+.product_desc .btns{
+    margin-bottom: var(--line-height);
+}
+.product_desc .btns a:first-child{
+    margin-right: 20px;
+}
+
+/*products tab*/
+.products_desc .product_desc{
+    display: none;
+}
+.products_desc .product_desc.active{
+    display: block;
+}
+
+.business_content ul{
+    display: flex;
+}
+.business_content ul li{
+    width: 33.33333%;
+}
+.business_news h2{
+    margin-bottom: var(--line-height);
+}
+.business_content ul h3{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: calc(var(--line-height)*2);
+}
+.news_slides ul{
+    display: flex;
+    justify-content: space-between;
+}
+.news_slides li{
+    width: 416px;
+    height: 405px;
+    border-radius: 0 5%;
+}
+.news_slide01 li:first-child{
+    background: url(../images/news1.png) no-repeat;
+}
+.news_slide01 li:nth-child(2){
+    background: url(../images/news6.png) no-repeat;
+    margin-top: calc(var(--line-height)*2);
+}
+.news_slide01 li:nth-child(3){
+    background: url(../images/news7.png) no-repeat;
+}
+.news_slide02 li:first-child{
+    background: url(../images/news2.png) no-repeat;
+}
+.news_slide02 li:nth-child(2){
+    background: url(../images/news8.png) no-repeat;
+    margin-top: calc(var(--line-height)*2);
+}
+.news_slide02 li:nth-child(3){
+    background: url(../images/news9.png) no-repeat;
+}
+.news_slide03 li:first-child{
+    background: url(../images/news3.png) no-repeat;
+}
+.news_slide03 li:nth-child(2){
+    background: url(../images/news4.png) no-repeat;
+    margin-top: calc(var(--line-height)*2);
+}
+.news_slide03 li:nth-child(3){
+    background: url(../images/news5.png) no-repeat;
+}
+.news_slides li{
+    position: relative;
+}
+.news_slides li:before{
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid #fff;
+    /* border-top: 1px solid #fff; */
+    opacity: 0;
+    z-index: 1;
+    transition: 0.3s;
+}
+.news_slides li span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, rgba(73,70,70,0.8), rgba(26,159,146,0.8));
+    opacity: 0;
+    transition: 0.3s;
+    color: #fff;
+    border-radius: 0 5%;
+}
+/*
+.news_slides li:after{
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.3s;
+}*/
+.news_slides li:hover span,
+/* .news_slides li:hover:after, */
+.news_slides li:hover:before{
+    opacity: 1;
+}
+.business_news .btn{
+    border-color: var(--body-tc);
+    transition: 0.3s;
+    display: block;
+    margin: var(--line-height) auto 0;
+}
+.business_news .btn:hover{
+    border-color: var(--primary-c);
+}
+
+
+
+/*esg*/
+.esg h2{
+    margin-bottom: calc(var(--line-height)*2);
+}
+.esg_list {
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;
+}
+.esg_list li{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+}
+.esg_list li h2, .esg_list li p{
+    opacity: 0;
+    transition: 0.3s;
+}
+.esg_list li h2{
+    position: relative;
+    background: rgba(225,225,225,0.9) no-repeat 50% 50%/cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 100px;
+    transition: 0.3s;
+}
+
+.esg_list li:first-child{
+    background: url(../images/environment\ img.png) no-repeat 40% 50%/cover;
+    transition: flex 0.5s;
+    flex: 1;
+    overflow: hidden;
+}
+.esg_list li:nth-child(2){
+    background: url(../images/social\ img.png) no-repeat 55% 50%/cover;
+    transition: flex 0.5s;
+    flex: 1;
+    overflow: hidden;
+}
+.esg_list li:nth-child(3){
+    background: url(../images/goverment\ img.png) no-repeat 55% 50%/cover;
+    transition: flex 0.5s;
+    flex: 1;
+    overflow: hidden;
+}
+.esg_list li:hover{
+    flex:2;
+    overflow: visible;
+}
+.esg_list li:hover h2,
+.esg_list li:hover p,
+.esg_list li:hover:after{
+    opacity: 1;
+}
+.esg_list li:hover h2,
+.esg_list li:hover p{
+    color: var(--white);
+    z-index: 2;
+}
+.esg_list li:after{
+    content: '';
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+
+/*recruit*/
+.recruit h2{
+    margin-bottom: var(--line-height);
+}
+.recruit h2+p{
+    text-align: center;
+    font-size: calc(var(--line-height)*3);
+    line-height: calc(var(--line-height)*3);
+    font-style: italic;
+}
+.recruit_list{
+    display: flex;
+    justify-content: space-between;
+    height: 40vh;
+}
+.recruit_list li{
+    position:relative;
+}
+.recruit_list .recruit_item1{
+    background: url(../images/bg_recruit_01.png) no-repeat center center/cover;
+    transition: flex 0.5s;
+    flex: 1;
+    overflow: hidden;
+}
+.recruit_list .recruit_item2{
+    background: url(../images/bg_recruit_02.png) no-repeat center center/cover;
+    transition: flex 0.5s;
+    flex: 1;
+    overflow: hidden;
+}
+.recruit_list li:hover{
+    flex:2;
+    overflow:visible;
+}
+.recruit_list .recruit_content{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    opacity: 0;
+    color: var(--white);
+    transition: 0.3s;
+}
+.recruit_list h3{
+    margin-top: calc(var(--line-height)*2);
+}
+.recruit_list li:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    opacity: 0;
+    transition: 0.3s;
+}
+.recruit_list li:hover .recruit_content,
+.recruit_list li:hover:after{
+    opacity: 1;
 }
