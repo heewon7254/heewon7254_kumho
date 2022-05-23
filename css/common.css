@@ -71,20 +71,21 @@ em{
     box-sizing: border-box;
     position: relative;
     background: var(--white);
-    border-color: var(--white);
+    border: 2px solid var(--white);
 }
 .btn span:first-child{
     display: inline-block;
     font-size: calc(var(--body-fz)*2);
-    line-height: 44px;
+    line-height: 42px;
+    transition: 0.3s;
 }
 .btn:hover span:first-child{
     transform: rotate(45deg);
 }
 .btn span:nth-child(2){
-    line-height: 44px;
+    line-height: 42px;
     position: absolute;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .btn:hover span{
     color: var(--primary-c);
@@ -157,6 +158,11 @@ header .top_links{
 }
 header li a{
     color: var(--white);
+}
+header .target{
+    position: absolute;
+    border-bottom: 4px solid var(--primary-c);
+    transition: all .35s ease-in-out;
 }
 .logo a{
     width: 197px;
