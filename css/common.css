@@ -122,7 +122,7 @@ header{
     overflow: hidden;
 }
 header:hover{
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
 }
 header .container{
     display: flex;
@@ -136,7 +136,8 @@ header nav > .main_menu{
 header nav > .main_menu > li{
     position: relative;
     line-height: calc(var(--line-height)*4);
-    padding: 0 40px;
+    padding: 0 35px;
+    text-transform: uppercase;
 }
 header nav > .main_menu > li > a{
     padding: calc(var(--line-height)*2) 0;
@@ -162,6 +163,10 @@ header .top_links{
 }
 header li a{
     color: var(--white);
+    transition: 0.3s;
+}
+header li a:hover{
+    color: var(--primary-c);
 }
 header .target{
     position: absolute;
