@@ -42,7 +42,7 @@ $(function(){
                 $('.target').css({opacity:0})
             });
             });
-        });
+        }); //sub menu
 
         var main = $('.slide').bxSlider({
             speed:1000,
@@ -54,7 +54,7 @@ $(function(){
                 main.stopAuto();
                 main.startAuto();
             }
-        });
+        }); //main slide
 
         $('.stop').click(function(){
            $('.autoplay_btn').addClass('active');
@@ -63,7 +63,7 @@ $(function(){
        $('.play').click(function(){
            $('.autoplay_btn').removeClass('active');
            main.startAuto();
-       });
+       }); // main slide stop, play button
 
         var product = $('.product_slide').bxSlider({
             pager:false,
@@ -72,15 +72,16 @@ $(function(){
             moveSlides:1,
             slideWidth:270,
             slideMargin:243
-        });
+        }); //product slide
 
-        let image = $('.product_slide li img');
-        console.log(image);
 
-        image.click(function(){
-           let targetProduct =  $(this).parent('a').attr('href');
+        let productTab = $('.product_slide li img');
+        console.log(productTab);
+
+        productTab.click(function(){
+           let targetProduct =  $(this).find('a').attr('href');
            console.log(targetProduct);
-           $(targetProduct).addClass('active').show();
+           $(targetProduct).addClass('active');
         });
 
         let title = $('.product_slide li h3');
@@ -89,18 +90,46 @@ $(function(){
             let showProduct = $(this).parent('a').attr('href');
             console.log(showProduct);
             $(showProduct).addClass('active');
-        });
-    
-        // $('#tabs').tabs();
+        }); //product tab
+      
 
-        let businessTab = $('.business_content ul li');
+        let newsTab = $('.business_content ul li');
 
-        businessTab.click(function(e){
+        newsTab.click(function(e){
             e.preventDefault();
-            let targetbus = $(this).find('a').attr('href');
-            $(targetbus).toggleClass('active').show().siblings().hide();
+            let targetnews = $(this).find('a').attr('href');
+            $(targetnews).toggleClass('active').fadeIn().siblings().hide();
         });
-        $('#news_slide03').show();
-});
+        $('#news_slide03').show(); //News Tab
+        
+        let counters = $('.company_info');
+        let counterNums = counters.find('h3');
+
+
+        let counterOST = counters.offset().top - 600;
+        let excuted = false;
+
+        $(window).scroll(function(){
+            let winSCT = $(window).scrollTop();
+
+            if(winSCT > counterOST){
+                counterNums.each(function(){
+                    let $this = $(this),
+                    targetNum = $this.attr('data-target');
+
+                    $({num:$this.text()}).animate({num:targetNum},
+                        {
+                            duration:2000,
+                            easing:'linear',
+                            progress:function(){
+                                $this.text(Math.floor(this.num));
+                            }
+                        }
+                    );
+                });
+            }
+        }); // number animation
+
+});//document ready jquery 
     
 
