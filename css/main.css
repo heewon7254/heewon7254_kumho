@@ -97,9 +97,6 @@
     transform: translateX(-50%);
     display: flex;
 }
-/* .control{
-    position: relative;
-} */
 .control .bx-controls a{
     width: 22px;
     height: 36px;
@@ -142,6 +139,8 @@
     height: 620px;
     background-image: url(../images/bg_circle.png) no-repeat;
 }
+
+
 */
 /*product*/
 .product_bg{
@@ -215,7 +214,7 @@
 
 
 
-
+/*product_desc*/
 .product_desc h2{
     text-align: left;
     padding-top: var(--line-height);
@@ -256,6 +255,8 @@
     display: block;
 }
 
+
+/*business*/
 .business_content ul{
     display: flex;
 }
