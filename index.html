@@ -11,6 +11,7 @@
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="js/main.js"></script>
 
@@ -221,7 +222,7 @@
             </div>
         </section>
         <section class="products_desc">
-            <div class="product_desc primary_bg active" id="item1">
+            <div class="product_desc primary_bg" id="item1">
                 <div class="container">
                     <div class="product_desc_content">
                         <h2 class="main_tt">합성고무</h2>
@@ -299,7 +300,7 @@
                         </p>
                     </div>
                     <div class="product_desc_img">
-                        <img src="images/합성수지desc.png" alt="합성수지">
+                        <img src="images/resin_desc.png" alt="합성수지">
                     </div>
                 </div>
             </div>
@@ -444,11 +445,11 @@
                 <ul>
                     <li><a href="#news_slide01"><h3 class="content_tt">business</h3></a></li>
                     <li><a href="#news_slide02"><h3 class="content_tt">developement</h3></a></li>
-                    <li class="active"><a href="#news_slide03"><h3 class="content_tt">award</h3></a></li>
+                    <li><a href="#news_slide03"><h3 class="content_tt">award</h3></a></li>
                 </ul>
             </div>
             <div class="news_slides">
-                <div class="news_slide01" id="news_slide01">
+                <div class="news_slide01 active" id="news_slide01">
                     <ul>
                         <li>
                             <span>안전환경 전담조직, 대표이사 직속으로 격상</span>
@@ -521,44 +522,43 @@
                 </li>
             </ul>
         </section>
-        <section class="recruit container con_top_pd">
+        <section class="recruit container con_pd">
             <h2 class="main_tt">도전하는 글로벌 리더를 기다립니다</h2>
-            <p>with us</p>
+            <p class="animate">
+                <span>with</span>
+                <span>us</span>
+            </p>
             <ul class="recruit_list">
                 <li class="recruit_item1">
-                    <div class="recruit_content">
-                        <h3 class="main_sm_tt">인재상</h3>
-                        <p class="content_tt">도전하는 글로벌 리더를 기다립니다</p>
-                    </div>
+                    <h3 class="main_sm_tt">인재상</h3>
+                    <p class="content_tt">도전하는 글로벌 리더를 기다립니다</p>
                 </li>
                 <li class="recruit_item2">
-                    <div class="recruit_content">
-                        <h3 class="main_sm_tt">채용문의</h3>
-                        <p class="content_tt">채용문의를 등록하기 전에 FAQ를 먼저 찾아보시면<br> 궁금증을 빠르게 해결하실 수 있습니다.</p>
-                    </div>
+                    <h3 class="main_sm_tt">채용문의</h3>
+                    <p class="content_tt">채용 FAQ를 먼저 확인하시면 빠른 해답을 찾을 수 있습니다.</p>
                 </li>
             </ul>
         </section>
-        <section class="company_info con_top_pd">
+        <section class="company_info">
             <h2 class="main_tt">기업정보</h2>
             <ul class="company_info_list container">
                 <li>
                     <span class="material-symbols-outlined">signal_cellular_alt</span>
-                    <h3 data-target="8" class="main_sm_tt">0</h3>
+                    <h3 data-target="8" class="main_sm_tt">8</h3>
                     <h4 class="content_tt">매출액</h4>
-                    <p>(조원,연결기준)</p>
+                    <p class="small_tt">(조원,연결기준)</p>
                 </li>
                 <li>
                     <span class="material-symbols-outlined">monetization_on</span>
                     <h3 data-target="5" class="main_sm_tt">0</h3>
                     <h4 class="content_tt">시가총액</h4>
-                    <p>(조원 / 보통주 기준)</p>
+                    <p class="small_tt">(조원 / 보통주 기준)</p>
                 </li>
                 <li>
                     <span class="material-symbols-outlined">thumb_up</span>
                     <h3 data-target="2500" class="main_sm_tt">20</h3>
                     <h4 class="content_tt">세계1등제품</h4>
-                    <p>(그룹전체)</p>
+                    <p class="small_tt">(그룹전체)</p>
                 </li>
                 <li>
                     <span class="material-symbols-outlined">apartment</span>
@@ -573,16 +573,16 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
-            <div class="letter">
-                <p>우리가 만든 소재에서</p> 
-                <p>더 편리한 세상과 더 안전한 일상이 시작되기에,</p>
-                <p> 소재의 혁신이 곧 일상의 혁신을 만든다는 믿음으로</p>
-                <p>금호석유화학그룹은 생활의 가장 가까운 곳에서 함께하고 있습니다.</p>
-                <p>-금호석유화학그룹-</p>
-            </div>
+            <ul class="letter">
+                <li>우리가 만든 소재에서</li> 
+                <li>더 편리한 세상과 더 안전한 일상이 시작되기에,</li>
+                <li> 소재의 혁신이 곧 일상의 혁신을 만든다는 믿음으로</li>
+                <li>금호석유화학그룹은 생활의 가장 가까운 곳에서 함께하고 있습니다.</li>
+                <li>-금호석유화학그룹-</li>
+            </ul>
         </section>
+        <a class="material-symbols-outlined top">arrow_upward</a>
     </main>
-    <a class="material-symbols-outlined top">arrow_upward</a>
     <footer>
         <div class="container">
             <div class="logo_content">

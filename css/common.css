@@ -33,6 +33,7 @@ body{
 .main_sm_tt{
     font-size: calc(var(--body-fz)*2.5);
     font-weight: 500;
+    line-height: calc(var(--line-height)*2);
 }
 .slide_tt{
     font-size: calc(var(--body-fz)*3);
@@ -48,6 +49,9 @@ body{
     font-size: calc(var(--body-fz)*1.25);
     font-weight: 400;
     line-height: var(--line-height);
+}
+.small_tt{
+    font-weight: 100;
 }
 em{
     color: var(--primary-c);

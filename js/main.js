@@ -78,9 +78,9 @@ $(function(){
         console.log(image);
 
         image.click(function(){
-           let targetProduct =  $(this).closest('a').attr('href');
+           let targetProduct =  $(this).parent('a').attr('href');
            console.log(targetProduct);
-           $(targetProduct).addClass('active');
+           $(targetProduct).addClass('active').show();
         });
 
         let title = $('.product_slide li h3');
@@ -90,6 +90,17 @@ $(function(){
             console.log(showProduct);
             $(showProduct).addClass('active');
         });
+    
+        // $('#tabs').tabs();
+
+        let businessTab = $('.business_content ul li');
+
+        businessTab.click(function(e){
+            e.preventDefault();
+            let targetbus = $(this).find('a').attr('href');
+            $(targetbus).toggleClass('active').show().siblings().hide();
+        });
+        $('#news_slide03').show();
 });
     
 
