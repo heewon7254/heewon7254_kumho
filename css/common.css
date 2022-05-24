@@ -53,6 +53,13 @@ body{
 .small_tt{
     font-weight: 100;
 }
+.big_tt{
+    font-size: calc(var(--line-height)*4);
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+}
 em{
     color: var(--primary-c);
 }
@@ -113,7 +120,7 @@ LAYOUT
 }
 header{
     position: absolute;
-    z-index:1;
+    z-index:100;
     left: 0;
     right: 0;
     height: calc(var(--line-height)*4);
