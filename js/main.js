@@ -75,20 +75,23 @@ $(function(){
         }); //product slide
 
 
-        let productTab = $('.product_slide li img');
-
-        productTab.click(function(){
-           let targetProduct =  $(this).parent('a').attr('href');
-           $(targetProduct).addClass('active');
+        let productTab = $('.product_slide li a');
+        console.log(productTab);
+        productTab.click(function(e){
+            e.preventDefault();
+           let targetProduct =  $(this).attr('href');
+           console.log(targetProduct);
+           $('.products_desc > div').hide();
+           $(targetProduct).show();
         });
-
+/*
         let productTitle = $('.product_slide li h3');
 
         productTitle.click(function(){
             let showProduct = $(this).parent('a').attr('href');
             $(showProduct).addClass('active');
         }); //product tab
-      
+ */     
 
         let newsTab = $('.business_content ul li');
 
@@ -138,7 +141,6 @@ $(function(){
            $(this).removeClass('active');
             body.css({overflow:'auto'});
         }); //search
-
 });//document ready jquery 
     
 
