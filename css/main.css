@@ -654,3 +654,124 @@
     text-align: center;
     font-size: 30px;
 }
+
+
+
+/*vision page*/
+.v_banner_wrap{
+    background: url(../images/vision_bg1.png) no-repeat 50% 70%/cover;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+.v_banner_wrap:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    background: rgba(0,0,0,.5);
+    z-index: -1;
+}
+.v_banner_wrap .content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.v_banner_wrap h2{
+    margin-bottom: calc(var(--line-height)*2);
+}
+.partners{
+    display: flex;
+    gap: 9vw;
+}
+.partners .img_wrap{
+    position: relative;
+    width: 689px;
+    height: 343px;
+}
+.partners .img_wrap img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.vision_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+.mission h2{
+    text-align: center;
+}
+.mission_wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 378px;
+}
+.mission_wrapper > div{
+    width: 22%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 15%);
+    position: relative;
+}
+.mission_front{
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+.mission1_img{
+    background: url(../images/mission1.png) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+}
+.mission2_img{
+    background: url(../images/mission2.png) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+}
+.mission3_img{
+    background: url(../images/mission3.png) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+}
+.mission4_img{
+    background: url(../images/mission4.png) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+}
+.mission_back{
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    background: linear-gradient(45deg, #8092af, #acf0eb);
+    height: 50%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.4s;
+    padding: 13%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+.mission_wrapper > div:hover .mission_back{
+    opacity: 1;
+    bottom: 0;
+}
+
+
+
