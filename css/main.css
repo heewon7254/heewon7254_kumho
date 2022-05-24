@@ -157,9 +157,10 @@
 .product_bg{
     background: url(../images/product_bg.jpg) no-repeat center center/cover;
     position: relative;
+    padding: var(--line-height) 0;
 }
 .product_bg> h2{
-    margin-bottom: calc(var(--line-height)*2);
+    margin-bottom: var(--line-height);
 }
 .product{
     display: flex;
