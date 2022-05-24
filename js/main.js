@@ -76,19 +76,16 @@ $(function(){
 
 
         let productTab = $('.product_slide li img');
-        console.log(productTab);
 
         productTab.click(function(){
-           let targetProduct =  $(this).find('a').attr('href');
-           console.log(targetProduct);
+           let targetProduct =  $(this).parent('a').attr('href');
            $(targetProduct).addClass('active');
         });
 
-        let title = $('.product_slide li h3');
+        let productTitle = $('.product_slide li h3');
 
-        title.click(function(){
+        productTitle.click(function(){
             let showProduct = $(this).parent('a').attr('href');
-            console.log(showProduct);
             $(showProduct).addClass('active');
         }); //product tab
       
@@ -129,6 +126,18 @@ $(function(){
                 });
             }
         }); // number animation
+
+        let searchIcon = $('.icon').find('.search');
+        let modalWrap = $('.modal_wrap');
+
+        searchIcon.click(function(){
+            modalWrap.addClass('active');
+            body.css({overflow:'hidden'});
+        });
+        modalWrap.find('.close').click(function(){
+           $(this).removeClass('active');
+            body.css({overflow:'auto'});
+        }); //search
 
 });//document ready jquery 
     
