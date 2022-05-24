@@ -118,7 +118,7 @@ header{
     right: 0;
     height: calc(var(--line-height)*4);
     box-sizing: border-box;
-    transition:0.3s;
+    transition:background 0.3s;
     overflow: hidden;
 }
 header:hover{
@@ -163,7 +163,7 @@ header .top_links{
 }
 header li a{
     color: var(--white);
-    transition: 0.3s;
+    transition: 0.2s;
 }
 header li a:hover{
     color: var(--primary-c);
@@ -172,6 +172,32 @@ header .target{
     position: absolute;
     border-bottom: 4px solid var(--primary-c);
     transition: all .35s ease-in-out;
+}
+.modal_wrap{
+    display:none;
+}
+.modal_wrap.active{
+    background: var(--white);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.modal_wrap.active > *{
+    display: block;
+}
+.modal_wrap.active .close{
+    display: block;
+    position: fixed;
+    right: 50px;
+    top: 50px;
 }
 .logo a{
     width: 197px;
