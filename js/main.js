@@ -66,6 +66,7 @@ $(function(){
        }); // main slide stop, play button
 
         var product = $('.product_slide').bxSlider({
+            touchEnabled: false,
             pager:false,
             minSlides:1,
             maxSlides:3,
@@ -82,7 +83,7 @@ $(function(){
            let targetProduct =  $(this).attr('href');
            console.log(targetProduct);
            $('.products_desc > div').hide();
-           $(targetProduct).show();
+           $(targetProduct).fadeIn();
         });
 /*
         let productTitle = $('.product_slide li h3');
