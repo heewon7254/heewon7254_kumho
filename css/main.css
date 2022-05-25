@@ -14,7 +14,7 @@
     transition: left 0.4s ease-out;
     display: flex;
 }*/
-.slide li{
+.slide > li{
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center center;
@@ -136,23 +136,88 @@
 .autoplay_btn .play{
     display: none;
 }
-/*
-
-.inner_circle ul:before{
-    content: '';
-    width: 600px;
-    height: 600px;
-    background-image: url(../images/sm_circle.png) no-repeat;
+.inner_circle{
+    position: absolute;
+    width: 630px;
+    height: 630px;
+    left: 45%;
+    margin-top: 9%;
 }
-.inner_circle ul:after{
-    content: '';
-    width: 620px;
-    height: 620px;
-    background-image: url(../images/bg_circle.png) no-repeat;
+.inner_circle li{
+    display: flex;
 }
-
-
-*/
+.inner_circle:before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: url(../images/sm_circle.png) no-repeat;
+    left: 1.5%;
+    top: 2.5%;
+    z-index: 0;
+    animation: move 10s linear infinite forwards;
+    transform-origin: 50% 50%;
+}   
+@keyframes move {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.inner_circle:after{
+    content: '';
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    background: url(../images/bg_circle.png) no-repeat;
+    top: -1%;
+    left: -2%;
+    animation: moving 10s linear infinite forwards;
+    transform-origin: 50% 50%;
+}
+@keyframes moving{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.inner_circle li{
+    position: absolute;
+    background: var(--white);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    transition:all 0.5s;
+}
+.inner_circle li:first-child{
+    left: 0;
+    top: 8%;
+}
+.inner_circle li:nth-child(2){
+    left: 30%;
+    top: 68%;
+}
+.inner_circle li:nth-child(3){
+    left: 65%;
+    top: 8%;
+}
+.inner_circle li span:first-child{
+    font-size: 50px;
+}
+.inner_circle li:hover{
+    background: linear-gradient(45deg, #8092af, #acf0eb);
+    color: var(--white);
+}
 /*product*/
 .product_bg{
     background: url(../images/product_bg.jpg) no-repeat center center/cover;
