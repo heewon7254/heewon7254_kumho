@@ -109,9 +109,6 @@ LAYOUT
     width: var(--con-width);
     margin:0 auto;
 }
-.hidden {
-    display: none;
-}
 .con_pd{
     padding: calc(var(--line-height)*5) 0;
 }
@@ -194,6 +191,8 @@ header .target{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 5%;
     width: 100vw;
     height: 100vh;
 }
@@ -205,6 +204,9 @@ header .target{
     position: fixed;
     right: 50px;
     top: 50px;
+}
+.hidden{
+    display: none;
 }
 .logo a{
     width: 197px;

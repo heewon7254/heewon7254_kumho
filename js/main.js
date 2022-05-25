@@ -135,12 +135,11 @@ $(function(){
         let modalWrap = $('.modal_wrap');
 
         searchIcon.click(function(){
-            modalWrap.addClass('active');
+            modalWrap.toggleClass('active');
             body.css({overflow:'hidden'});
         });
         modalWrap.find('.close').click(function(){
-           $(this).removeClass('active');
-            body.css({overflow:'auto'});
+            modalWrap.fadeOut();
         }); //search
 });//document ready jquery 
     
