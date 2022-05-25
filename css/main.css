@@ -774,4 +774,85 @@
 }
 
 
+/*회사 개요 */
+.company_banner_wrap{
+    height: 100vh;
+    background: url(../images/company_bg1.png) no-repeat 0 0/cover;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.company_banner_wrap:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.6);
+    z-index: -1;
+}
+.company_banner_wrap .content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.company_banner_wrap h2{
+    margin-bottom: calc(var(--line-height)*2);
+}
+.value > div{
+    height: 35vh;
+    position: relative;
+    z-index: 2;
+}
+.value > div:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: -1;
+}
+.change{
+    background: url(../images/change_bg.png) no-repeat 50%/cover;
+}
+.trust{
+    background: url(../images/trust_bg.png) no-repeat 50%/cover;
+}
+.environ{
+    background: url(../images/environ_bg.png) no-repeat 0 0/cover;
+}
+.value .contents{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.value .contents p{
+    width: 50vw;
+}
+.trust .contents{
+    flex-direction: row-reverse;
+}
+.value div[class*="back"]{
+    opacity: 0;
+    transition: 0.3s;
+}
+.value div:hover div[class*="back"]{
+    opacity: 1;
+}
+.info_list h3{
+    border-bottom: 1px solid var(--body-tc);
+    line-height: calc(var(--line-height)*2);
+    display: flex;
+    align-items: center;
+}
 
