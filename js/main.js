@@ -72,7 +72,7 @@ $(function(){
             maxSlides:3,
             moveSlides:1,
             slideWidth:270,
-            slideMargin:243
+            slideMargin:150
         }); //product slide
 
 
