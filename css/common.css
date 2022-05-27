@@ -60,6 +60,9 @@ body{
     text-transform: uppercase;
     font-weight: 800;
 }
+.tac{
+    text-align: center;
+}
 em{
     color: var(--primary-c);
 }
