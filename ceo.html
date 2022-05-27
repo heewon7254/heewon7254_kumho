@@ -1,22 +1,37 @@
-<!DOCTYPE html>
+<!DOCTYliE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta httli-equiv="X-UA-Comliatible" content="IE=edge">
+    <meta name="viewliort" content="width=device-width, initial-scale=1.0">
     <title>2차 포트폴리오- CEO 인사말 페이지 금호석유화학</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+
+
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="logo"><a href="#">logo</a></h1>
+            <h1 class="logo"><a href="index.html">logo</a></h1>
             <nav>
                 <ul class="main_menu">
                     <li><a href="#">company</a>
                         <ul>
                             <li><a href="#">회사개요</a></li>
                             <li><a href="#">CEO인사말</a></li>
-                            <li><a href="#">비전</a></li>
+                            <li><a href="vision.html">비전</a></li>
                             <li><a href="#">CI</a></li>
                             <li><a href="#">연혁</a></li>
                             <li><a href="#">R&BD</a></li>
@@ -55,6 +70,9 @@
                         </ul>
                     </li>
                 </ul>
+            </nav>
+            <span class="target"></span>
+            <div class="icon">
                 <ul class="top_links">  
                     <li>
                         <a class="material-symbols-outlined">pin_drop</a>
@@ -63,68 +81,157 @@
                         <a class="material-symbols-outlined">person</a>
                     </li>
                     <li>
-                        <a class="material-symbols-outlined">search</a>
+                        <a class="material-symbols-outlined search">search</a>                         
                     </li>
                     <li>
                         <a class="language">kor</a>
                     </li>
                 </ul>
-            </nav>
+            </div>
+            <div class="modal_wrap">
+                    <button class="close material-symbols-outlined">close</button>
+                    <h2 class="main_tt">궁금하신 내용을 찾아드립니다.</h2>
+                    <label for="search" class="hidden">검색창</label>
+                    <input type="text" id="search" placeholder="검색어를 입력해주세요">
+                    <span class="material-symbols-outlined search">search</span> 
+            </div>   
         </div>
     </header>
 
     <div class="ceo_banner_wrap">
-        <h2 class="main_tt">CEO 인사말</h2>
-        <p>금호석유화학은 고객에게 만족을 드리고 인류의 복지에 기여할 것임을 약속합니다.</p>
+        <h2 class="main_tt w_color">CEO 인사말</h2>
+        <p class="w_color">금호석유화학은 고객에게 만족을 드리고 인류의 복지에 기여할 것임을 약속합니다.</p>
     </div>
 
     <main>
-        <section class="container">
+        <section class="container con_top_pd">
             <h2 class="main_tt">대표이사 부사장 <em>JONG HOON BAEK</em></h2>
-            <p>Senior Executive Vice President &CEO</p> 
-            <div class="ceo_img">
-                <div class="tab">
-                    <button>CEO 인사말</button>
-                    <button>CEO 프로필</button>
+            <p class="content_tt tac">Senior Executive Vice liresident &CEO</p>
+            <div class="all_content con_top_pd">
+                <div class="ceo_img">
+                    <div class="tab">
+                        <a href="#greeting">CEO 인사말</button>
+                        <a href="#profile">CEO 프로필</button>
+                    </div>
+                    <img src="images/ceo_img.png" alt="ceo이미지">
                 </div>
-                <img src="images/ceo_img.png" alt="ceo이미지">
+                <div class="ceo_content">
+                    <div id="greeting">
+                        <ul class="content">
+                            <ul>
+                                <li>존경하는 주주 및 고객 여러분,</li>
+                                <li>금호석유화학은 1970년 창사 이후 합성고무, 합성수지, 정밀화학, CNT, 에너지,</li>
+                                <li>건자재를 아우르는 사업 포트폴리오 구축을 통해</li>  
+                                <li>글로벌 석유화학 기업으로  성장하였습니다.</li>
+                                <li>이는 지속적으로 더 나은 미래 가치를 제공하기 위해 노력한 결과입니다.</li>
+                            </ul>
+                            <ul>
+                                <li>최근 직면한 산업 구조 변화와 경영 환경 상의 위협은 석유화학 기업에 전례 없는</li>
+                                <li> 새로운 도전과 혁신을 요구하고 있습니다</li>
+                            </ul>
+                            <ul>
+                                <li>이러한 변화흐름에 맞추어 금호석유화학은 “솔루션 파트너”로 나아가고자 합니다.</li>
+                                <li>제품과 기술 개발뿐 아니라 비즈니스 프로세스, 서비스, 인재 등 각 분야에서</li> 
+                                <li>최고 수준을 지향하고, 고객의 요구에 앞서 최적의 솔루션을 제공하겠습니다.</li>
+                            </ul> 
+                            <ul>
+                                <li>앞으로 조직과 미래 사회의 안전 및 환경 개선을 위해 노력하는 한편,</li>
+                                <li>성장 동력 확보에 힘써 신수종 사업 등으로 포트폴리오를 다변화하고 </li>
+                                <li>안정적인 수익 구조를 확보하여 모든 이해관계자에게 신뢰받는 기업이 되겠습니다.</li>
+                            </ul> 
+                            <li>감사합니다.</li>
+                        </ul>
+                    </div>
+                    <div id="profile">
+                        <ul class="content1">
+                            <li>약력</li>
+                            <ul class="cell">
+                                <li>성명</li>
+                                <li>백 종 훈 (白 鍾 勳, Jong-Hoon Baek)</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>생년</li>
+                                <li>1961. 09. 08</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>학력</li>
+                                <li>1980. 02</li>
+                                <li>부산 중앙고 졸업</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>1986. 02</li>
+                                <li>부산대학교 화학공학과 졸업</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>1996. 02</li>
+                                <li>서강대 MBA 수료</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>2019. 12</li>
+                                <li>연세대 AMli 수료</li>
+                            </ul>
+                        </ul>
+                        <ul class="content2">
+                            <li>경력</li>
+                            <ul class="cell">
+                                <li>1988. 08</li>
+                                <li>금호쉘화학 경력직 입사</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>1988. 10</li>
+                                <li>일본 Mitsubishi Yuka Shell R&D Center</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>1990. 05</li>
+                                <li>Belgium Shell R&D Center</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>1996. 04</li>
+                                <li>금호피앤비화학 Elioxy 영업 팀장</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>2000. 07</li>
+                                <li>금호피앤비화학 lihenol / Solvent 영업팀장</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>2004. 01</li>
+                                <li>금호피앤비화학 영업전략팀장 / 해외영업팀장</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>2005. 12</li>
+                                <li>금호피앤비화학 영업담당 이사</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>2007. 12</li>
+                                <li>금호피앤비화학 영업담당 상무</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>2015. 12</li>
+                                <li>금호석유화학 영업본부장 전무</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>2021. 04 ~ </li>
+                                <li>현재 금호석유화학 대표이사 부사장</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>2019~2021</li>
+                                <li>IISRli(International Institute</li>
+                            </ul>
+                            <ul class="cell">
+                                <li>of Synthetic Rubber</li>
+                                <li>liroducers,Inc.)</li>
+                            </ul>
+                            <li>International liresident</li>
+                        </ul>
+                    </div>     	 	 		 	
+                </div>
             </div>
-            <div class="ceo_content">
-                <div id="greeting">
-                    <p>존경하는 주주 및 고객 여러분,</p>
-                    <p>금호석유화학은 1970년 창사 이후 합성고무, 합성수지, 정밀화학, CNT, 에너지, 건자재를 아우르는 사업 포트폴리오 구축을 통해 글로벌 석유화학 기업으로  성장하였습니다.
-                        이는 지속적으로 더 나은 미래 가치를 제공하기 위해 노력한 결과입니다.
-                    </p>
-                    <p>
-                        최근 직면한 산업 구조 변화와 경영 환경 상의 위협은 석유화학 기업에 전례 없는 새로운 도전과 혁신을 요구하고 있습니다
-                    </p>
-                    <p>
-                        이러한 변화흐름에 맞추어 금호석유화학은 “솔루션 파트너”로 나아가고자 합니다. 제품과 기술 개발뿐 아니라 비즈니스 프로세스, 서비스, 인재 등 각 분야에서 
-                        최고 수준을 지향하고, 고객의 요구에 앞서 최적의 솔루션을 제공하겠습니다.
-                    </p>
-                    <p>
-                        앞으로 조직과 미래 사회의 안전 및 환경 개선을 위해 노력하는 한편, 성장 동력 확보에 힘써 신수종 사업 등으로 포트폴리오를 다변화하고 
-                        안정적인 수익 구조를 확보하여 모든 이해관계자에게 신뢰받는 기업이 되겠습니다.
-                    </p>
-                    <p>감사합니다.</p>
-                </div>
-                <div id="profile">
-                    <p>약력
-                        성명	백 종 훈 (白 鍾 勳, Jong-Hoon Baek) 생년	1961. 09. 08 학력	1980. 02	부산 중앙고 졸업 1986. 02	부산대학교 화학공학과 졸업
-                        1996. 02	서강대 MBA 수료 2019. 12	연세대 AMP 수료
-                    </p>
-                    <p>경력 1988. 08	금호쉘화학 경력직 입사 1988. 10	일본 Mitsubishi Yuka Shell R&D Center 1990. 05	Belgium Shell R&D Center
-                        1996. 04	금호피앤비화학 Epoxy 영업 팀장 2000. 07	금호피앤비화학 Phenol / Solvent 영업팀장 2004. 01	금호피앤비화학 영업전략팀장 / 해외영업팀장
-                        2005. 12	금호피앤비화학 영업담당 이사 2007. 12	금호피앤비화학 영업담당 상무 2015. 12	금호석유화학 영업본부장 전무
-                        2021. 04 ~ 현재 금호석유화학 대표이사 부사장 2019~2021 IISRP(International Institute of Synthetic Rubber Producers,Inc.) International President
-                    </p>
-                </div>
-            </div>
+
         </section>
     </main>
 
     <footer>
-        <div class="containers">
+        <div class="container">
             <div class="logo_content">
                 <h2 class="logo">
                     <a href="#">logo</a>
