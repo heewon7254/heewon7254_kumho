@@ -106,6 +106,26 @@ em{
 .btn:hover span{
     color: var(--primary-c);
 }
+.goBtn{
+    align-items: center;
+    border: 2px solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    padding: 9px 10px;
+    position: relative;
+    width: 130px;
+    height: 45px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    gap:0;
+}
+.goBtn:hover{
+    width: 150px;
+    gap: 20px;
+    border-color: var(--white);
+}
 
 /*
 LAYOUT
@@ -253,6 +273,7 @@ footer .footer_menu{
 }
 footer .footer_menu li{
     position: relative;
+    transition: 0.3s;
 }
 footer .footer_menu li:after{
     content:'';
@@ -266,4 +287,7 @@ footer .footer_menu li:after{
 }
 footer .footer_menu li:last-child:after{
     background: none;
+}
+footer .footer_menu li:hover{
+    color: var(--primary-c);
 }
