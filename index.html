@@ -10,21 +10,28 @@
     <meta name="robots" content="index, follow">
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <link rel='stylesheet prefetch' href='http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
-    <script src="js/common.js"></script>
-    <script src="js/main.js"></script>
-
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
+
+    <link rel='stylesheet prefetch' href='http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
     integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
 
-    <link rel="stylesheet" href="css/main.css">
+
 
     <style>
     @font-face {
@@ -62,7 +69,7 @@
                     <li><a href="#">company</a>
                         <ul>
                             <li><a href="company.html">회사개요</a></li>
-                            <li><a href="ceo.html">CEO인사말</a></li>
+                            <li><a href="ceo.html">CEO</a></li>
                             <li><a href="vision.html">비전</a></li>
                             <li><a href="#">CI</a></li>
                             <li><a href="#">연혁</a></li>
@@ -184,7 +191,7 @@
             <a href="" class="prev">prev</a>
             <a href="" class="next">next</a>
         </p> -->
-        <p class="scroll_down">
+        <p class="scroll_down  animate__animated animate__bounce animate__infinite	infinite">
             <span class="material-symbols-outlined w_color">keyboard_double_arrow_down</span>
             <span class="w_color">scroll down</span>
         </p>
@@ -460,15 +467,15 @@
             <div class="news_slides">
                 <div class="news_slide01 active" id="news_slide01">
                     <ul>
-                        <li>
+                        <li data-aos="fade-right" data-aos-duration="1500">
                             <img src="images/news1.png" alt="news1">
                             <span>안전환경 전담조직, 대표이사 직속으로 격상</span>
                         </li>
-                        <li>
+                        <li data-aos="fade-up" data-aos-duration="1500">
                             <img src="images/news6.png" alt="news6">
                             <span>ESG비전 탄소중립 성장 청사진 수립</span>
                         </li>
-                        <li>
+                        <li data-aos="fade-left" data-aos-duration="1500">
                             <img src="images/news7.png" alt="news7">
                             <span>ESG 비전 발표 “Let’s AAA for ESG!”</span>
                         </li>
@@ -480,15 +487,15 @@
                 </div>
                 <div class="news_slide02" id="news_slide02">
                     <ul>
-                        <li>
+                        <li data-aos="fade-right" data-aos-duration="1500">
                             <img src="images/news2.png" alt="news2">
                             <span>폐플라스틱으로 친환경 원료 제조 사업 추진</span>
                         </li>
-                        <li>
+                        <li data-aos="fade-up" data-aos-duration="1500">
                             <img src="images/news8.png" alt="news8">
                             <span>금호폴리켐 지분 인수로 ‘합성고무 리더’ 입지 강화</span>
                         </li>
-                        <li>
+                        <li data-aos="fade-left" data-aos-duration="1500">
                             <img src="images/news9.png" alt="news9">
                             <span>에너지 폐기물 제로에 도전</span>
                         </li>
@@ -500,15 +507,15 @@
                 </div>
                 <div class="news_slide03" id="news_slide03">
                     <ul>
-                        <li>
+                        <li data-aos="fade-right" data-aos-duration="1500">
                             <img src="images/news3.png" alt="news3">
                             <span>휴그린, 창호 핸들 ‘굿 디자인(GD)’ 선정</span>
                         </li>
-                        <li>
+                        <li data-aos="fade-up" data-aos-duration="1500">
                             <img src="images/news4.png" alt="news4">
                             <span>세계일류상품 20개 달성</span>
                         </li>
-                        <li>
+                        <li data-aos="fade-left" data-aos-duration="1500">
                             <img src="images/news5.png" alt="news5">
                             <span>고기능 합성고무(SBS) 세계일류상품 선정</span>
                         </li>
@@ -520,7 +527,7 @@
                 </div>
             </div>    
         </section>
-        <section class="esg container con_top_pd">
+        <section class="esg container con_top_pd" data-aos="fade-up">
             <h2 class="main_tt">책임감있는 ESG 경영을 실현 하겠습니다.</h2>
             <ul class="esg_list">
                 <li class="esg_item1">
@@ -540,12 +547,13 @@
                 </li>
             </ul>
         </section>
-        <section class="recruit container con_pd">
-            <h2 class="main_tt">도전하는 글로벌 리더를 기다립니다</h2>
-            <p class="animate">
-                <span>with</span>
-                <span>us</span>
-            </p>
+        <section class="recruit container con_pd" data-aos="fade-up">
+            <h2 class="main_tt" >도전하는 글로벌 리더를 기다립니다</h2>
+            <!--
+            <div class="animate">
+                <div>with</div>
+                <span data-aos="fade-left" data-aos-delay="350">us</span>
+            </div>-->
             <ul class="recruit_list">
                 <li class="recruit_item1">
                     <h3 class="main_sm_tt">인재상</h3>
@@ -585,18 +593,18 @@
                 </li>
             </ul>
         </section>
-        <section class="promotion container con_pd">
+        <section class="promotion container con_pd" data-aos="fade-up">
             <div class="video">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/YQthfq2Gof4" title="YouTube video player" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
-            <ul class="letter">
-                <li>우리가 만든 소재에서</li> 
-                <li>더 편리한 세상과 더 안전한 일상이 시작되기에,</li>
-                <li> 소재의 혁신이 곧 일상의 혁신을 만든다는 믿음으로</li>
-                <li>금호석유화학그룹은 생활의 가장 가까운 곳에서 함께하고 있습니다.</li>
-                <li>-금호석유화학그룹-</li>
+            <ul class="letter content_desc">
+                <li data-aos="fade-up" data-aos-delay="50" >우리가 만든 소재에서</li> 
+                <li data-aos="fade-up" data-aos-delay="150">더 편리한 세상과 더 안전한 일상이 시작되기에,</li>
+                <li data-aos="fade-up" data-aos-delay="250"> 소재의 혁신이 곧 일상의 혁신을 만든다는 믿음으로</li>
+                <li data-aos="fade-up" data-aos-delay="350">금호석유화학그룹은 생활의 가장 가까운 곳에서 함께하고 있습니다.</li>
+                <li data-aos="fade-up" data-aos-delay="400">-금호석유화학그룹-</li>
             </ul>
         </section>
         <a class="material-symbols-outlined top">arrow_upward</a>
@@ -620,6 +628,6 @@
             </div>
         </div>
     </footer>
-
+    <script src="js/aos.js"></script>
 </body>
 </html>

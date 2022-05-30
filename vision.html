@@ -9,19 +9,21 @@
     <meta name="keywords" content="html, css, jquery , responsive">
     <meta name="description" content="웹 접근성을 준수하는 포트폴리오">
     <meta name="robots" content="index, follow">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="js/main.js"></script>
 
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/main.css">
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
     integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <link rel="stylesheet" href="css/main.css">
+    <script src="js/common.js"></script>
+    <script src="js/vision.js"></script>
 
     <style>
     @font-face {
@@ -59,7 +61,7 @@
                     <li><a href="#">company</a>
                         <ul>
                             <li><a href="company.html">회사개요</a></li>
-                            <li><a href="#">CEO인사말</a></li>
+                            <li><a href="ceo.html">CEO</a></li>
                             <li><a href="#">비전</a></li>
                             <li><a href="#">CI</a></li>
                             <li><a href="#">연혁</a></li>
@@ -78,7 +80,7 @@
                     </li>
                     <li><a href="#">investment</a>
                         <ul>
-                            <li><a href="#">재무정보</a></li>
+                            <li><a href="result.html">재무정보</a></li>
                             <li><a href="#">공시정보</a></li>
                             <li><a href="#">IR자료실</a></li>
                         </ul>
@@ -104,7 +106,7 @@
             <div class="icon">
                 <ul class="top_links">  
                     <li>
-                        <a class="material-symbols-outlined">pin_drop</a>
+                        <a class="material-symbols-outlined" href="location.html">pin_drop</a>
                     </li>
                     <li>
                         <a class="material-symbols-outlined">person</a>
@@ -129,20 +131,20 @@
 
     <div class="v_banner_wrap">
         <div class="content">
-            <h2 class="big_tt w_color">vision</h2>
-            <p class="w_color">금호석유화학은 에너지·소재 기술 기반 솔루션으로 모두에게 더 나은 미래를 만들어 가겠습니다.</p>
+            <h2 class="big_tt">vision</h2>
+            <p class="w_color content_desc">금호석유화학은 에너지·소재 기술 기반 솔루션으로 모두에게 더 나은 미래를 만들어 가겠습니다.</p>
         </div>
     </div>
 
     <main>
         <div class="container con_top_pd">
-            <h2 class="main_tt">우리만의 성공 DNA를 발판으로<br>더 나은 미래를 향해 함께 나아가려 합니다.
+            <h2 class="main_tt" data-aos="fade-up" data-aos-duration="1500">우리만의 성공 DNA를 발판으로<br>더 나은 미래를 향해 함께 나아가려 합니다.
             </h2>
             <div class="partners con_top_pd">
-                <div class="img_wrap">
+                <div class="img_wrap" data-aos="fade-right" data-aos-duration="1500">
                     <img src="images/new_vision.png" alt="비전">
                 </div>
-                <div class="vision_text">
+                <div class="vision_text content_desc" data-aos="fade-left" data-aos-duration="1500">
                     <p>산업 리더십을 강화하여 고객성공에기여하고 변화를 선도하며</p>
                     <p>새로운 시장을창출하는 <em>혁신적 리더</em>으로 성장하겠습니다.</p>
                 </div>
@@ -150,7 +152,7 @@
             <div class="mission con_top_pd">
                 <h2 class="main_tt">미션</h2>
                 <div class="mission_wrapper con_pd">
-                    <div class="mission1">
+                    <div class="mission1" data-aos-duration="1500" data-aos="fade-up">
                         <div class="mission1_img"></div>
                         <div class="mission1_contents">
                             <div class="mission_front">
@@ -165,7 +167,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mission2">
+                    <div class="mission2" data-aos-duration="1600" data-aos-delay="100" data-aos="fade-up">
                         <div class="mission2_img"></div>
                         <div class="mission2_contents">
                             <div class="mission_front">
@@ -180,7 +182,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mission3">
+                    <div class="mission3" data-aos-duration="1800" data-aos-delay="200" data-aos="fade-up">
                         <div class="mission3_img"></div>
                         <div class="mission3_contents">
                             <div class="mission_front">
@@ -195,7 +197,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mission4">
+                    <div class="mission4" data-aos-duration="2100" data-aos-delay="300" data-aos="fade-up">
                         <div class="mission4_img"></div>
                         <div class="mission4_contents">
                             <div class="mission_front">
@@ -233,5 +235,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/aos.js"></script>
 </body>
 </html>

@@ -9,170 +9,152 @@
     <meta name="keywords" content="html, css, jquery , responsive">
     <meta name="description" content="웹 접근성을 준수하는 포트폴리오">
     <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/fullpage.min.css">
 
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/result.js"></script>
+
+
+    <style>
+        @font-face {
+        font-family: 'MinSans-Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'MinSans-Medium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'MinSans-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'MinSans-Thin';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Thin.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo"><a href="#">logo</a></h1>
-            <nav>
-                <ul class="main_menu">
-                    <li><a href="#">company</a>
-                        <ul>
-                            <li><a href="#">회사개요</a></li>
-                            <li><a href="#">CEO인사말</a></li>
-                            <li><a href="#">비전</a></li>
-                            <li><a href="#">CI</a></li>
-                            <li><a href="#">연혁</a></li>
-                            <li><a href="#">R&BD</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">product</a>
-                        <ul>
-                            <li><a href="#">합성고무</a></li>
-                            <li><a href="#">합성수지</a></li>
-                            <li><a href="#">정밀화학</a></li>
-                            <li><a href="#">나노탄소</a></li>
-                            <li><a href="#">에너지</a></li>
-                            <li><a href="#">건자재</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">investment</a>
-                        <ul>
-                            <li><a href="#">재무정보</a></li>
-                            <li><a href="#">공시정보</a></li>
-                            <li><a href="#">IR자료실</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">recruit</a>
-                        <ul>
-                            <li><a href="#">인재상</a></li>
-                            <li><a href="#">인사제도</a></li>
-                            <li><a href="#">직무소개</a></li>
-                            <li><a href="#">채용FAQ</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">sustainability</a>
-                        <ul>
-                            <li><a href="#">윤리경영</a></li>
-                            <li><a href="#">환경보건경영</a></li>
-                            <li><a href="#">사회공헌</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="top_links">  
-                    <li>
-                        <a class="material-symbols-outlined">pin_drop</a>
-                    </li>
-                    <li>
-                        <a class="material-symbols-outlined">person</a>
-                    </li>
-                    <li>
-                        <a class="material-symbols-outlined">search</a>
-                    </li>
-                    <li>
-                        <a class="language">kor</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <div class="r_banner_wrap">
-        <h2 class="main_tt">경영실적</h2>
-        <p>‘같이’의 가치를 창출하는 경영으로 고객에게 다가갑니다.</p>
-        <div class="tab-wrapper">
-            <ul class="tab-menu container">
-                <li class="active">
-                    <a href="#tabs-1" class="active">본사</a>
-                </li>
-                <li><a href="#tabs-2">연구소</a>
-                </li>
-            </ul>    
-        </div>
-    </div>
 
-    <section class="graph"></section> <!--라이브러리 배우고 적기-->
-
-    <section class="table01 con_top_pd container">
-        <table class="tbl_col01 tbl_col09" summary="2019, 2018, 2017, 2016, 2015년도 경영실적이 보여집니다.">
-        <caption class="hidden">경영실적 테이블</caption>
-            <thead>
-            <tr>
-                <th scope="col" class="tit">구분</th>								
-                <th scope="col">2020</th>
-                <th scope="col">2019</th>
-                <th scope="col">2018</th>
-                <th scope="col">2017</th>
-                <th scope="col">2016</th>								
-            </tr>
-            </thead>
-
-            <tbody>
-            <tr>
-                <td class="tit">자산(억원)</td>		
-                <td class="num">50,273</td>	
-                <td class="num">45,380</td>	
-                <td class="num">46,167</td>	
-                <td class="num">45,798</td>	
-                <td class="num">45,461</td>							
-            </tr>
-            <tr>
-                <td class="tit">부채(억원)</td>	
-                <td class="num">18,780</td>		
-                <td class="num">19,085</td>
-                <td class="num">22,686</td>
-                <td class="num">26,230</td>
-                <td class="num">28,182</td>								
-            </tr>
-            <tr>
-                <td class="tit">자본(억원)</td>		
-                <td class="num">31,493</td>							
-                <td class="num">26,295</td>
-                <td class="num">23,481</td>
-                <td class="num">19,568</td>
-                <td class="num">17,279</td>							
-            </tr>
-            <tr>
-                <td class="tit">부채비율(%)</td>
-                <td class="num">59.6</td>							
-                <td class="num">72.6</td>
-                <td class="num">96.6</td>
-                <td class="num">134.0</td>
-                <td class="num">163.1</td>								
-            </tr>
-            <tr>
-                <td class="tit">차입금(억원)</td>
-                <td class="num">8,602</td>								
-                <td class="num">11,041</td>
-                <td class="num">14,570</td>
-                <td class="num">18,091</td>
-                <td class="num">20,807</td>							
-            </tr>
-            <tr>
-                <td class="tit">총자산회전율(회)</td>
-                <td class="num">1.0</td>						
-                <td class="num">1.1</td>
-                <td class="num">1.2</td>
-                <td class="num">1.1</td>
-                <td class="num">0.9</td>							
-            </tr>
-            <tr>
-                <td class="tit">이자보상배율(배)</td>
-                <td class="num">26.5</td>						
-                <td class="num">8.3</td>
-                <td class="num">9.7</td>
-                <td class="num">4.0</td>
-                <td class="num">2.7</td>							
-            </tr>							
-            </tbody>
-        </table>
-    </section>
-
-    <section class="table02 con_pd container">
-        <table class="tbl_col01 tbl_col09" summary="2019, 2018, 2017, 2016, 2015년도 경영실적이 보여집니다.">
+    <main id="fullpage">
+        <section class="section">      
+            <div class="result_banner_wrap">
+                <header>
+                    <div class="container">
+                        <h1 class="logo"><a href="index.html">logo</a></h1>
+                        <nav>
+                            <ul class="main_menu">
+                                <li><a href="#">company</a>
+                                    <ul>
+                                        <li><a href="company.html">회사개요</a></li>
+                                        <li><a href="#">CEO</a></li>
+                                        <li><a href="vision.html">비전</a></li>
+                                        <li><a href="#">CI</a></li>
+                                        <li><a href="#">연혁</a></li>
+                                        <li><a href="#">R&BD</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">product</a>
+                                    <ul>
+                                        <li><a href="#">합성고무</a></li>
+                                        <li><a href="#">합성수지</a></li>
+                                        <li><a href="#">정밀화학</a></li>
+                                        <li><a href="#">나노탄소</a></li>
+                                        <li><a href="#">에너지</a></li>
+                                        <li><a href="#">건자재</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">investment</a>
+                                    <ul>
+                                        <li><a href="#">재무정보</a></li>
+                                        <li><a href="#">공시정보</a></li>
+                                        <li><a href="#">IR자료실</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">recruit</a>
+                                    <ul>
+                                        <li><a href="#">인재상</a></li>
+                                        <li><a href="#">인사제도</a></li>
+                                        <li><a href="#">직무소개</a></li>
+                                        <li><a href="#">채용FAQ</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">sustainability</a>
+                                    <ul>
+                                        <li><a href="#">윤리경영</a></li>
+                                        <li><a href="#">환경보건경영</a></li>
+                                        <li><a href="#">사회공헌</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <span class="target"></span>
+                        <div class="icon">
+                            <ul class="top_links">  
+                                <li>
+                                    <a class="material-symbols-outlined">pin_drop</a>
+                                </li>
+                                <li>
+                                    <a class="material-symbols-outlined">person</a>
+                                </li>
+                                <li>
+                                    <a class="material-symbols-outlined search">search</a>                         
+                                </li>
+                                <li>
+                                    <a class="language">kor</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal_wrap">
+                            <button class="close material-symbols-outlined">close</button>
+                            <h2 class="main_tt">궁금하신 내용을 찾아드립니다.</h2>
+                            <label for="search" class="hidden">검색창</label>
+                            <input type="text" id="search" placeholder="검색어를 입력해주세요">
+                            <span class="material-symbols-outlined search">search</span> 
+                        </div>   
+                    </div>
+                </header>
+                <div class="content">
+                    <h2 class="big_tt">financial information</h2>
+                    <p class="w_color content_desc tac">‘같이’의 가치를 창출하는 경영으로 고객에게 다가갑니다.</p>
+                </div>
+                <div class="tab-wrapper">
+                    <ul class="tab-menu container">
+                        <li class="active"><a href="#tabs-1">경영실적</a></li>
+                        <li><a href="#tabs-2">재무제표</a></li>
+                        <li><a href="#tabs-3">검토/감사보고서</a></li>
+                        <li><a href="#tabs-4">정기보고서</a></li>
+                        <li><a href="#tabs-5">영업보고서</a></li>
+                    </ul>    
+                </div>
+            </div>
+        </section>
+        <div class="chart-container con_pd section">
+            <h2 class="main_tt">자산/부채/자본</h2>
+            <canvas id="line-chart"></canvas>
+        </div> <!--라이브러리 배우고 적기-->
+    
+        <section class="table01 con_top_pd container section">
+            <h2 class="main_tt hidden">table01</h2>
+            <table class="tbl_col01 tbl_col09" summary="2019, 2018, 2017, 2016, 2015년도 경영실적이 보여집니다.">
             <caption class="hidden">경영실적 테이블</caption>
                 <thead>
                 <tr>
@@ -181,73 +163,153 @@
                     <th scope="col">2019</th>
                     <th scope="col">2018</th>
                     <th scope="col">2017</th>
-                    <th scope="col">2016</th>
+                    <th scope="col">2016</th>								
                 </tr>
                 </thead>
-
+    
                 <tbody>
                 <tr>
-                    <td class="tit">매출액(억원)</td>
-                    <td class="num">48,095</td>						
-                    <td class="num">49,615</td>
-                    <td class="num">55,849</td>
-                    <td class="num">50,647</td>
-                    <td class="num">39,704</td>
+                    <td class="tit">자산(억원)</td>		
+                    <td class="num">50,273</td>	
+                    <td class="num">45,380</td>	
+                    <td class="num">46,167</td>	
+                    <td class="num">45,798</td>	
+                    <td class="num">45,461</td>							
                 </tr>
                 <tr>
-                    <td class="tit">영업이익(억원)</td>
-                    <td class="num">7,422</td>							
-                    <td class="num">3,654</td>
-                    <td class="num">5,546</td>
-                    <td class="num">2,626</td>
-                    <td class="num">1,571</td>
+                    <td class="tit">부채(억원)</td>	
+                    <td class="num">18,780</td>		
+                    <td class="num">19,085</td>
+                    <td class="num">22,686</td>
+                    <td class="num">26,230</td>
+                    <td class="num">28,182</td>								
                 </tr>
                 <tr>
-                    <td class="tit">영업이익률(%)</td>
-                    <td class="num">15.4</td>					
-                    <td class="num">7.4</td>
-                    <td class="num">9.9</td>
-                    <td class="num">5.2</td>
+                    <td class="tit">자본(억원)</td>		
+                    <td class="num">31,493</td>							
+                    <td class="num">26,295</td>
+                    <td class="num">23,481</td>
+                    <td class="num">19,568</td>
+                    <td class="num">17,279</td>							
+                </tr>
+                <tr>
+                    <td class="tit">부채비율(%)</td>
+                    <td class="num">59.6</td>							
+                    <td class="num">72.6</td>
+                    <td class="num">96.6</td>
+                    <td class="num">134.0</td>
+                    <td class="num">163.1</td>								
+                </tr>
+                <tr>
+                    <td class="tit">차입금(억원)</td>
+                    <td class="num">8,602</td>								
+                    <td class="num">11,041</td>
+                    <td class="num">14,570</td>
+                    <td class="num">18,091</td>
+                    <td class="num">20,807</td>							
+                </tr>
+                <tr>
+                    <td class="tit">총자산회전율(회)</td>
+                    <td class="num">1.0</td>						
+                    <td class="num">1.1</td>
+                    <td class="num">1.2</td>
+                    <td class="num">1.1</td>
+                    <td class="num">0.9</td>							
+                </tr>
+                <tr>
+                    <td class="tit">이자보상배율(배)</td>
+                    <td class="num">26.5</td>						
+                    <td class="num">8.3</td>
+                    <td class="num">9.7</td>
                     <td class="num">4.0</td>
-                </tr>
-                <tr>
-                    <td class="tit">법인세차감전순이익(억원)</td>
-                    <td class="num">7,669</td>						
-                    <td class="num">3,769</td>
-                    <td class="num">6,169</td>
-                    <td class="num">2,897</td>
-                    <td class="num">1,129</td>
-                </tr>
-                <tr>
-                    <td class="tit">법인세차감전순이익율(%)</td>
-                    <td class="num">15.9</td>						
-                    <td class="num">7.6</td>
-                    <td class="num">11.0</td>
-                    <td class="num">5.7</td>
-                    <td class="num">2.8</td>
-                </tr>
+                    <td class="num">2.7</td>							
+                </tr>							
                 </tbody>
-        </table>
-    </section>
+            </table>
+        </section>
+    
+        <section class="table02 con_pd container section">
+            <h2 class="main_tt hidden">table02</h2>
+            <table class="tbl_col01 tbl_col09" summary="2019, 2018, 2017, 2016, 2015년도 경영실적이 보여집니다.">
+                <caption class="hidden">경영실적 테이블</caption>
+                    <thead>
+                    <tr>
+                        <th scope="col" class="tit">구분</th>								
+                        <th scope="col">2020</th>
+                        <th scope="col">2019</th>
+                        <th scope="col">2018</th>
+                        <th scope="col">2017</th>
+                        <th scope="col">2016</th>
+                    </tr>
+                    </thead>
+    
+                    <tbody>
+                    <tr>
+                        <td class="tit">매출액(억원)</td>
+                        <td class="num">48,095</td>						
+                        <td class="num">49,615</td>
+                        <td class="num">55,849</td>
+                        <td class="num">50,647</td>
+                        <td class="num">39,704</td>
+                    </tr>
+                    <tr>
+                        <td class="tit">영업이익(억원)</td>
+                        <td class="num">7,422</td>							
+                        <td class="num">3,654</td>
+                        <td class="num">5,546</td>
+                        <td class="num">2,626</td>
+                        <td class="num">1,571</td>
+                    </tr>
+                    <tr>
+                        <td class="tit">영업이익률(%)</td>
+                        <td class="num">15.4</td>					
+                        <td class="num">7.4</td>
+                        <td class="num">9.9</td>
+                        <td class="num">5.2</td>
+                        <td class="num">4.0</td>
+                    </tr>
+                    <tr>
+                        <td class="tit">법인세차감전순이익(억원)</td>
+                        <td class="num">7,669</td>						
+                        <td class="num">3,769</td>
+                        <td class="num">6,169</td>
+                        <td class="num">2,897</td>
+                        <td class="num">1,129</td>
+                    </tr>
+                    <tr>
+                        <td class="tit">법인세차감전순이익율(%)</td>
+                        <td class="num">15.9</td>						
+                        <td class="num">7.6</td>
+                        <td class="num">11.0</td>
+                        <td class="num">5.7</td>
+                        <td class="num">2.8</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </section>
 
-    <footer>
-        <div class="container">
-            <div class="logo_content">
-                <h2 class="logo">
-                    <a href="#">logo</a>
-                </h2>
+        <footer class="section fp-auto-height">
+            <div class="container">
+                <div class="logo_content">
+                    <h2 class="logo">
+                        <a href="#">logo</a>
+                    </h2>
+                </div>
+                <div class="footer_content">
+                    <ul class="footer_menu">
+                        <li><a href="#"></a>개인정보 처리방침</a></li>
+                        <li>법적고지</li>
+                        <li>사회공헌 임직원공간</li>
+                        <li><a href="#">온라인 제보실</a></li>
+                    </ul>
+                    <p>서울시 중구 청계천로 100(수표동) 시그니쳐타워 동관 10-14층 TEL. 02-6961-1114</p>
+                    <p>Copyright &copy; 2014 KUMHO PETROCHEMICAL. ALL RIGHTS RESERVED</p>
+                </div>
             </div>
-            <div class="footer_content">
-                <ul class="footer_menu">
-                    <li><a href="#"></a>개인정보 처리방침</a></li>
-                    <li>법적고지</li>
-                    <li>사회공헌 임직원공간</li>
-                    <li><a href="#">온라인 제보실</a></li>
-                </ul>
-                <p>서울시 중구 청계천로 100(수표동) 시그니쳐타워 동관 10-14층 TEL. 02-6961-1114</p>
-                <p>Copyright &copy; 2014 KUMHO PETROCHEMICAL. ALL RIGHTS RESERVED</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </main>
+    <script src="js/fullpage.min.js"></script>
+    <script src="js/fullpage.extensions.min.js"></script>
+
 </body>
 </html>
