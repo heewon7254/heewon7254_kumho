@@ -11,7 +11,8 @@ $(function(){
                 $('.bar_wrap .slideinfo_list li').eq(currentIndex).addClass('active');
             },
             onSlideAfter:function($slideElement){
-                if($slideElement == $('.bar_wrap .slideinfo_list li').eq()){
+                console.log($slideElement);
+                if($slideElement == $('.bar_wrap .slideinfo_list li').eq($slideElement)){
                     $('.bar_wrap .slideinfo_list li').addClass('active').siblings().removeClass('active');
                 }
                 main.stopAuto();
@@ -99,6 +100,14 @@ $(function(){
             if(winSCT > recruitSCT){
                 $('.recruit_list').addClass('active');
             }
+
+            if(winSCT > 800){
+                $('.top').addClass('active');
+            }
+            else{
+                $('.top').removeClass('active');
+            }
+
             /*
             if(winSCT > animationOST){
                 $('.recruit .animate').addClass('animate__animated');
@@ -107,6 +116,11 @@ $(function(){
             }
             */
         }); // number animation
+
+        $('.top').click(function(e){
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, 400);
+        });
 
         let searchIcon = $('.icon').find('.search');
         let modalWrap = $('.modal_wrap');

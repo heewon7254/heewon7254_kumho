@@ -301,6 +301,7 @@
 .product_desc .container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .product_desc .product_summary{
     display: flex;
@@ -314,9 +315,6 @@
     display: flex;
     gap: 25px;
     margin-bottom: calc(var(--line-height)*2);
-}
-.product_desc img{
-    padding-top: calc(var(--line-height)*5);
 }
 .product_desc .btns{
     margin-bottom: var(--line-height);
@@ -497,18 +495,19 @@
     justify-content: space-between;
     height: 450px;
 }
-.esg_list li{
+.esg_list > li{
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 5vh;
     justify-content: center;
+    align-items: center;
 }
-.esg_list li h2, .esg_list li p{
+.esg_list li > h2, .esg_list > li .esg_desc{
     opacity: 0;
     transition: 0.3s;
 }
-.esg_list li h2{
+.esg_list > li h2{
     position: relative;
     background: rgba(225,225,225,0.9) no-repeat 50% 50%/cover;
     width: 100px;
@@ -523,45 +522,45 @@
     line-height: 100px;
     transition: 0.3s;
 }
-.esg_list li h2:hover{
+.esg_list > li h2:hover{
     background: var(--primary-c);
 }
-.esg_list li:first-child{
+.esg_list > li:first-child{
     background: url(../images/environment\ img.png) no-repeat 40% 50%/cover;
     transition: flex 0.5s;
     flex: 1;
     overflow: hidden;
 }
-.esg_list li:nth-child(2){
+.esg_list > li:nth-child(2){
     background: url(../images/social\ img.png) no-repeat 55% 50%/cover;
     transition: flex 0.5s;
     flex: 1;
     overflow: hidden;
 }
-.esg_list li:nth-child(3){
+.esg_list > li:nth-child(3){
     background: url(../images/goverment\ img.png) no-repeat 55% 50%/cover;
     transition: flex 0.5s;
     flex: 1;
     overflow: hidden;
 }
-.esg_list li p{
+.esg_list > li .esg_desc{
     padding: 0 5vw;
 }
-.esg_list li:hover{
+.esg_list > li:hover{
     flex:2;
     overflow: visible;
 }
-.esg_list li:hover h2,
-.esg_list li:hover p,
-.esg_list li:hover:after{
+.esg_list > li:hover h2,
+.esg_list > li:hover .esg_desc,
+.esg_list > li:hover:after{
     opacity: 1;
 }
-.esg_list li:hover h2,
-.esg_list li:hover p{
+.esg_list > li:hover h2,
+.esg_list > li:hover .esg_desc{
     color: var(--white);
     z-index: 2;
 }
-.esg_list li:after{
+.esg_list > li:after{
     content: '';
     position: absolute;
     background: rgba(0,0,0,.5);
@@ -592,7 +591,7 @@
 .recruit_list{
     display: flex;
     justify-content: space-between;
-    height: 40vh;
+    height: 400px;
     margin-top: var(--line-height);
     position: relative;
 }
@@ -668,13 +667,14 @@
     z-index: -1;
 }
 .recruit_list li > *{
-    width: 23vw;
     margin-left: 3vw;
 }
 .recruit_list p{
-    opacity: 0;
+    display: none;
 }
-.recruit_list li:hover > *,
+.recruit_list li:hover p{
+    display: block;
+}
 .recruit_list li:hover:after{
     opacity: 1;
 }
@@ -750,6 +750,24 @@
     justify-content: space-around;
     font-style: italic;
 }
+.promotion .letter li{
+    position: relative;
+}
+.promotion .letter li:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: var(--body-tc);
+    transition:0.4s;
+}
+.promotion .letter li:hover:after{
+    width: 100%;    
+}
 
 /*top*/
 .top{
@@ -759,8 +777,17 @@
     color: var(--white);
     text-align: center;
     font-size: 30px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
 }
-
+.top.active{
+    opacity: 1;
+    visibility: visible;
+}
 
 /*sub page*/
 
@@ -892,7 +919,6 @@
     bottom: 0;
 }
 
-
 /*회사 개요 */
 .company_banner_wrap{
     height: 100vh;
@@ -928,7 +954,7 @@
     position: relative;
     z-index: 2;
 }
-.value > div:after{
+.value > *:not(.title):after{
     content: '';
     position: absolute;
     left: 0;
@@ -962,17 +988,14 @@
     display: flex;
     justify-content: space-between;
 }
-.value .contents p{
-    width: 50vw;
-}
 .trust .contents{
     flex-direction: row-reverse;
 }
-.value div[class*="back"]{
+.value ul[class*="back"]{
     opacity: 0;
     transition: 0.3s;
 }
-.value div:hover div[class*="back"]{
+.value div:hover ul[class*="back"]{
     opacity: 1;
 }
 .question{
@@ -1131,9 +1154,9 @@
     animation-name: fadeInLeft;
     animation-delay: 0.3s;
 }
-.ceo1.active .greeting_content{
+.ceo2.active img{
     animation-name: fadeInRight;
-    animation-delay: 0.5s;
+    animation-delay: 0.3s;
 }
 /*ceo tab*/
 /*
@@ -1193,7 +1216,7 @@
     border-radius: 4px;
     margin: 0 auto;
 }
-table{.tab-menu
+table{
     width: 80%;
     max-width: 1000px;
     margin: 0 auto;
@@ -1249,4 +1272,7 @@ table tbody tr:hover{
 }
 .location > div h3:hover span{
     color: var(--primary-c);
+}
+.mapcontent h2{
+    line-height: calc(var(--line-height)*3);
 }
