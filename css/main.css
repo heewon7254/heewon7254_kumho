@@ -1089,9 +1089,6 @@
     position: relative;
     justify-content: center
 }
-.ceo2 img{
-    border-radius: 70%;
-}
 .profile_content{
     position: absolute;
     display: flex;
@@ -1129,6 +1126,14 @@
 }
 .ceo_background{
     background:#999;
+}
+.ceo1.active img{
+    animation-name: fadeInLeft;
+    animation-delay: 0.3s;
+}
+.ceo1.active .greeting_content{
+    animation-name: fadeInRight;
+    animation-delay: 0.5s;
 }
 /*ceo tab*/
 /*
@@ -1188,7 +1193,7 @@
     border-radius: 4px;
     margin: 0 auto;
 }
-table{
+table{.tab-menu
     width: 80%;
     max-width: 1000px;
     margin: 0 auto;
