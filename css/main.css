@@ -771,12 +771,12 @@
 
 /*top*/
 .top{
-    background: var(--secondary-c);
-    width: 50px;
-    height: 30px;
+    background: var(--primary-c);
+    width: 70px;
+    height: 50px;
     color: var(--white);
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
     position: fixed;
     bottom: 50px;
     right: 50px;
@@ -919,7 +919,7 @@
     bottom: 0;
 }
 
-/*회사 개요 */
+/*company html */
 .company_banner_wrap{
     height: 100vh;
     background: url(../images/company_bg1.png) no-repeat 0 0/cover;
@@ -946,9 +946,19 @@
     top: 50%;
     transform: translate(-50%,-50%);
 }
-/* .company_banner_wrap h2{
-    margin-bottom: calc(var(--line-height)*2);
-} */
+.active .company_banner_wrap .content h2{
+    animation-name: fadeInUp;
+    animation-delay: 0.2s;
+}
+.active .company_banner_wrap .content p{
+    animation-name: fadeInUp;
+    animation-delay: 0.3s;
+}
+.title.active h2{
+    animation-name: fadeInUp;
+    animation-delay: 0.3s;
+}
+
 .value > div{
     height: 100vh;
     position: relative;
@@ -1039,6 +1049,10 @@
     background: #ebebeb;
 }
 
+
+
+/*ceo html*/
+
 .ceo_banner_wrap{
     position: relative;
     left: 0;
@@ -1066,6 +1080,14 @@
 }
 .ceo_banner_wrap header{
     top: 0;
+}
+.active .ceo_banner_wrap .big_tt{
+    animation-name: fadeInUp;
+    animation-delay: 0.2s;
+}
+.active .ceo_banner_wrap .big_tt+p{
+    animation-name: fadeInUp;
+    animation-delay: 0.3s;
 }
 .ceo_greeting{
     display: flex;
@@ -1251,6 +1273,10 @@ table tbody tr:hover{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+.location_banner_wrap .content h2,
+.location_banner_wrap .content p{
+    animation-delay: 0.3s;
 }
 .location_banner_wrap .tab-wrapper ul li{
     width:50%;

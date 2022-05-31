@@ -139,6 +139,9 @@ $(function(){
             // once: true
         });
 
+        $('.language').click(function(){
+            $(this).text('eng');
+        });
 
 });//document ready jquery 
     
