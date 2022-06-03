@@ -247,6 +247,9 @@ header .target{
     border: none;
     margin: 0 auto;
 }
+.search_wrap input:focus{
+    outline: none;
+}
 .logo a{
     width: 197px;
     height: 32px;
