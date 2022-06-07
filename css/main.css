@@ -543,9 +543,11 @@
     flex: 1;
     overflow: hidden;
 }
+/*
 .esg_list > li .esg_desc{
     padding: 0 5vw;
 }
+*/
 .esg_list > li:hover{
     flex:2;
     overflow: visible;
