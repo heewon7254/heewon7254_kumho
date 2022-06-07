@@ -144,7 +144,7 @@ LAYOUT
     padding-top: calc(var(--line-height)*5);
 }
 header{
-    position: absolute;
+    position: fixed;
     z-index:100;
     left: 0;
     right: 0;
@@ -204,6 +204,17 @@ header .target{
     position: absolute;
     border-bottom: 4px solid var(--primary-c);
     transition: all .35s ease-in-out;
+}
+
+header.shrink{
+    height: calc(var(--line-height)*3);
+    background:var(--white);
+}
+header.shrink a{
+    color: var(--black);
+}
+header.shrink nav > .main_menu > li{
+    line-height: calc(var(--line-height)*3);
 }
 .modal_wrap{
     display:none;
