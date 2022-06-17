@@ -8,18 +8,19 @@ $(function(){
     subMenu = menu.find('ul');
 
 
-    $(window).scroll(function(){
-        if($(this).scrollTop()>0){
-            if(!header.hasClass('shrink')){
-                header.addClass('shrink');
-            }
-        }
-        else{
-            if(header.hasClass('shrink')){
-                header.removeClass('shrink');
-            }
-        }
-    });
+    // $(window).scroll(function(){
+    //     if($(this).scrollTop()>0){
+    //         if(!header.hasClass('shrink')){
+    //             header.addClass('shrink');
+    //         }
+    //     }
+    //     else{
+    //         if(header.hasClass('shrink')){
+    //             header.removeClass('shrink');
+    //         }
+    //     }
+
+    // });
 
     subMenu.each(function(){
         if($(this).outerHeight() > newHeight){
@@ -27,27 +28,16 @@ $(function(){
         }
     });
 
-    if(!header.hasClass('shrink')){
-        menu.hover(
-            function(){
-                header.stop().animate({height:newHeight});
-            },
-            function(){
-                header.stop().animate({height:headerHeight});
-            }
-        );
-    }
-    
-    if(header.hasClass('shrink')){
-        menu.hover(
+    menu.hover(
         function(){
             header.stop().animate({height:newHeight});
         },
         function(){
-            header.stop().animate({height:headerStickyHeight});
+            header.stop().animate({height:headerHeight});
         }
-        );
-    }
+    );
+
+    
 
     menu.each(function(){
         $(this).mouseover(function(){
