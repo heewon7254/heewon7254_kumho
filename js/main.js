@@ -34,7 +34,7 @@ $(function(){
 	    });
 
     
-        var product = $('.product_slide').bxSlider({
+        /*var product = $('.product_slide').bxSlider({
             touchEnabled: false,
             pager:false,
             minSlides:1,
@@ -44,6 +44,41 @@ $(function(){
             slideMargin:72,
             // auto:true
         }); //product slide
+        */
+        $('.product_slide').slick({
+            dots: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+              {
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 937,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 542,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
+          });
         
         let productSelect = $('.select_menu').selectmenu();
 
@@ -58,7 +93,7 @@ $(function(){
         });
         $('#item1').show();
 
-        let newsTab = $('.business_content ul li');
+        let newsTab = $('.business_content li');
 
         newsTab.click(function(e){
             e.preventDefault();
@@ -158,6 +193,8 @@ $(function(){
         });
         
         $('.text_area a').eq(0).trigger('click'); //recruit tab
+
+
 
 });//document ready jquery 
     
