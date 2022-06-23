@@ -136,21 +136,23 @@ $(function(){
             //     $('.recruit_list').addClass('active');
             // }
 
-            if(winSCT > 800){
-                $('.top').addClass('active');
-            }
-            else{
-                $('.top').removeClass('active');
-            }
-            
-            if(winSCT>100){
-                 $('header').fadeOut();
-                 $('.mini').addClass('active');
-                 $('.mini').fadeIn();
-            }
-            else if(winSCT<=100){
-                $('.mini').fadeOut();
-                $('header').fadeIn(300);
+                if(winSCT > 800){
+                    $('.top').addClass('active');
+                }
+                else{
+                    $('.top').removeClass('active');
+                }
+
+            if($(window).width()>=922){
+                if(winSCT>100){
+                    $('header').fadeOut();
+                    $('.mini').addClass('active');
+                    $('.mini').fadeIn();
+                }
+                else if(winSCT<=100){
+                    $('.mini').fadeOut();
+                    $('header').fadeIn(300);
+                }
             }
         });
         $('.menushow').click(function(e){
@@ -194,6 +196,7 @@ $(function(){
         
         $('.text_area a').eq(0).trigger('click'); //recruit tab
 
+        
 
 
 });//document ready jquery 

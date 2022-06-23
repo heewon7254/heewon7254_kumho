@@ -23,6 +23,13 @@ $(function(){
                 header.stop().animate({height:headerHeight});
             }
         );
+        let aisideMenu = $('.main_menu > li');
+        aisideMenu.click(function(){
+            $(this).find('ul').slideToggle();
+            $(this).siblings().find('ul').slideUp();
+            $(this).toggleClass('active');
+            $(this).sibilings().removeClass('active');
+        });
     }
 
     
