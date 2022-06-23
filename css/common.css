@@ -1,5 +1,29 @@
 @import url(normalize.min.css);
 @import url(reset.css);
+@font-face {
+    font-family: 'MinSans-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'MinSans-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'MinSans-Thin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 :root {
     --body-ff:'MinSans-Regular';
@@ -34,6 +58,7 @@ body{
     font-size: calc(var(--body-fz)*2.5);
     font-weight: 500;
     line-height: calc(var(--line-height)*2);
+    white-space: nowrap;
 }
 .slide_tt{
     font-size: calc(var(--body-fz)*3);
@@ -222,21 +247,22 @@ header{
     overflow: hidden;
 }
 header:hover{
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
 }
 header .container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 2vw;
 }
 header nav > .main_menu{
     display: flex;
-    width: 775px;
+    /* width: 775px; */
 }
 header nav > .main_menu > li{
     position: relative;
     line-height: calc(var(--line-height)*4);
-    padding: 0 35px;
+    padding: 0 2vw;
     text-transform: uppercase;
 }
 header nav > .main_menu > li > a{
@@ -254,7 +280,7 @@ header nav > .main_menu > li ul li{
     line-height: calc(var(--line-height)*2);
 }
 header nav > .main_menu > li ul li a{
-    padding: 0 40px;
+    padding: 0 2vw;
 }
 header .top_links{
     display: flex;
@@ -391,3 +417,41 @@ footer .footer_menu li:last-child:after{
 footer .footer_menu li:hover{
     color: var(--primary-c);
 }
+
+
+@media (max-width:1170px){
+    .container{
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    header{
+        padding-top: 10px;
+    }
+    header .container{
+        justify-content: flex-start;
+    }
+    header .icon{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    header nav > .main_menu > li {
+        position: relative;
+        line-height: calc(var(--line-height)*4);
+        text-transform: uppercase;
+    }
+    .slide_tt{
+        font-size: calc(var(--body-fz)*2);
+    }
+    .content_desc{
+        font-size: var(--body-fz);
+    }
+    .product_desc .container{
+        padding:28px 10px;
+    }
+}
+@media (max-width:922px){
+
+}
+ 
