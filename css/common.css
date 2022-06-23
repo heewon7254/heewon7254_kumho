@@ -425,6 +425,15 @@ footer .footer_menu li:hover{
         padding: 0 10px;
         box-sizing: border-box;
     }
+    .con_pd{
+        padding: calc(var(--line-height)*5) 0;
+    }
+    .con_top_pd{
+        padding-top: calc(var(--line-height)*5);
+    }
+    .mgb2{
+        margin-bottom: calc(var(--line-height)*2);
+    }
     header{
         padding-top: 10px;
     }
@@ -443,6 +452,7 @@ footer .footer_menu li:hover{
     }
     .slide_tt{
         font-size: calc(var(--body-fz)*2);
+        line-height: calc(var(--line-height)*1.3);
     }
     .content_desc{
         font-size: var(--body-fz);
