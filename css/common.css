@@ -328,6 +328,9 @@ header .target{
     border-bottom: 4px solid var(--primary-c);
     transition: all .35s ease-in-out;
 }
+.main_menu > li span{
+    display: none;
+}
 .mini{
     display: none;
     color: var(--white);
@@ -394,8 +397,7 @@ header.shrink nav > .main_menu > li{
     right: 0;
 }
 .search_wrap input{
-    width: 800px;
-    max-width: 50%;
+    width: 46vw;
     border: none;
     margin: 0 auto;
 }
@@ -509,10 +511,10 @@ footer .footer_menu li:hover{
         left: 0;
         top: 0;
         bottom: 0;
-        width:70%;
+        width: 70%;
         background: rgba(0,0,0,0.8);
     }
-    header nav > .main_menu {
+    header nav.active > .main_menu {
         flex-direction: column;
     }
     nav.active + .target{
@@ -521,14 +523,41 @@ footer .footer_menu li:hover{
     }
     nav.active .main_menu{
         margin-top: 10%;
+        width: 100%;
     }
-    header nav.active > .main_menu > li ul{
+    nav.active > .main_menu > li{
+        position: relative;
+        line-height: calc(var(--line-height)*1)
+    }
+    nav.active > .main_menu > li > a {
+        padding: calc(var(--line-height)*1) 0;
+        display: block;
+        position: relative;
+    }
+    nav.active > .main_menu > li > a:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--white);
+    }
+    nav.active > .main_menu > li ul{
         display: none;
         position: static;
     }
-    header nav.active > .main_menu > li ul li {
-        line-height: calc(var(--line-height)*1);
+    nav.active .main_menu > li span{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 40%;
+        margin-left: 10px;
+        transition: 0.2s;
     }
-
+    nav.active .main_menu > li.active span{
+        transform: rotate(-45deg);
+    }
 }
  

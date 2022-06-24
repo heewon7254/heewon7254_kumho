@@ -1,22 +1,25 @@
 
 $(function(){
+        let bar = $('.bar_wrap .slideinfo_list li');
+
         var main = $('.slide').bxSlider({
-            speed:1000,
+            speed:700,
             pager:false,
             autoControls: true,
             stopAutoOnClick: true,
             auto:true,
             onSliderLoad:function(currentIndex){
                 console.log(currentIndex);
-                $('.bar_wrap .slideinfo_list li').eq(currentIndex).addClass('active');
+                bar.eq(currentIndex).addClass('active');
             },
             onSlideAfter:function(newIndex){
                 console.log(newIndex); //현재 활성화된 슬라이드 번호
                 main.stopAuto();
-                $('.bar_wrap .slideinfo_list li').removeClass('active');
-                $('.bar_wrap .slideinfo_list li').eq(newIndex).addClass('active');    
+                bar.removeClass('active');
+                bar.eq(newIndex).addClass('active');    
             }
         }); //main slide
+        
 
         $('.stop').click(function(){
            $('.autoplay_btn').addClass('active');
@@ -27,12 +30,12 @@ $(function(){
            main.startAuto();
        }); // main slide stop, play button
 
+
        $('.bar_wrap .slideinfo_list li').click(function(){
 		    main.goToSlide($(this).index()); //pager 활성화
             $('.bar_wrap .slideinfo_list li').removeClass('active');
             $(this).addClass('active');
 	    });
-
     
         /*var product = $('.product_slide').bxSlider({
             touchEnabled: false,
@@ -74,13 +77,10 @@ $(function(){
                   slidesToScroll: 1
                 }
               }
-              // You can unslick at a given breakpoint now by adding:
-              // settings: "unslick"
-              // instead of a settings object
             ]
           });
         
-        let productSelect = $('.select_menu').selectmenu();
+        let productSelect = $('.select').selectmenu(); //product select menu
 
         let productTab = $('.product_slide li a');
 
@@ -91,7 +91,7 @@ $(function(){
            $('.products_desc > div').hide();
            $(targetProduct).fadeIn(800);
         });
-        $('#item1').show();
+        $('#item1').show();//product tab
 
         let newsTab = $('.business_content li');
 
@@ -107,9 +107,7 @@ $(function(){
 
 
         let counterOST = counters.offset().top - 600;
-        // let animationOST = $('.recruit .animate').offset().top - 600;
-        //let recruitSCT = $('.recruit_list').offset().top - 700;
-        console.log(counterOST);
+
         let excuted = false;
 
         $(window).scroll(function(){
@@ -196,7 +194,7 @@ $(function(){
         
         $('.text_area a').eq(0).trigger('click'); //recruit tab
 
-        
+
 
 
 });//document ready jquery 

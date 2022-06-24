@@ -28,7 +28,7 @@ $(function(){
             $(this).find('ul').slideToggle();
             $(this).siblings().find('ul').slideUp();
             $(this).toggleClass('active');
-            $(this).sibilings().removeClass('active');
+            $(this).siblings().removeClass('active');
         });
     }
 
@@ -52,13 +52,11 @@ $(function(){
         }); //sub menu
 
 
-    $(function(){
         $('.hamburger-button').click(function(e){
         e.preventDefault();
         $('nav').toggleClass('active');
         $(this).toggleClass('active');
       });
-    });
-    
+
 
 });
