@@ -291,11 +291,11 @@
     position: relative;
 }
 .slick-prev{
-    left: 85%;
+    right: calc(3% + 40px);
     background-image: url(../images/product_chevron_left.png);
 }
 .slick-next{
-    left: 90%;
+    right: 3%;
     background-image: url(../images/product_chervron_right.png);
 }
 .slick-dots{
@@ -316,13 +316,13 @@
     background: var(--body-tc);
 } */
 
-.slick-slide {
-    margin: 0 27px;
+.slick-track > li + li{
+    margin: 0 2.15vw;
 }
 
-.slick-list {
+/* .slick-list {
     margin: 0 -27px;
-}
+} */
 
 
 /*product_desc*/
@@ -790,6 +790,9 @@
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
+}
+.invest_wrap .com_info h3{
+    font-weight: 400;
 }
 .invest_wrap .com_info li{
     width: 50%;

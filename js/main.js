@@ -15,7 +15,7 @@ $(function(){
             onSlideAfter:function(newIndex){
                 console.log(newIndex); //현재 활성화된 슬라이드 번호
                 main.stopAuto();
-                bar.removeClass('active');
+               // bar.removeClass('active');
                 bar.eq(newIndex).addClass('active');    
             }
         }); //main slide
@@ -53,6 +53,8 @@ $(function(){
             speed: 300,
             slidesToShow: 4,
             slidesToScroll: 1,
+            infinite: true,
+            variableWidth: true,
             responsive: [
               {
                 breakpoint: 1200,
