@@ -35,12 +35,6 @@
 <body>
     <header>
         <div class="container">
-            <a href="#" class="hamburger-button">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
             <h1 class="logo"><a href="#">logo</a></h1>
             <nav>
                 <ul class="main_menu">
@@ -100,38 +94,91 @@
                         <a class="material-symbols-outlined page none" href="location.html">pin_drop</a>
                     </li>
                     <li>
-                        <a class="material-symbols-outlined none">person</a>
+                        <a class="material-symbols-outlined search page">search</a>
                     </li>
                     <li>
-                        <a class="material-symbols-outlined search">search</a>                         
+                        <a class="language">KOR</a>                         
                     </li>
                     <li>
-                        <a class="language">KOR</a>
+                        <a href="#" class="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
                     </li>
                 </ul>
             </div>
-            <div class="modal_wrap">
+            <div class="modal_wrap" >
                 <button class="close material-symbols-outlined">close</button>
                 <h2 class="main_tt">궁금하신 내용을 찾아드립니다.</h2>
-                <label for="search" class="hidden">검색창</label>
                 <div class="search_wrap">
+                    <label for="search" class="hidden">검색창</label>
                     <input type="text" id="search" placeholder="검색어를 입력해주세요">
                     <span class="material-symbols-outlined search">search</span>
                 </div>
-            </div>   
+            </div>  
+            <div class="toggle_wrap">
+                <ul class="main_menu2">
+                    <li>
+                        <a href="#">company<span class="material-symbols-outlined">add</span></a>   
+                        <ul>
+                            <li><a href="company.html" class="page">회사개요</a></li>
+                            <li><a href="ceo.html" class="page">CEO</a></li>
+                            <li><a href="vision.html" class="page">비전</a></li>
+                            <li><a href="#">CI</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">R&BD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">product<span class="material-symbols-outlined">add</span></a>
+                        <ul>
+                            <li><a href="#">합성고무</a></li>
+                            <li><a href="#">합성수지</a></li>
+                            <li><a href="#">정밀화학</a></li>
+                            <li><a href="#">나노탄소</a></li>
+                            <li><a href="#">에너지</a></li>
+                            <li><a href="#">건자재</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">investment<span class="material-symbols-outlined">add</span></a>
+                        <ul>
+                            <li><a href="result.html" class="page">재무정보</a></li>
+                            <li><a href="#">공시정보</a></li>
+                            <li><a href="#">IR자료실</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">recruit<span class="material-symbols-outlined">add</span></a>
+                        <ul>
+                            <li><a href="#">인재상</a></li>
+                            <li><a href="#">인사제도</a></li>
+                            <li><a href="#">직무소개</a></li>
+                            <li><a href="#">채용FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">sustainability<span class="material-symbols-outlined">add</span></a>
+                        <ul>
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">환경보건경영</a></li>
+                            <li><a href="#">사회공헌</a></li>
+                        </ul>
+                    </li>
+                </ul> 
+            </div> 
         </div>
-    </header>  
+    </header> 
+    <!-- 
     <div class="mini">
         <div class="container">
             <a class="material-symbols-outlined menushow">dashboard_customize</a>
             <span>금호석유화학</span>
         </div>
     </div>
-
+-->
     <div class="slide_wrapper control">
          <ul class="slide">
              <li id="slide1">
-                <h2 class="slide_tt w_color"><em>화학</em>, 그 이상의 가치로 공동의 미래를 창조하는 솔루션 파트너</h2>
+                <h2 class="slide_tt w_color"><em>화학</em>, 그 이상의 가치로<br> 공동의 미래를 창조하는 <br>솔루션 파트너</h2>
                 <div class="circle">
                     <ul class="inner_circle">
                         <li>
@@ -151,7 +198,7 @@
              </li>
              <li id="slide2">
                  <div class="slide_content">
-                     <h2 class="slide_tt">소재 혁신의 최전선에서<br> 최고의 가치를 개발하고 제공하는 <br>글로벌 석유화학기업으로 거듭나겠습니다.</h2>
+                     <h2 class="slide_tt">소재 혁신의 최전선에서<br> 최고의 가치를 개발하고 제공하는 <br>글로벌기업으로 거듭나겠습니다.</h2>
                  </div>
              </li>
              <li id="slide3">
@@ -568,17 +615,17 @@
             </div>
         </section>
         <section class="esg container con_pd" data-aos="fade-up">
-            <h2 class="main_tt mgb2 container">책임감있는 ESG 경영을 실현 하겠습니다.</h2>
+            <h2 class="main_tt mgb2 container">책임감 있는 ESG 경영을 실현하겠습니다.</h2>
             <ul class="esg_list container">
-                <li class="esg_item1">
+                <li class="esg_item1" style="background: url('images/environment\ img.png') no-repeat 40% 50%/cover";>
                     <h2 class="main_tt">E</h2>
                     <ul class="esg_desc content_desc">
-                        <li>환경은 경영에 우선한다는</li>
-                        <li>기업철학을 바탕으로 모든 경영계획을</li>
-                        <li> 수립 및 운영하고 있습니다.</li> 
+                        <li>환경을 생각한 기업철학을</li>
+                        <li>바탕으로 모든 경영계획을</li>
+                        <li>수립 및 운영하고 있습니다.</li> 
                     </ul>
                 </li>
-                <li class="esg_item2">
+                <li class="esg_item2" style="background: url('images/social\ img.png') no-repeat 55% 50%/cover";>
                     <h2 class="main_tt">S</h2>
                     <ul class="esg_desc content_desc">
                         <li>기업활동이 벌어지는 지역사회는 물론</li> 
@@ -586,7 +633,7 @@
                         <li>자립할 수 있도록 지원하고 있습니다.</li>
                     </ul> 
                 </li>
-                <li class="esg_item3">
+                <li class="esg_item3" style="background: url('images/goverment\ img.png') no-repeat 55% 50%/cover";>
                     <h2 class="main_tt">G</h2>
                     <ul class="esg_desc content_desc">
                         <li>올바른 기업윤리로 공정하고</li>
@@ -686,11 +733,11 @@
                     </iframe>
                 </div>
                 <ul class="letter content_desc">
-                    <li data-aos="fade-up" data-aos-delay="50" >우리가 만든 소재에서</li> 
-                    <li data-aos="fade-up" data-aos-delay="150">더 편리한 세상과 더 안전한 일상이 시작되기에,</li>
-                    <li data-aos="fade-up" data-aos-delay="250"> 소재의 혁신이 곧 일상의 혁신을 만든다는 믿음으로</li>
-                    <li data-aos="fade-up" data-aos-delay="350">금호석유화학그룹은 생활의 가장 가까운 곳에서 함께하고 있습니다.</li>
-                    <li data-aos="fade-up" data-aos-delay="400">-금호석유화학그룹-</li>
+                    <li  data-aos-delay="50" >우리가 만든 소재에서</li> 
+                    <li  data-aos-delay="150">더 편리한 세상과 더 안전한 일상이 시작되기에,</li>
+                    <li  data-aos-delay="250"> 소재의 혁신이 곧 일상의 혁신을 만든다는 믿음으로</li>
+                    <li  data-aos-delay="350">금호석유화학그룹은 생활의 가장 가까운 곳에서 함께하고 있습니다.</li>
+                    <li  data-aos-delay="400">-금호석유화학그룹-</li>
                 </ul>
             </div>
         </section>

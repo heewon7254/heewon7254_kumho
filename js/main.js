@@ -1,7 +1,7 @@
 
 $(function(){
         let bar = $('.bar_wrap .slideinfo_list li');
-
+       
         var main = $('.slide').bxSlider({
             speed:700,
             pager:false,
@@ -12,15 +12,21 @@ $(function(){
                 console.log(currentIndex);
                 bar.eq(currentIndex).addClass('active');
             },
-            onSlideAfter:function(newIndex){
+            onSlideAfter:function($slideElement, oldIndex, newIndex){
                 console.log(newIndex); //현재 활성화된 슬라이드 번호
                 main.stopAuto();
-               // bar.removeClass('active');
+                bar.removeClass('active');
                 bar.eq(newIndex).addClass('active');    
             }
         }); //main slide
-        
-
+        /*
+        $('.slide').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+          });
+          */
         $('.stop').click(function(){
            $('.autoplay_btn').addClass('active');
            main.stopAuto();
@@ -57,26 +63,21 @@ $(function(){
             variableWidth: true,
             responsive: [
               {
-                breakpoint: 1200,
+                breakpoint: 1320,
                 settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-                  infinite: true,
-                  dots: true
+                  slidesToShow: 3
                 }
               },
               {
                 breakpoint: 937,
                 settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1
+                  slidesToShow: 2
                 }
               },
               {
-                breakpoint: 542,
+                breakpoint: 630,
                 settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
+                  slidesToShow: 1
                 }
               }
             ]
@@ -142,7 +143,7 @@ $(function(){
                 else{
                     $('.top').removeClass('active');
                 }
-
+            /*
             if($(window).width()>=922){
                 if(winSCT>100){
                     $('header').fadeOut();
@@ -154,6 +155,7 @@ $(function(){
                     $('header').fadeIn(300);
                 }
             }
+            */
         });
         $('.menushow').click(function(e){
             e.preventDefault();
@@ -166,17 +168,7 @@ $(function(){
             $('html, body').animate({ scrollTop: 0 }, 400);
         });
 
-        let searchIcon = $('.icon').find('.search');
-        let modalWrap = $('.modal_wrap');
 
-        searchIcon.click(function(){
-            modalWrap.addClass('active');
-            $('body').css({overflow:'hidden'});
-        });
-        modalWrap.find('.close').click(function(){
-            modalWrap.removeClass('active');
-            modalWrap.fadeOut();
-        }); //search
 
         AOS.init({
             offset: 300,
@@ -187,7 +179,7 @@ $(function(){
             $(this).text('eng');
         });
 
-        $('.text_area a').click(function(e){
+        $('.recruit_con .text_area a').click(function(e){
             e.preventDefault();
             let targetImg=$(this).attr('href');
             $(targetImg).siblings().fadeOut();
@@ -196,7 +188,25 @@ $(function(){
         
         $('.text_area a').eq(0).trigger('click'); //recruit tab
 
+        if($(window).width()<=768){
+            $('.esg_list').addClass('active');
 
+        }
+        else{
+            $('esg_list').removeClass('active');            
+            $('esg_list').removeClass('slick-initialized');            
+            $('esg_list').removeClass('slick-slider');          
+        }
+
+
+        if($('.esg_list').hasClass('active')){
+            $('.esg_list').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+            });
+        }
 
 
 });//document ready jquery 
