@@ -60,7 +60,6 @@ $(function(){
             slidesToShow: 4,
             slidesToScroll: 1,
             infinite: true,
-            variableWidth: true,
             responsive: [
               {
                 breakpoint: 1320,
@@ -188,7 +187,7 @@ $(function(){
         
         $('.text_area a').eq(0).trigger('click'); //recruit tab
 
-        if($(window).width()<=768){
+        if($(window).outerWidth()<=768){
             $('.esg_list').addClass('active');
 
         }
@@ -201,10 +200,10 @@ $(function(){
 
         if($('.esg_list').hasClass('active')){
             $('.esg_list').slick({
-                dots: true,
+                dots: false,
                 infinite: true,
                 speed: 300,
-                slidesToShow: 1,
+                slidesToShow: 1
             });
         }
 

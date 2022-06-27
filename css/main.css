@@ -282,23 +282,24 @@
     padding-top: var(--line-height);
     position: relative;
 }
+
 .product .slick-arrow{
     position: absolute;
-    bottom: 100%;
+    top:92%;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:5;
+    text-indent:-9999em;
     width: 22px;
     height: 36px;
-    text-indent: -9999em;
-}
-.product .slick-slider{
-    position: static;
 }
 .product .slick-prev{
-    right: calc(12% + 40px);
-    background-image: url(../images/product_chevron_left.png);
+    margin-left: -150px;
+    background:url(../images/product_chevron_left.png) no-repeat;
 }
 .product .slick-next{
-    right: 12%;
-    background-image: url(../images/product_chervron_right.png);
+    margin-left: 150px;
+    background:url(../images/product_chervron_right.png) no-repeat;
 }
 .product .slick-dots{
     display: flex;
@@ -306,27 +307,26 @@
     gap: 2vw;
     margin-top: 2%;
 }
+.product .slick-dots{
+    display:flex;
+    justify-content:center;
+    gap: 15px;
+    position:relative;
+}
 .product .slick-dots button{
-    /* text-indent: -9999em;
+    text-indent: -9999em;
     background: var(--white);
     width: 25px;
     height: 10px;
-    border-radius: 15px; */
-    display: none;
+    border-radius: 15px;
 }
-/* .slick-dots .slick-active button{
+.slick-dots .slick-active button{
     background: var(--body-tc);
-} */
-
-.product .slick-track > li + li{
-    margin: 0 2.15vw;
 }
 
-/* .slick-list {
-    margin: 0 -27px;
-} */
-
-
+.product .slick-arrow{
+    display:none;
+}
 /*product_desc*/
 .products_desc{
     margin-bottom: calc(var(--line-height)*5);
@@ -1454,6 +1454,18 @@ table tbody tr:hover{
     .esg_list > li:after{
         opacity: 1;
     }*/
+    .esg_list > button{
+        position: absolute;
+        left: 50%;
+        top: calc(100% + 15px);
+        transform: translateX(-50%);
+    }
+    .esg_list > .slick-prev{
+        margin-left: -40px;
+    }
+    .esg_list > .slick-next{
+        margin-left: 40px;
+    }
 }
 @media (max-width:700px){
     .products_desc .product_desc_img:hover .sb{
