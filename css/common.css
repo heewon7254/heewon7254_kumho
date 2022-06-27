@@ -515,11 +515,11 @@ footer .footer_menu{
     display: flex;
     justify-content: space-between;
 }
-footer .footer_menu li{
+.footer_menu li{
     position: relative;
     transition: 0.3s;
 }
-footer .footer_menu li:after{
+.footer_menu li:after{
     content:'';
     width:1px;
     height:10px;
@@ -529,10 +529,10 @@ footer .footer_menu li:after{
     top:50%;
     transform:translateY(-50%);
 }
-footer .footer_menu li:last-child:after{
+.footer_menu li:last-child:after{
     background: none;
 }
-footer .footer_menu li:hover{
+.footer_menu li:hover{
     color: var(--primary-c);
 }
 

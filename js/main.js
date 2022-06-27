@@ -173,26 +173,41 @@ $(function(){
         
         $('.text_area a').eq(0).trigger('click'); //recruit tab
 
-        if($(window).outerWidth()<=768){
-            $('.esg_list').addClass('active');
+        //$(window).resize(function(){
+ 
+            //if($(window).width()<=768){              
+                //$('.esg_list').not('.slick-initialized').slick({
+                    //dots: false,
+                    //infinite: true,
+                    //speed: 300,
+                    //slidesToShow: 1
+                //});
+            //}
+            //else{
+                //$('.esg_list').slick('unslick'); 
+               
+            //}  
+           
+        //});
+        //$(window).trigger('resize');// esg slide 'add' of null 오류 slick을 여러번 불러와서 발생한 문제
 
-        }
-        else{
-            $('esg_list').removeClass('active');            
-            $('esg_list').removeClass('slick-initialized');            
-            $('esg_list').removeClass('slick-slider');          
-        }
+        let esgSlide = $('.esg_list');
 
+        let esgOptions = {
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1
+        };
 
-        if($('.esg_list').hasClass('active')){
-            $('.esg_list').slick({
-                dots: false,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1
-            });
-        } // esg slide
-
+        $(window).resize(function(){
+            if($(window).width() <= 768){
+                esgSlide.not('.slick-initialized').slick(esgOptions);
+            }
+            else{
+                esgSlide.slick('unslick');
+            }
+        });
 
 });//document ready jquery 
     

@@ -11,7 +11,7 @@ $(function(){
         scrollHorizontally: true,
         navigation:true,
         anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage','5rdPage','6rdPage','footer'],
-        navigationTooltips:['1','2','3','4','5','6']
+        navigationTooltips:['1','2','3','4','5','6','7']
     });
 
 });

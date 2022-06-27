@@ -666,7 +666,13 @@
     height: 100%;
     display: none;
 }
-.recruit_con .img_area li p{
+.img_area #tabs-1{
+    background: url(../images/bg_recruit_01.png) no-repeat 50%/cover;
+}
+.img_area #tabs-2{
+    background: url(../images/bg_recruit_02.png) no-repeat 50%/cover;
+}
+.img_area li p{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -675,7 +681,7 @@
     transition: 0.3s;
     color: var(--white);
 }
-.recruit_con .img_area li:before{
+.img_area li:before{
     content: '';
     position: absolute;
     width: 100%;
@@ -687,38 +693,38 @@
     opacity: 0;
     transition: 0.3s;
 }
-.recruit_con .img_area li:hover:before{
+.img_area li:hover:before{
     left: 0;
 }
-.recruit_con .img_area li:hover:before,
-.recruit_con .img_area li:hover p{
+.img_area li:hover:before,
+.img_area li:hover p{
     opacity: 1;
 }
-.recruit_con .img_area a{
+.img_area a{
     display: block;
     height: 100%;
     width: 100%;
 }
-.recruit_con .text_area{
+.text_area{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
 }
-.recruit_con .text_area li{
+.text_area li{
     position: relative;
     position: relative;
     display: flex;
     align-items: center;
     gap: var(--line-height);
 }
-.recruit_con .text_area li a:first-child{
+.text_area li a:first-child{
     display: flex;
     align-items: center;
     gap: var(--line-height);
     /* position: relative; */
 }
-.recruit_con .text_area li:after{
+.text_area li:after{
     content: '';
     width: 100%;
     height: 2px;
@@ -728,14 +734,14 @@
     background: var(--primary_bg);
     transition: all 0.3s;
 }
-.recruit_con .text_area li:hover:after{
+.text_area li:hover:after{
     background: var(--body-tc);
 }
 .recruit_con .goBtn{
     opacity: 0;
     transition: 0.2s 0.2s;
 }
-.recruit_con .text_area li:hover .goBtn{
+.text_area li:hover .goBtn{
     opacity: 1;
 }
 
@@ -807,13 +813,12 @@
     flex-direction: column;
     justify-content: space-around;
     gap: 2vh;
-    font-style: italic;
 }
 .promotion .letter li{
     position: relative;
 }
 .promotion .letter li:after{
-    content: '';
+    /*content: '';*/
     position: absolute;
     left: 0;
     right: 0;
@@ -827,7 +832,9 @@
 .promotion .letter li:hover:after{
     width: 100%;    
 }
-
+.promotion .letter li:nth-child(5){
+    text-align: right;
+}
 /*top*/
 .top{
     background: var(--primary-c);
@@ -885,7 +892,6 @@
 .partners .img_wrap img{
     position: absolute;
     width: 100%;
-    height: 100%;
 }
 
 .vision_text{
@@ -1012,6 +1018,9 @@
 .active .company_banner_wrap .content p{
     animation-name: fadeInUp;
     animation-delay: 0.3s;
+}
+.title{
+    background: var(--white);
 }
 .title.active h2{
     animation-name: fadeInUp;
@@ -1510,4 +1519,62 @@ table tbody tr:hover{
     .product_slide > button{
         display: none;
     }
+    .bar_wrap .slideinfo_list{
+        gap: 6vw;
+    }
+    :root{
+        --body-fz:10px;
+    }
+    .language{
+        display: none;
+    }
+    header .top_links{
+        gap: 10px;
+    }
+    #slide1 h2{
+        left: 70%;
+    }
+    .product_desc .product_summary{
+        gap: 10px;
+    }
+    .product_desc .product_select{
+        gap: 10px;
+    }
+    .btn{
+        width: 130px;
+    }
+    .footer_menu li:after{
+        background: none;
+    }
 }
+/*
+@media (max-width:437px){
+    .bar_wrap .slideinfo_list{
+        gap: 6vw;
+    }
+    :root{
+        --body-fz:10px;
+    }
+    .language{
+        display: none;
+    }
+    header .top_links{
+        gap: 10px;
+    }
+    #slide1 h2{
+        left: 70%;
+    }
+    .product_desc .product_summary{
+        gap: 10px;
+    }
+    .product_desc .product_select{
+        gap: 10px;
+    }
+    .btn{
+        width: 130px;
+    }
+    .footer_menu li:after{
+        background: none;
+    }
+
+}    */
