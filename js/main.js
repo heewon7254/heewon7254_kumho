@@ -43,17 +43,6 @@ $(function(){
             $(this).addClass('active');
 	    });
     
-        /*var product = $('.product_slide').bxSlider({
-            touchEnabled: false,
-            pager:false,
-            minSlides:1,
-            maxSlides:4,
-            moveSlides:1,
-            slideWidth:270,
-            slideMargin:72,
-            // auto:true
-        }); //product slide
-        */
         $('.product_slide').slick({
             dots: true,
             speed: 300,
@@ -74,7 +63,7 @@ $(function(){
                 }
               },
               {
-                breakpoint: 630,
+                breakpoint: 620,
                 settings: {
                   slidesToShow: 1
                 }
@@ -132,17 +121,14 @@ $(function(){
                 });
             } // number animation
 
-            // if(winSCT > recruitSCT){
-            //     $('.recruit_list').addClass('active');
-            // }
 
-                if(winSCT > 800){
-                    $('.top').addClass('active');
-                }
-                else{
-                    $('.top').removeClass('active');
-                }
-            /*
+            if(winSCT > 800){
+                $('.top').addClass('active');
+            }
+            else{
+                $('.top').removeClass('active');
+            }
+            /* mini header
             if($(window).width()>=922){
                 if(winSCT>100){
                     $('header').fadeOut();
@@ -159,30 +145,30 @@ $(function(){
         $('.menushow').click(function(e){
             e.preventDefault();
             // $('.mini').fadeOut();
-            $('html, body').animate({ scrollTop: 0 }, 400);
+            $('html, body').animate({ scrollTop: 0 }, 400); 
         });
 
         $('.top').click(function(e){
             e.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, 400);
+            $('html, body').animate({ scrollTop: 0 }, 400); //top button
         });
 
 
 
         AOS.init({
             offset: 300,
-            // once: true
-        });
+            once: true
+        });    //aos
 
         $('.language').click(function(){
             $(this).text('eng');
-        });
+        });  //language
 
         $('.recruit_con .text_area a').click(function(e){
             e.preventDefault();
             let targetImg=$(this).attr('href');
             $(targetImg).siblings().fadeOut();
-            $(targetImg).fadeIn();
+            $(targetImg).fadeIn();             
         });
         
         $('.text_area a').eq(0).trigger('click'); //recruit tab
@@ -205,7 +191,7 @@ $(function(){
                 speed: 300,
                 slidesToShow: 1
             });
-        }
+        } // esg slide
 
 
 });//document ready jquery 

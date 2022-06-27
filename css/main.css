@@ -235,14 +235,12 @@
 .product .bx-wrapper{
     position: relative;
 }
-/* .product li{
-    position: relative;
-} */
-.product li a:first-child{
+.product .slick-track > li a:first-child{
     display: block;
     border-radius: 30px;
     overflow: hidden;
     width: 270px;
+    margin: 0 auto;
 }
 .product li img{
     border-radius: 30px;
