@@ -880,17 +880,23 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.v_banner_wrap .cell{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
 .partners{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 .partners .img_wrap{
-    position: relative;
     width: 689px;
     height: 343px;
 }
 .partners .img_wrap img{
-    position: absolute;
     width: 100%;
 }
 
@@ -922,7 +928,7 @@
 .mission_wrapper {
     display: flex;
     justify-content: space-between;
-    height: 378px;
+    flex-wrap: wrap;
 }
 .mission_wrapper > div{
     width: 22%;
@@ -931,6 +937,7 @@
     overflow: hidden;
     box-shadow: 1px 1px 5px rgb(0 0 0 / 15%);
     position: relative;
+    height: 378px;
 }
 .mission_front{
     background: #fff;
@@ -1173,7 +1180,7 @@
     gap: 15px;
     padding: 20px;
     border: transparent;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 .ceo_greeting:before{
     content: 'CEO GREETING';
@@ -1184,18 +1191,8 @@
     color: #ebebeb;
     transition:1.5s 1s cubic-bezier(.11,.24,.26,1);
 }
-.ceo_greeting:after{
-    content:'';
-    position: absolute;
-    width: 700px;
-    height: 2;
-    background:var(--primary-c);
-    top: 50%;
-    left: 0;
-    transition:1.5s 1s cubic-bezier(.11,.24,.26,1);
-}
 .ceo_greeting img{
-    border-radius: 3%;
+    border-radius: 10px;
 }
 .ceo2{
     display: flex;
@@ -1206,12 +1203,12 @@
     position: absolute;
     display: flex;
     gap: 20px;
-    left: 30%;
+    right: 3vh;
     top: 50%;
     background: #ebebeb;
     padding: 10px;
     border: transparent;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 .profile_content:before{
     content: 'CEO PROFILE';
@@ -1222,23 +1219,13 @@
     color: #ebebeb;
     transition:1.5s 1s cubic-bezier(.11,.24,.26,1);
 }
-.profile_content:after{
-    content:'';
-    position: absolute;
-    width: 700px;
-    height: 2;
-    background:var(--primary-c);
-    top: -40%;
-    left: -10%;
-    transition:1.5s 1s cubic-bezier(.11,.24,.26,1);
-}
 .cell ul{
     display: flex;
     white-space: nowrap;
     gap: 20px;
 }
 .ceo_background{
-    background:#999;
+    background:silver;
 }
 .ceo1.active img{
     animation-name: fadeInLeft;
@@ -1386,12 +1373,21 @@ table tbody tr:hover{
     .scroll_down{
        opacity: 0;
     }
-    /* .product_desc .container{
-        flex-direction: column;
-        gap: var(--line-height);
-    } */
+    .ceo_greeting:before{
+        content: none;
+    }
 }
-
+@media (max-width:1800px){
+    .ceo_greeting .greeting_content{
+        position: static;
+    }
+    .ceo_greeting:before{
+        content: none;
+    }
+    .profile_content{
+        top: 30%;
+    }
+}
 @media (max-width:960px){
     .product_desc .container{
         flex-direction: column;
@@ -1416,6 +1412,15 @@ table tbody tr:hover{
     .recruit .recruit_con .goBtn {
         opacity: 1;
     }
+    /*sub page*/
+
+    /*vision page*/
+    .mission_wrapper{
+        gap: 4vw;
+    }
+    .mission_wrapper > div {
+        width: 46%;
+    }
 }
 @media (max-width:768px){
     .news_slides li span{
@@ -1436,6 +1441,11 @@ table tbody tr:hover{
     .slideinfo_list .content_desc{
         font-size: 2vw;
     }
+    .mission_wrapper > div .mission_back{
+        display: none;
+    }
+
+
     /*
     .esg_list{
         display: block;
@@ -1472,6 +1482,15 @@ table tbody tr:hover{
     }
     .esg_list > .slick-next{
         margin-left: 40px;
+    }
+    /*subpage*/
+
+    /*vision*/
+    .partners .img_wrap {
+        height: 49vw;
+    }
+    .vision_text p{
+        font-size: 3vw;
     }
 }
 @media (max-width:700px){
@@ -1510,6 +1529,10 @@ table tbody tr:hover{
     }
     #slide2 h2 {
         right: 6%;
+    }
+    .mission_wrapper > div{
+        width: 100%;
+        height: 25vh;
     }
 }
 @media (max-width:480px){
