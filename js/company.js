@@ -5,6 +5,10 @@ $(function(){
         $(this).parent('.qna').toggleClass('active');
     });
 
+    $( "#accordion" ).accordion({
+        collapsible: true
+    });
+
     $('#fullpage').fullpage({
         //options here
         autoScrolling:true,
