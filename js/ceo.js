@@ -21,21 +21,30 @@ $(function(){
 
     let ceoSlide = $('.greeting_content');
     
-    let ceoOptions = {
+    ceoSlide.slick({
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 300,
-        slidesToShow: 1
-    };
-
-    $(window).resize(function(){
-        if($(window).width() <= 1300){
-            ceoSlide.not('.slick-initialized').slick(ceoOptions);
-        }
-        else{
-            ceoSlide.slick('unslick');
-        }
+        slidesToShow: 1,
+        fade: true,
+        cssEase: 'linear'
     });
+
+    // let ceoOptions = {
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 1
+    // };
+
+    // $(window).resize(function(){
+    //     if($(window).width() <= 1300){
+    //         ceoSlide.not('.slick-initialized').slick(ceoOptions);
+    //     }
+    //     else{
+    //         ceoSlide.slick('unslick');
+    //     }
+    // });
     
 
     

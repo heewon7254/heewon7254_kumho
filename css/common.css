@@ -447,7 +447,7 @@ header .target{
     position: fixed;
     bottom: 0;
 }
-.toggle_wrap ul{
+.toggle_wrap ul, .toggle_wrap h1{
     display: none;
 }
 .toggle_wrap.active .main_menu2{
@@ -690,13 +690,23 @@ footer .footer_menu{
     .toggle_wrap.active .main_menu2 li ul{
         display: none;
     }
-    @media (max-width:830px){
-        :root{
-            --body-fz:0.8rem; 
-            --line-height:20px;
-        }
+    .toggle_wrap.active h1{
+        display: block;
+        position: relative;
+        margin-top: calc(var(--line-height)*2);
+    }
+    .toggle_wrap.active h1 a{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
 
+}
+@media (max-width:830px){
+    :root{
+        --body-fz:0.8rem; 
+        --line-height:20px;
+    }
 }
  

@@ -32,20 +32,21 @@
             <div class="result_banner_wrap">
                 <header>
                     <div class="container">
-                        <h1 class="logo"><a href="index.html">logo</a></h1>
+                        <h1 class="logo"><a href="#">logo</a></h1>
                         <nav>
                             <ul class="main_menu">
-                                <li><a href="#">company</a>
+                                <li>
+                                    <a href="#">company<span class="material-symbols-outlined">add</span></a>   
                                     <ul>
-                                        <li><a href="company.html">회사개요</a></li>
-                                        <li><a href="#">CEO</a></li>
-                                        <li><a href="vision.html">비전</a></li>
+                                        <li><a href="company.html" class="page">회사개요</a></li>
+                                        <li><a href="ceo.html" class="page">CEO</a></li>
+                                        <li><a href="vision.html" class="page">비전</a></li>
                                         <li><a href="#">CI</a></li>
                                         <li><a href="#">연혁</a></li>
                                         <li><a href="#">R&BD</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">product</a>
+                                <li><a href="#">product<span class="material-symbols-outlined">add</span></a>
                                     <ul>
                                         <li><a href="#">합성고무</a></li>
                                         <li><a href="#">합성수지</a></li>
@@ -55,14 +56,14 @@
                                         <li><a href="#">건자재</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">investment</a>
+                                <li><a href="#">investment<span class="material-symbols-outlined">add</span></a>
                                     <ul>
-                                        <li><a href="#">재무정보</a></li>
+                                        <li><a href="result.html" class="page">재무정보</a></li>
                                         <li><a href="#">공시정보</a></li>
                                         <li><a href="#">IR자료실</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">recruit</a>
+                                <li><a href="#">recruit<span class="material-symbols-outlined">add</span></a>
                                     <ul>
                                         <li><a href="#">인재상</a></li>
                                         <li><a href="#">인사제도</a></li>
@@ -70,7 +71,7 @@
                                         <li><a href="#">채용FAQ</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">sustainability</a>
+                                <li><a href="#">sustainability<span class="material-symbols-outlined">add</span></a>
                                     <ul>
                                         <li><a href="#">윤리경영</a></li>
                                         <li><a href="#">환경보건경영</a></li>
@@ -78,31 +79,90 @@
                                     </ul>
                                 </li>
                             </ul>
+                            <ul class="nav_inner_icon">
+                                <li><a href="location.html" class="page">location</a></li>
+                                <li>login</li>
+                            </ul>
                         </nav>
                         <span class="target"></span>
                         <div class="icon">
                             <ul class="top_links">  
                                 <li>
-                                    <a class="material-symbols-outlined">pin_drop</a>
+                                    <a class="material-symbols-outlined page none" href="location.html">pin_drop</a>
                                 </li>
                                 <li>
-                                    <a class="material-symbols-outlined">person</a>
+                                    <a class="material-symbols-outlined search page">search</a>
                                 </li>
                                 <li>
-                                    <a class="material-symbols-outlined search">search</a>                         
+                                    <a class="language">KOR</a>                         
                                 </li>
                                 <li>
-                                    <a class="language">kor</a>
+                                    <a href="#" class="menu">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="modal_wrap">
+                        <div class="modal_wrap" >
                             <button class="close material-symbols-outlined">close</button>
                             <h2 class="main_tt">궁금하신 내용을 찾아드립니다.</h2>
-                            <label for="search" class="hidden">검색창</label>
-                            <input type="text" id="search" placeholder="검색어를 입력해주세요">
-                            <span class="material-symbols-outlined search">search</span> 
-                        </div>   
+                            <div class="search_wrap">
+                                <label for="search" class="hidden">검색창</label>
+                                <input type="text" id="search" placeholder="검색어를 입력해주세요">
+                                <span class="material-symbols-outlined search">search</span>
+                            </div>
+                        </div>  
+                        <div class="toggle_wrap">
+                            <h1 class="logo"><a href="#">logo</a></h1>
+                            <ul class="main_menu2">
+                                <li>
+                                    <a href="#">company<span class="material-symbols-outlined">add</span></a>   
+                                    <ul>
+                                        <li><a href="company.html" class="page">회사개요</a></li>
+                                        <li><a href="ceo.html" class="page">CEO</a></li>
+                                        <li><a href="vision.html" class="page">비전</a></li>
+                                        <li><a href="#">CI</a></li>
+                                        <li><a href="#">연혁</a></li>
+                                        <li><a href="#">R&BD</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">product<span class="material-symbols-outlined">add</span></a>
+                                    <ul>
+                                        <li><a href="#">합성고무</a></li>
+                                        <li><a href="#">합성수지</a></li>
+                                        <li><a href="#">정밀화학</a></li>
+                                        <li><a href="#">나노탄소</a></li>
+                                        <li><a href="#">에너지</a></li>
+                                        <li><a href="#">건자재</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">investment<span class="material-symbols-outlined">add</span></a>
+                                    <ul>
+                                        <li><a href="result.html" class="page">재무정보</a></li>
+                                        <li><a href="#">공시정보</a></li>
+                                        <li><a href="#">IR자료실</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">recruit<span class="material-symbols-outlined">add</span></a>
+                                    <ul>
+                                        <li><a href="#">인재상</a></li>
+                                        <li><a href="#">인사제도</a></li>
+                                        <li><a href="#">직무소개</a></li>
+                                        <li><a href="#">채용FAQ</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">sustainability<span class="material-symbols-outlined">add</span></a>
+                                    <ul>
+                                        <li><a href="#">윤리경영</a></li>
+                                        <li><a href="#">환경보건경영</a></li>
+                                        <li><a href="#">사회공헌</a></li>
+                                    </ul>
+                                </li>
+                            </ul> 
+                        </div> 
                     </div>
                 </header>
                 <div class="content">
@@ -135,8 +195,8 @@
                     <th scope="col">2020</th>
                     <th scope="col">2019</th>
                     <th scope="col">2018</th>
-                    <th scope="col">2017</th>
-                    <th scope="col">2016</th>								
+                    <th scope="col" class="dn">2017</th>
+                    <th scope="col" class="dn">2016</th>								
                 </tr>
                 </thead>
     
@@ -146,56 +206,56 @@
                     <td class="num">50,273</td>	
                     <td class="num">45,380</td>	
                     <td class="num">46,167</td>	
-                    <td class="num">45,798</td>	
-                    <td class="num">45,461</td>							
+                    <td class="num dn">45,798</td>	
+                    <td class="num dn">45,461</td>							
                 </tr>
                 <tr>
                     <td class="tit">부채(억원)</td>	
                     <td class="num">18,780</td>		
                     <td class="num">19,085</td>
                     <td class="num">22,686</td>
-                    <td class="num">26,230</td>
-                    <td class="num">28,182</td>								
+                    <td class="num dn">26,230</td>
+                    <td class="num dn">28,182</td>								
                 </tr>
                 <tr>
                     <td class="tit">자본(억원)</td>		
                     <td class="num">31,493</td>							
                     <td class="num">26,295</td>
                     <td class="num">23,481</td>
-                    <td class="num">19,568</td>
-                    <td class="num">17,279</td>							
+                    <td class="num dn">19,568</td>
+                    <td class="num dn">17,279</td>							
                 </tr>
                 <tr>
                     <td class="tit">부채비율(%)</td>
                     <td class="num">59.6</td>							
                     <td class="num">72.6</td>
                     <td class="num">96.6</td>
-                    <td class="num">134.0</td>
-                    <td class="num">163.1</td>								
+                    <td class="num dn">134.0</td>
+                    <td class="num dn">163.1</td>								
                 </tr>
                 <tr>
                     <td class="tit">차입금(억원)</td>
                     <td class="num">8,602</td>								
                     <td class="num">11,041</td>
                     <td class="num">14,570</td>
-                    <td class="num">18,091</td>
-                    <td class="num">20,807</td>							
+                    <td class="num dn">18,091</td>
+                    <td class="num dn">20,807</td>							
                 </tr>
                 <tr>
                     <td class="tit">총자산회전율(회)</td>
                     <td class="num">1.0</td>						
                     <td class="num">1.1</td>
                     <td class="num">1.2</td>
-                    <td class="num">1.1</td>
-                    <td class="num">0.9</td>							
+                    <td class="num dn">1.1</td>
+                    <td class="num dn">0.9</td>							
                 </tr>
                 <tr>
                     <td class="tit">이자보상배율(배)</td>
                     <td class="num">26.5</td>						
                     <td class="num">8.3</td>
                     <td class="num">9.7</td>
-                    <td class="num">4.0</td>
-                    <td class="num">2.7</td>							
+                    <td class="num dn">4.0</td>
+                    <td class="num dn">2.7</td>							
                 </tr>							
                 </tbody>
             </table>
@@ -211,8 +271,8 @@
                         <th scope="col">2020</th>
                         <th scope="col">2019</th>
                         <th scope="col">2018</th>
-                        <th scope="col">2017</th>
-                        <th scope="col">2016</th>
+                        <th scope="col" class="dn">2017</th>
+                        <th scope="col" class="dn">2016</th>
                     </tr>
                     </thead>
     
@@ -222,40 +282,40 @@
                         <td class="num">48,095</td>						
                         <td class="num">49,615</td>
                         <td class="num">55,849</td>
-                        <td class="num">50,647</td>
-                        <td class="num">39,704</td>
+                        <td class="num dn">50,647</td>
+                        <td class="num dn">39,704</td>
                     </tr>
                     <tr>
                         <td class="tit">영업이익(억원)</td>
                         <td class="num">7,422</td>							
                         <td class="num">3,654</td>
                         <td class="num">5,546</td>
-                        <td class="num">2,626</td>
-                        <td class="num">1,571</td>
+                        <td class="num dn">2,626</td>
+                        <td class="num dn">1,571</td>
                     </tr>
                     <tr>
                         <td class="tit">영업이익률(%)</td>
                         <td class="num">15.4</td>					
                         <td class="num">7.4</td>
                         <td class="num">9.9</td>
-                        <td class="num">5.2</td>
-                        <td class="num">4.0</td>
+                        <td class="num dn">5.2</td>
+                        <td class="num dn">4.0</td>
                     </tr>
                     <tr>
                         <td class="tit">법인세차감전순이익(억원)</td>
                         <td class="num">7,669</td>						
                         <td class="num">3,769</td>
                         <td class="num">6,169</td>
-                        <td class="num">2,897</td>
-                        <td class="num">1,129</td>
+                        <td class="num dn">2,897</td>
+                        <td class="num dn">1,129</td>
                     </tr>
                     <tr>
                         <td class="tit">법인세차감전순이익율(%)</td>
                         <td class="num">15.9</td>						
                         <td class="num">7.6</td>
                         <td class="num">11.0</td>
-                        <td class="num">5.7</td>
-                        <td class="num">2.8</td>
+                        <td class="num dn">5.7</td>
+                        <td class="num dn">2.8</td>
                     </tr>
                     </tbody>
             </table>

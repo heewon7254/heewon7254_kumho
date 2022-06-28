@@ -40,7 +40,7 @@ $(function(){
           maintainAspectRatio :false,
           plugins:{
             legend:{
-              display:false
+              display:true
             }        
           }
         }
