@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/fullpage.min.css">
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet"  href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/main.css">
 
@@ -18,7 +18,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
     <script src="js/common.js"></script>
@@ -177,38 +177,40 @@
             <h3 class="w_color content_tt tac">CEO GREETING</h3>
             <div class="ceo_greeting">
                 <img src="images/ceo_img.png" class="animate__animated" alt="ceo_img">
-                <ul class="greeting_content" class="animate__animated">
-                    <li>
-                        <ul>
-                            <li>존경하는 주주 및 고객 여러분,</li>
-                            <li>금호석유화학은 1970년 창사 이후 합성고무, 합성수지, 정밀화학, CNT, 에너지,</li>
-                            <li>건자재를 아우르는 사업 포트폴리오 구축을 통해</li>  
-                            <li>글로벌 석유화학 기업으로  성장하였습니다.</li>
-                            <li>이는 지속적으로 더 나은 미래 가치를 제공하기 위해 노력한 결과입니다.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li>최근 직면한 산업 구조 변화와 경영 환경 상의 위협은 석유화학 기업에 전례 없는</li>
-                            <li> 새로운 도전과 혁신을 요구하고 있습니다</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li>이러한 변화흐름에 맞추어 금호석유화학은 “솔루션 파트너”로 나아가고자 합니다.</li>
-                            <li>제품과 기술 개발뿐 아니라 비즈니스 프로세스, 서비스, 인재 등 각 분야에서</li> 
-                            <li>최고 수준을 지향하고, 고객의 요구에 앞서 최적의 솔루션을 제공하겠습니다.</li>
-                        </ul>
-                    </li> 
-                    <li>
-                        <ul>
-                            <li>앞으로 조직과 미래 사회의 안전 및 환경 개선을 위해 노력하는 한편,</li>
-                            <li>성장 동력 확보에 힘써 신수종 사업 등으로 포트폴리오를 다변화하고 </li>
-                            <li>안정적인 수익 구조를 확보하여 모든 이해관계자에게 신뢰받는 기업이 되겠습니다.</li>
-                        </ul>
-                    </li> 
-                    <li>감사합니다.</li>
-                </ul>
+                <div class="swiper mySwiper">
+                    <div class="greeting_content animate__animated swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>존경하는 주주 및 고객 여러분,</li>
+                                <li>금호석유화학은 1970년 창사 이후 합성고무, 합성수지, 정밀화학, CNT, 에너지,</li>
+                                <li>건자재를 아우르는 사업 포트폴리오 구축을 통해</li>  
+                                <li>글로벌 석유화학 기업으로  성장하였습니다.</li>
+                                <li>이는 지속적으로 더 나은 미래 가치를 제공하기 위해 노력한 결과입니다.</li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>최근 직면한 산업 구조 변화와 경영 환경 상의 위협은 석유화학 기업에 전례 없는</li>
+                                <li> 새로운 도전과 혁신을 요구하고 있습니다</li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>이러한 변화흐름에 맞추어 금호석유화학은 “솔루션 파트너”로 나아가고자 합니다.</li>
+                                <li>제품과 기술 개발뿐 아니라 비즈니스 프로세스, 서비스, 인재 등 각 분야에서</li> 
+                                <li>최고 수준을 지향하고, 고객의 요구에 앞서 최적의 솔루션을 제공하겠습니다.</li>
+                            </ul>
+                        </div> 
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>앞으로 조직과 미래 사회의 안전 및 환경 개선을 위해 노력하는 한편,</li>
+                                <li>성장 동력 확보에 힘써 신수종 사업 등으로 포트폴리오를 다변화하고 </li>
+                                <li>안정적인 수익 구조를 확보하여 모든 이해관계자에게 신뢰받는 기업이 되겠습니다.</li>
+                            </ul>
+                        </div> 
+                        <div class="swiper-slide">감사합니다.</div>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="ceo2 container con_pd section">
@@ -355,6 +357,7 @@
 
     <script src="js/fullpage.min.js"></script>
     <script src="js/fullpage.extensions.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCC25PZWX0"></script>
@@ -366,4 +369,5 @@
         gtag('config', 'G-ZCC25PZWX0');
     </script>
 </body>
+
 </html>

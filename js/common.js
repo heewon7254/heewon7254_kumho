@@ -68,7 +68,7 @@ $(function(){
         }
     });
 
-      let searchIcon = $('.icon').find('.search');
+      let searchIcon = $('.search');
       let modalWrap = $('.modal_wrap');
 
       searchIcon.click(function(){

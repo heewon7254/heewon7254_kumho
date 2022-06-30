@@ -1,6 +1,9 @@
 $(function(){
 
-
+    var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true
+    });
     // let ceoTab = $('.ceo_img a');
 
     // console.log(ceoTab);
@@ -14,21 +17,24 @@ $(function(){
         //options here
         autoScrolling:true,
         scrollHorizontally: true,
+        showActiveTooltip: true, 
         navigation:true,
         anchors: ['firstPage', 'secondPage', '3rdPage','footer'],
-        navigationTooltips:['1','2','3','4'],
+        navigationTooltips:['ceo','greeting','profile','footer'],
     });
 
-    let ceoSlide = $('.greeting_content');
+    // let ceoSlide = $('.greeting_content');
     
-    ceoSlide.slick({
-        dots: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 1,
-        fade: true,
-        cssEase: 'linear'
-    });
+    // ceoSlide.slick({
+    //     dots: false,
+    //     infinite: false,
+    //     speed: 300,
+    //     slidesToShow: 1,
+    //     fade: true,
+    //     cssEase: 'linear'
+    // });
+
+
 
     // let ceoOptions = {
     //     dots: false,

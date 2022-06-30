@@ -230,23 +230,26 @@ em{
     top:0;
     transition:0.2s ease-in-out;    
   }
-  .menu span:nth-child(1){top:0;}
+.menu span:nth-child(1){top:0;}
   
-  .menu span:nth-child(2),
-  .menu span:nth-child(3){top:10px;}
+.menu span:nth-child(2),
+.menu span:nth-child(3){top:10px;}
 
-  .menu span:nth-child(4){top:20px;}
+.menu span:nth-child(4){top:20px;}
   
 .menu.active span:nth-child(1),
 .menu.active span:nth-child(4){
     opacity:0;
   }
-  .menu.active span:nth-child(2){transform:rotate(45deg)}
+.menu.active span:nth-child(2){transform:rotate(45deg)}
   
-  .menu.active span:nth-child(3){transform:rotate(-45deg)}
-  .menu{position: absolute;width: 30px; height: 30px; z-index: 105;display: block;    top: 50%;
+.menu.active span:nth-child(3){transform:rotate(-45deg)}
+.menu{position: absolute;width: 30px; height: 30px; z-index: 105;display: block;    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);}
+.fp-watermark{
+    display: none;
+}
 /*
 LAYOUT
 */
@@ -455,7 +458,6 @@ header li a:hover{
     display:flex;
     justify-content: space-between;
     text-align: center;
-    transition: background 0.2s;
 }
 .toggle_wrap .main_menu2 > li{
     width: 20%;
@@ -544,7 +546,29 @@ footer .footer_menu{
 .footer_menu li:hover{
     color: var(--primary-c);
 }
-
+/*
+#fp-nav ul li, .fp-slidesNav ul li {
+    display: block;
+    width: 20px;
+    height: 13px;
+    margin: 7px;
+    position: relative;
+}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span,
+#fp-nav ul li a span,.fp-slidesNav ul li:hover a{
+    height: 4px;
+    width: 100%;
+    margin: -6px 0 0 -6px;
+    border-radius: 2px;
+}
+#fp-nav li a span:nth-child(2):hover{
+    width: 20px;
+    height: 4px;
+}
+#fp-nav ul li .fp-tooltip {
+    top: -10px;
+}
+*/
 @media (max-width:1170px){
     .container{
         padding: 0 10px;

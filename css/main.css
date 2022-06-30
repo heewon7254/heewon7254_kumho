@@ -55,6 +55,7 @@
     right: 15%;
     width: 620px;
 }*/
+
 .slide_wrapper .controls a{
     position: absolute;
     left: 50%;
@@ -1125,6 +1126,9 @@
     transition: 0.2s;
     display: block;
 }
+#fp-nav ul li .fp-tooltip{
+    color: var(--body-tc);
+}
 
 
 
@@ -1170,8 +1174,14 @@
     display: flex;
     position: relative;
     justify-content: center;
+    align-items: center;
     margin-top: var(--line-height);
+    overflow: hidden;
 }
+.swiper-slide ul{
+    font-weight: 300;
+}
+/*
 .greeting_content{
     background: #ebebeb;
     position: absolute;
@@ -1198,7 +1208,7 @@
     left: 50%;
     transform: translateX(-50%);
     margin-left: 40px;
-}
+}*/
 /*
 .ceo_greeting:before{
     content: 'CEO GREETING';
@@ -1215,7 +1225,8 @@
 .ceo2{
     display: flex;
     position: relative;
-    justify-content: center
+    justify-content: center;
+    overflow: hidden;
 }
 .profile_content{
     position: absolute;
@@ -1254,6 +1265,25 @@
     animation-name: fadeInRight;
     animation-delay: 0.3s;
 }
+.swiper {
+    width: 46vw;
+    height: 320px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    padding: 0px 10px;
+    background: linear-gradient(45deg, #8092af, #acf0eb);
+}
+  
 /*ceo tab*/
 /*
 #profile{
@@ -1301,6 +1331,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    white-space: nowrap;
 }
 .tab-wrapper ul li:hover{
     background: var(--secondary-c);
@@ -1394,6 +1425,15 @@ table tbody tr:hover{
     }
     .ceo_greeting:before{
         content: none;
+    }
+    .ceo_greeting{
+        flex-direction: column;
+    }
+    .swiper{
+        width: 80vw;
+    }
+    .ceo_greeting img{
+        height: 60vw;   
     }
 }
 @media (max-width:1300px){

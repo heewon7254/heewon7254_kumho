@@ -14,8 +14,9 @@ $(function(){
         autoScrolling:true,
         scrollHorizontally: true,
         navigation:true,
+        showActiveTooltip: true, 
         anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage','5rdPage','6rdPage','footer'],
-        navigationTooltips:['1','2','3','4','5','6','7']
+        navigationTooltips:['About Us','Slogan','Change','Trust','Environment','Information','Footer']
     });
 
 });

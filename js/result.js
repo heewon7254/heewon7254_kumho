@@ -56,8 +56,9 @@ $(function(){
       autoScrolling:true,
       scrollHorizontally: true,
       navigation:true,
+      showActiveTooltip: true, 
       anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'footer'],
-      navigationTooltips:['1','2','3','4','5']  
+      navigationTooltips:['Financial','Chart','Table1','Table2','Footer']  
   });
 
   
