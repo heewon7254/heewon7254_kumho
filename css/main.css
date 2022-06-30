@@ -1379,6 +1379,9 @@ table tbody tr:hover{
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.mapcontent h2{
+    line-height: calc(var(--line-height)*3);
+}
 .location_banner_wrap .content h2,
 .location_banner_wrap .content p{
     animation-delay: 0.3s;
@@ -1390,22 +1393,19 @@ table tbody tr:hover{
     text-align: center;
 }
 .location > div h3{
-    border-bottom:2px solid var(--body-tc);
     line-height: calc(var(--line-height)*3);
-    position: relative;
-    transition: 0.3s;
 }
-.location > div h3 span{
-    position: absolute;
-    left: 25%;
-    top: 50%;
-    transform: translateY(-50%);
+.lo_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
-.location > div h3:hover span{
+.lo_wrap span{
+    transition: 0.2s;
+}
+.lo_wrap:hover span{
     color: var(--primary-c);
-}
-.mapcontent h2{
-    line-height: calc(var(--line-height)*3);
 }
 @media (max-width:1170px){
     .inner_circle{
