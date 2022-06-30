@@ -19,14 +19,15 @@ $(function(){
                 bar.eq(newIndex).addClass('active');    
             }
         }); //main slide
-        /*
-        $('.slide').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-          });
-          */
+        
+        
+        // $('.slide').slick({
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     autoplay: true,
+        //     autoplaySpeed: 2000,
+        // });
+
         $('.stop').click(function(){
            $('.autoplay_btn').addClass('active');
            main.stopAuto();
@@ -160,9 +161,6 @@ $(function(){
             once: true
         });    //aos
 
-        $('.language').click(function(){
-            $(this).text('eng');
-        });  //language
 
         $('.recruit_con .text_area a').click(function(e){
             e.preventDefault();

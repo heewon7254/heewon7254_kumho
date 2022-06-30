@@ -8,7 +8,6 @@ $(function(){
     subMenu = menu.find('ul');
 
 
-    if(!$('nav').hasClass('active')){
         subMenu.each(function(){
             if($(this).outerHeight() > newHeight){
                 newHeight =$(this).outerHeight() + headerHeight;
@@ -23,14 +22,6 @@ $(function(){
                 header.stop().animate({height:headerHeight});
             }
         );
-        let aisideMenu = $('.main_menu2 > li');
-        aisideMenu.click(function(){
-            $(this).find('ul').slideToggle();
-            $(this).siblings().find('ul').slideUp();
-            $(this).toggleClass('active');
-            $(this).siblings().removeClass('active');
-        });
-    }
 
     
         menu.each(function(){
@@ -58,13 +49,24 @@ $(function(){
     //     $(this).toggleClass('active');
     //   });
 
-      $('.menu').click(function(e){
+
+    $('.menu').click(function(e){
         e.preventDefault();
         $('.toggle_wrap').toggleClass('active');
         $('body').toggleClass('active');
         $(this).toggleClass('active');
-      });
+    });
     
+    let aisideMenu = $('.main_menu2 > li');
+
+    aisideMenu.click(function(){
+        if($(window).outerWidth()<=922){
+            $(this).find('ul').slideToggle();
+            $(this).siblings().find('ul').slideUp();
+            $(this).toggleClass('active');
+            $(this).siblings().removeClass('active');
+        }
+    });
 
       let searchIcon = $('.icon').find('.search');
       let modalWrap = $('.modal_wrap');
@@ -73,11 +75,17 @@ $(function(){
           modalWrap.addClass('active');
           $('body').css({overflow:'hidden'});
       });
+
       modalWrap.find('.close').click(function(){
           modalWrap.removeClass('active');
           modalWrap.fadeOut();
       }); //search
 
+      $('.logo').click(function(){
+        location.href = 'index.html';
+      });
 
-
+      $('.language').click(function(){
+        $(this).toggleClass('active');
+    });  //language
 });
