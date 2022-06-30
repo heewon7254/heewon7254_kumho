@@ -293,11 +293,11 @@
 }
 .product .slick-prev{
     margin-left: -150px;
-    background:url(../images/product_chevron_left.png) no-repeat;
+    background:url(../images/left.png) no-repeat;
 }
 .product .slick-next{
     margin-left: 150px;
-    background:url(../images/product_chervron_right.png) no-repeat;
+    background:url(../images/right.png) no-repeat;
 }
 .product .slick-dots{
     display: flex;
@@ -784,6 +784,7 @@
     padding: var(--line-height) 0;
     border-radius: 5px;
     /* height: 33.3333%; */
+    transition: 0.3s;
 }
 .invest_wrap .com_info{
     display: flex;
@@ -991,7 +992,7 @@
     bottom: 0;
 }
 
-/*company html */
+/* -------------------------- COMPANY ---------------------------*/
 .company_banner_wrap{
     height: 100vh;
     background: url(../images/company_bg1.png) no-repeat 0 0/cover;
@@ -1072,6 +1073,7 @@
     transform: translate(-50%,-50%);
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .trust .contents{
     flex-direction: row-reverse;
@@ -1126,7 +1128,7 @@
 
 
 
-/*ceo html*/
+/* -------------------------- CEO ---------------------------*/
 
 .ceo_banner_wrap{
     position: relative;
@@ -1330,7 +1332,7 @@ table tbody tr:hover{
 }
 
 
-  /*location html*/
+/* -------------------------- LOCATION ---------------------------*/
 .location_banner_wrap{
     position: relative;
     left: 0;
@@ -1464,33 +1466,6 @@ table tbody tr:hover{
     .mission_wrapper > div .mission_back{
         display: none;
     }
-
-
-    /*
-    .esg_list{
-        display: block;
-        height: auto;
-    }
-    .esg_list > li {
-        gap: 2.5vh;
-    }
-    .esg_list li > h2{
-        opacity: 1;
-        background: none;
-        color: var(--white);
-        z-index: 5;
-    }
-    .esg_list > li h2:hover{
-        background:none;
-    }
-    .esg_list > li .esg_desc{
-        opacity: 1;
-        color: var(--white);
-        z-index: 5;
-    }
-    .esg_list > li:after{
-        opacity: 1;
-    }*/
     .esg_list > button{
         position: absolute;
         left: 50%;
@@ -1514,6 +1489,10 @@ table tbody tr:hover{
     }
     .ceo2 img{
         width: 60vw;
+    }
+    .value ul[class*="back"] {
+        opacity: 1;
+        font-size: 2vw;
     }
 }
 @media (max-width:700px){
