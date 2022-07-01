@@ -1178,77 +1178,26 @@
     margin-top: var(--line-height);
     overflow: hidden;
 }
-.swiper-slide ul{
+.swiper-slide > ul{
     font-weight: 300;
 }
-/*
-.greeting_content{
-    background: #ebebeb;
-    position: absolute;
-    right: 10%;
-    top: 33%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    border: transparent;
-    border-radius: 10px;
-    width: 565px;
-}
-.greeting_content .slick-prev{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: -40px;
-}
-.greeting_content .slick-next{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 40px;
-}*/
-/*
-.ceo_greeting:before{
-    content: 'CEO GREETING';
-    position: absolute;
-    left: -15%;
-    top: 31%;
-    font-size: 90px;
-    color: #ebebeb;
-    transition:1.5s 1s cubic-bezier(.11,.24,.26,1);
-}*/
 .ceo_greeting img{
     border-radius: 10px;
 }
-.ceo2{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    overflow: hidden;
-}
 .profile_content{
-    position: absolute;
     display: flex;
     gap: 20px;
     right: 3vh;
     top: 50%;
-    background: #ebebeb;
     padding: 10px;
     border: transparent;
     border-radius: 10px;
 }
-/*
-.profile_content:before{
-    content: 'CEO PROFILE';
-    position: absolute;
-    left: 10%;
-    top: -20%;
-    font-size: 90px;
-    color: #ebebeb;
-    transition:1.5s 1s cubic-bezier(.11,.24,.26,1);
-}*/
+.content1 , .content2{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
 .cell ul{
     display: flex;
     white-space: nowrap;
@@ -1265,13 +1214,22 @@
     animation-name: fadeInRight;
     animation-delay: 0.3s;
 }
-.swiper {
+.ceo_profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ceo_greeting .swiper {
     width: 46vw;
     height: 320px;
     margin-right: 0;
     margin-left: 0;
-  }
-
+}
+.ceo_profile .swiper{
+    width: 46vw;
+    margin-right: 0;
+    margin-left: 0;
+}
 .swiper-slide {
     display: flex;
     align-items: center;
@@ -1407,6 +1365,7 @@ table tbody tr:hover{
 .lo_wrap:hover span{
     color: var(--primary-c);
 }
+
 @media (max-width:1170px){
     .inner_circle{
         left: 58%;
@@ -1432,8 +1391,8 @@ table tbody tr:hover{
     .swiper{
         width: 80vw;
     }
-    .ceo_greeting img{
-        height: 60vw;   
+    .ceo_greeting img, .ceo_profile img{
+        height: 40vh;   
     }
 }
 @media (max-width:1300px){
@@ -1446,14 +1405,17 @@ table tbody tr:hover{
     .profile_content{
         top: 30%;
     }
-    .ceo2 .profile_content{
-        flex-direction: column;
-    }
 }
 @media (max-width:960px){
     .product_desc .container{
         flex-direction: column;
         gap: var(--line-height);
+    }
+    .ceo_profile img{
+        display: none;
+    }
+    .ceo2 ul, .ceo1 ul{
+        font-size: 2vw;
     }
 }
 @media (max-width:922px){
