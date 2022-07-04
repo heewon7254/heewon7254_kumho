@@ -30,6 +30,9 @@
     margin: 10px;
     border-bottom: 1px solid var(--white);
 }
+.popup ul a:hover{
+    color: var(--primary-c);
+}
 /* -------------------------- MAIN SLIDE ---------------------------*/
 .slide_wrapper{
     height: 100vh;
