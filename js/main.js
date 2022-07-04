@@ -91,7 +91,7 @@ $(function(){
             e.preventDefault();
             let targetnews = $(this).find('a').attr('href');
             $(targetnews).fadeIn().siblings().hide();
-            $(this).toggleClass('active').siblings().removeClass('active');
+            $(this).addClass('active').siblings().removeClass('active');
         });
         $('.business_content li:nth-child(3)').addClass('active');
         $('#news_slide03').show(); //News Tab
