@@ -1,5 +1,15 @@
 @import url(common.css);
-/*메인슬라이드*/
+/* -------------------------- MAIN SLIDE ---------------------------*/
+.popup{
+    width: 150px;
+    padding: 20px;
+    position: fixed;
+    left: 50px;
+    top: 100px;
+    border:1px solid #ebebeb;
+    box-shadow:3px 5px 10px rgba(0,0,0,.2);
+    border-radius:8px;
+}
 .slide_wrapper{
     height: 100vh;
 }
@@ -49,13 +59,7 @@
 #slide3 h2{
     left: 15%;
     color:#ebebeb;
-}/*
-#slide1 .inner_circle{
-    position: absolute;
-    right: 15%;
-    width: 620px;
-}*/
-
+}
 .slide_wrapper .controls a{
     position: absolute;
     left: 50%;
@@ -113,13 +117,11 @@
     width: 22px;
     height: 36px;
     background: no-repeat 0 0 / 100% 100%;
-    /* display: inline-block; pos absoulte로 하면 크기가 잡히므로 없애도됨*/
     text-indent: -9999em;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
-
 .control .bx-controls .bx-prev{
     background-image: url(../images/chevron\ left.png);
     right: 87%;
@@ -219,7 +221,7 @@
     background: linear-gradient(45deg, #8092af, #acf0eb);
     color: var(--white);
 }
-/*product*/
+/* -------------------------- PRODUCT ---------------------------*/
 .product_bg{
     background: url(../images/product_bg.jpg) no-repeat center center/cover;
     position: relative;
@@ -273,15 +275,11 @@
 .product li:hover :after{
     background-color: var(--secondary-c);
 }
-/* .product .bx-wrapper .bx-viewport{
-    overflow: visible;
-} */
 .product li h3{
     text-align: center;
     padding-top: var(--line-height);
     position: relative;
 }
-
 .product .slick-arrow{
     position: absolute;
     top:92%;
@@ -326,7 +324,7 @@
 .product .slick-arrow{
     display:none;
 }
-/*product_desc*/
+/* -------------------------- PRODUCT DESC ---------------------------*/
 .products_desc{
     margin-bottom: calc(var(--line-height)*5);
 }
@@ -344,16 +342,11 @@
     gap: 25px;
     white-space: nowrap;
 }
-/* .product_desc .product_summary .content_desc{
-    width: 525px;
-} */
 .product_desc .product_select{
     display: flex;
     gap: 25px;
     margin-bottom: var(--line-height);
 }
-/* .product_desc .btns{
-} */
 .product_desc .btns a:first-child{
     margin-right: 20px;
 }
@@ -394,7 +387,7 @@
 
 
 
-/*news*/
+/* -------------------------- NEWS ---------------------------*/
 .business_news{
     background:url(../images/news_bg.jpg) no-repeat center/cover; 
     overflow: hidden;
@@ -451,10 +444,6 @@
     width: 32.1%;
     height: 32%;
 }
-/* .news_slides li{
-    width: 416px;
-    height: 405px;
-} */
 .news_slides li img{
     border-radius: 0 5%;
     width: 100%;
@@ -532,7 +521,7 @@
     display: block;
 }
 
-/*esg*/
+/* -------------------------- ESG ---------------------------*/
 .esg_list {
     display: flex;
     justify-content: space-between;
@@ -642,7 +631,7 @@
 }
 
 
-
+/* -------------------------- RECRUIT ---------------------------*/
 .recruit{
     background: #f5f5f5;
 }
@@ -747,7 +736,7 @@
 }
 
 
-
+/* -------------------------- INVEST ---------------------------*/
 .invest{
     background: url(../images/info_bg.jpg) no-repeat center/cover;
     position: relative;
@@ -803,7 +792,7 @@
     font-weight: 500;
 }
 
-/*promotion*/
+/* -------------------------- PROMOTION ---------------------------*/
 
 .promotion .container{
     display: flex;
@@ -857,9 +846,9 @@
     visibility: visible;
 }
 
-/*sub page*/
+/* ------------------------------------ SUB PAGE -------------------------------------*/
 
-/*vision page*/
+/* -------------------------- VISION PAGE ---------------------------*/
 .v_banner_wrap{
     background: url(../images/vision_bg1.png) no-repeat 50% 70%/cover;
     height: 100vh;
@@ -993,7 +982,7 @@
     bottom: 0;
 }
 
-/* -------------------------- COMPANY ---------------------------*/
+/* -------------------------- COMPANY PAGE---------------------------*/
 .company_banner_wrap{
     height: 100vh;
     background: url(../images/company_bg1.png) no-repeat 0 0/cover;
@@ -1035,13 +1024,10 @@
     animation-name: fadeInUp;
     animation-delay: 0.3s;
 }
-
-.value > div{
-    height: 100vh;
+.value{
     position: relative;
-    z-index: 2;
 }
-.value > *:not(.title):after{
+.value:after{
     content: '';
     position: absolute;
     left: 0;
@@ -1049,14 +1035,7 @@
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,.5);
-    z-index: -1;
-}
-.value > h2{
-    background: rgba(73,70,70,0.2);
-    left: 0;right: 0;top: 0;bottom: 0;
-    position: absolute;
-    height: 100vh;
-    z-index: -1;
+    z-index: 0;
 }
 .change{
     background: url(../images/change_bg.png) no-repeat 50%/cover;
@@ -1075,6 +1054,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    z-index: 5;
 }
 .trust .contents{
     flex-direction: row-reverse;
@@ -1083,29 +1063,8 @@
     opacity: 0;
     transition: 0.3s;
 }
-.value div:hover ul[class*="back"]{
+.value:hover ul[class*="back"]{
     opacity: 1;
-}
-.question{
-    position: relative;
-    /* display: flex;
-    justify-content: center; */
-}
-.question h3{
-    line-height: calc(var(--line-height)*2);
-    padding-right:600px;
-    border-bottom: 3px solid var(--body-tc);
-}
-.question span{
-    position: absolute;
-    left: 90%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 50px;
-}
-.answer p{
-    display: flex;
-    justify-content: center;
 }
 .info_list{
     max-width: 700px;
@@ -1132,7 +1091,7 @@
 
 
 
-/* -------------------------- CEO ---------------------------*/
+/* -------------------------- CEO PAGE ---------------------------*/
 
 .ceo_banner_wrap{
     position: relative;
@@ -1242,12 +1201,7 @@
     background: linear-gradient(45deg, #8092af, #acf0eb);
 }
   
-/*ceo tab*/
-/*
-#profile{
-    display:none;
-}
-*/
+/* -------------------------- RESULT PAGE ---------------------------*/
 .result_banner_wrap{
     height: 100vh;
     background: url(../images/result_bg.png) no-repeat 0 0/cover;
@@ -1321,7 +1275,7 @@ table tbody tr:hover{
 }
 
 
-/* -------------------------- LOCATION ---------------------------*/
+/* -------------------------- LOCATION PAGE ---------------------------*/
 .location_banner_wrap{
     position: relative;
     left: 0;

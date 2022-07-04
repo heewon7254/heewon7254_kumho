@@ -253,6 +253,12 @@ em{
 /*
 LAYOUT
 */
+body.scroll-down header{
+    transform:translateY(-100%);
+  }
+body.scroll-up header{
+    transform:none;
+}
 body.active{
     overflow: hidden;
 }
@@ -274,7 +280,7 @@ body.active{
     margin-bottom: calc(var(--line-height)*2);
 }
 header{
-    position: absolute;
+    position: fixed;
     z-index:100;
     left: 0;
     right: 0;
@@ -282,6 +288,9 @@ header{
     box-sizing: border-box;
     transition:background 0.3s;
     overflow: hidden;
+}
+header.bg{
+    background: #000;
 }
 header:hover{
     background: rgba(0, 0, 0, 0.9);
@@ -373,7 +382,7 @@ header li a:hover{
 .main_menu > li span{
     display: none;
 }
-.mini{
+/* .mini{
     display: none;
     color: var(--white);
 }
@@ -391,7 +400,7 @@ header li a:hover{
     left: 0;
     right: 0;
     top: 0;
-}
+} */
 .modal_wrap{
     display:none;
 }
@@ -446,9 +455,9 @@ header li a:hover{
     transition:  0.3s;
 }
 .toggle_wrap.active{
-    background: var(--black);
     position: fixed;
     bottom: 0;
+    background: var(--black);
 }
 .toggle_wrap ul, .toggle_wrap h1{
     display: none;
@@ -464,6 +473,8 @@ header li a:hover{
     display: flex;
     flex-direction: column;
     gap: 5vh;
+    background: var(--black);
+    transition: 0.2s;
 }
 .toggle_wrap.active .main_menu2 li.active > a{
     color: var(--primary-c);
@@ -481,13 +492,16 @@ header li a:hover{
     background: url(../images/menu_company_bg.jpg) no-repeat 70%/cover;
 }
 .toggle_wrap > ul > li:nth-child(2):hover{
-    background: url(../images/menu_product_bg.jpg) no-repeat 70%/cover;
+    background: url(../images/menu_product_bg\ .jpg) no-repeat 70%/cover;
 }
 .toggle_wrap > ul > li:nth-child(3):hover{
-    background: url(../images/result_bg.png) no-repeat 30% 0/cover;
+    background: url(../images/menu_invest_bg1.jpg) no-repeat 50% 0%/cover;
 }
 .toggle_wrap > ul > li:nth-child(4):hover{
-    background: url(../images/ceo_bg.png) no-repeat 50% 0/cover;
+    background: url(../images/ceo_bg.png) no-repeat 50% 50%/cover;
+}
+.toggle_wrap > ul > li:nth-child(5):hover{
+    background: url(../images/menu_manage_bg.jpg) no-repeat 0 0/cover;
 }
 .toggle_wrap a{
     text-transform: uppercase;
@@ -502,8 +516,6 @@ header li a:hover{
     left: 80%;
     transition: 0.2s;
 }
-
-
 .logo a{
     width: 197px;
     height: 32px;
@@ -546,29 +558,6 @@ footer .footer_menu{
 .footer_menu li:hover{
     color: var(--primary-c);
 }
-/*
-#fp-nav ul li, .fp-slidesNav ul li {
-    display: block;
-    width: 20px;
-    height: 13px;
-    margin: 7px;
-    position: relative;
-}
-#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span,
-#fp-nav ul li a span,.fp-slidesNav ul li:hover a{
-    height: 4px;
-    width: 100%;
-    margin: -6px 0 0 -6px;
-    border-radius: 2px;
-}
-#fp-nav li a span:nth-child(2):hover{
-    width: 20px;
-    height: 4px;
-}
-#fp-nav ul li .fp-tooltip {
-    top: -10px;
-}
-*/
 @media (max-width:1170px){
     .container{
         padding: 0 10px;

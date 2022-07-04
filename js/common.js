@@ -73,6 +73,7 @@ $(function(){
 
       searchIcon.click(function(){
           modalWrap.addClass('active');
+          modalWrap.find('#search').focus();
           $('body').css({overflow:'hidden'});
       });
 
