@@ -234,7 +234,7 @@ $(function(){
 
         let popup = document.querySelector('.popup');
         let popupCheckBox = document.querySelector('#popup');
-        let popupClose = popup.querySelector('#close');
+        let popupClose = document.querySelector('#close');
 
         //쿠키 생성 함수
         function setCookie(name,value,day){
@@ -274,7 +274,7 @@ $(function(){
                 popup.style.display = 'block'; //첫방문, 안보기 체크안하고 닫기,
             }
         }        
-        getCookie('ABC');
+        getCookie('KUMHO');
 
         //쿠키 삭제 함수
         function delCookie(name,value){           
@@ -293,9 +293,9 @@ $(function(){
         popupClose.addEventListener('click', ()=>{
             popup.style.display = 'none';
             if(popupCheckBox.checked){ //체크되었다면, 팝업을 다시 안보겠다, 쿠키생성
-                setCookie('ABC','Main Page',1);
+                setCookie('KUMHO','MainPage',1);
             }else{//체크x, 팝업을 다시 보겠다, 쿠키제거
-                delCookie('ABC','Main Page');
+                delCookie('KUMHO','MainPage');
             }
         });
 

@@ -82,9 +82,9 @@ $(function(){
           modalWrap.fadeOut();
       }); //search
 
-      $('.logo').click(function(){
-        location.href = 'index.html';
-      });
+    //   $('.logo').click(function(){
+    //     location.href = 'index.html';
+    //   });
 
       $('.language').click(function(){
         $(this).toggleClass('active');

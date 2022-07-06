@@ -9,7 +9,7 @@
     box-shadow:3px 5px 10px rgba(0,0,0,.2);
     border-radius:8px;
     z-index: 10;
-    background: rgba(0,0,0,.8);
+    background: rgba(0,0,0,.9);
 }
 .popup ul{
     padding: 10px 0;
@@ -26,12 +26,9 @@
     right: 0;
 }
 .popup ul a{
-    color: var(--white);
+    color: var(--primary-c);
     margin: 10px;
     border-bottom: 1px solid var(--white);
-}
-.popup ul a:hover{
-    color: var(--primary-c);
 }
 /* -------------------------- MAIN SLIDE ---------------------------*/
 .slide_wrapper{
@@ -117,6 +114,8 @@
 }
 .bar_wrap .slideinfo_list li.active{
     opacity: 1;
+    transform: translateY(-5px);
+    transition: 0.2s;
 }
 .bar_wrap .slideinfo_list li:after{
     content: '';
@@ -408,9 +407,6 @@
     opacity: 1;
 }
 
-
-
-
 /* -------------------------- NEWS ---------------------------*/
 .business_news{
     background:url(../images/news_bg.jpg) no-repeat center/cover; 
@@ -424,30 +420,16 @@
     width: 33.33333%;
     position: relative;
 }
-/* .business_content  li:after{
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%,-50%);
-    background: var(--primary_bg);
-    width: 135px;
-    height: 135px;
-    border-radius: 50%;
-    z-index: 0;
-    opacity: 0;
-    transition: 0.3s;
-} */
 .business_content  li.active:before{
     content: '';
     position: absolute;
-    left: 65%;
-    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 10px);
     transform: translate(-50%,-50%);
-    background: #a5a5a5;
-    width: 135px;
-    height: 135px;
-    border-radius: 50%;
+    background: var(--primary-c);
+    width:  40px;
+    height: 5px;
     z-index: 0;
     opacity: 1;
     transition: 0.3s;
@@ -487,8 +469,8 @@
     top: 15px;
     width: 0;
     height: 0;
-    border-left: 1px solid #fff;
-    border-top: 1px solid #fff;
+    border-left: 1px solid var(--white);
+    border-top: 1px solid var(--white);
     z-index: 1;
     transition: width 1.2s 1.2s,height 1.2s, 1.2s;
     opacity: 0;
@@ -505,7 +487,7 @@
     background: linear-gradient(45deg, rgba(73,70,70,0.8), rgba(26,159,146,0.8));
     opacity: 0;
     transition: 0.3s;
-    color: #fff;
+    color: var(--white);
     border-radius: 0 5%;
 }
 .news_slides li:after{
@@ -515,8 +497,8 @@
     height: 0;
     right: 15px;
     bottom: 15px;
-    border-right: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-right: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
     /* z-index: 1; */
     transition: width 0.8s 0.6s, height 0.8s, 0.6s;
     opacity: 0;
@@ -850,10 +832,27 @@
 .promotion .letter li:nth-child(5){
     text-align: right;
 }
-/*top*/
+/* ------------------------------------ QUESTION -------------------------------------*/
+.custom{
+    position: fixed;
+    bottom: 120px;
+    right: 50px;
+}
+.custom span{
+    display: inline-block;
+    background: var(--white);
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--primary-c);
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+/* ------------------------------------ TOP -------------------------------------*/
 .top{
     background: var(--primary-c);
-    width: 70px;
+    width: 50px;
     height: 50px;
     color: var(--white);
     text-align: center;
@@ -1176,10 +1175,11 @@
     border: transparent;
     border-radius: 10px;
 }
-.content1 , .content2{
+.profile_content .content1 , .profile_content .content2{
     display: flex;
     flex-direction: column;
     padding: 10px 0;
+    font-weight: 300;
 }
 .cell ul{
     display: flex;
@@ -1343,7 +1343,17 @@ table tbody tr:hover{
 .lo_wrap:hover span{
     color: var(--primary-c);
 }
-
+@media (max-width:1300px){
+    .ceo_greeting .greeting_content{
+        width: 46vw;
+    }
+    .ceo_greeting:before{
+        content: none;
+    }
+    .profile_content{
+        top: 30%;
+    }
+}
 @media (max-width:1170px){
     .inner_circle{
         left: 58%;
@@ -1371,17 +1381,6 @@ table tbody tr:hover{
     }
     .ceo_greeting img, .ceo_profile img{
         height: 40vh;   
-    }
-}
-@media (max-width:1300px){
-    .ceo_greeting .greeting_content{
-        width: 46vw;
-    }
-    .ceo_greeting:before{
-        content: none;
-    }
-    .profile_content{
-        top: 30%;
     }
 }
 @media (max-width:960px){
@@ -1457,6 +1456,9 @@ table tbody tr:hover{
     }
     .esg_list > .slick-next{
         margin-left: 40px;
+    }
+    .top{
+        display: none;  
     }
     /*subpage*/
 
@@ -1561,34 +1563,3 @@ table tbody tr:hover{
         width: 60vw;
     }
 }
-/*
-@media (max-width:437px){
-    .bar_wrap .slideinfo_list{
-        gap: 6vw;
-    }
-    :root{
-        --body-fz:10px;
-    }
-    .language{
-        display: none;
-    }
-    header .top_links{
-        gap: 10px;
-    }
-    #slide1 h2{
-        left: 70%;
-    }
-    .product_desc .product_summary{
-        gap: 10px;
-    }
-    .product_desc .product_select{
-        gap: 10px;
-    }
-    .btn{
-        width: 130px;
-    }
-    .footer_menu li:after{
-        background: none;
-    }
-
-}    */
