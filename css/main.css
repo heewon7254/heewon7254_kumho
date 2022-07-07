@@ -1156,6 +1156,7 @@
 }
 .swiper-slide > ul{
     font-weight: 300;
+    padding: 20px 0;
 }
 .ceo_greeting img{
     border-radius: 10px;
@@ -1198,7 +1199,6 @@
 }
 .ceo_greeting .swiper {
     width: 46vw;
-    height: 320px;
     margin-right: 0;
     margin-left: 0;
 }
