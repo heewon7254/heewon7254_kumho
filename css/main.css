@@ -10,7 +10,8 @@
     border-radius:8px;
     z-index: 10;
     background: rgba(0,0,0,.9);
-    overflow: auto;
+    height: 45vh;
+    overflow-y: auto;
 }
 .popup ul{
     padding: 10px 0;
@@ -30,6 +31,16 @@
     color: var(--primary-c);
     margin: 10px;
     border-bottom: 1px solid var(--white);
+}
+.svg_list{
+    display: flex;
+    align-items: center;
+}
+.svg_list svg{
+    margin-left: 5px;
+}
+.svg_list svg path{
+    stroke: var(--white);
 }
 /* -------------------------- MAIN SLIDE ---------------------------*/
 .slide_wrapper{
@@ -1404,6 +1415,12 @@ table tbody tr:hover{
     }
     .mission_wrapper > div {
         width: 46%;
+    }
+    /*pop up*/
+    .popup{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 @media (max-width:768px){
