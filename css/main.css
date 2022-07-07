@@ -10,6 +10,7 @@
     border-radius:8px;
     z-index: 10;
     background: rgba(0,0,0,.9);
+    overflow: auto;
 }
 .popup ul{
     padding: 10px 0;
@@ -428,7 +429,7 @@
     top: calc(100% + 10px);
     transform: translate(-50%,-50%);
     background: var(--primary-c);
-    width:  40px;
+    width:  40%;
     height: 5px;
     z-index: 0;
     opacity: 1;
@@ -499,7 +500,6 @@
     bottom: 15px;
     border-right: 1px solid var(--white);
     border-bottom: 1px solid var(--white);
-    /* z-index: 1; */
     transition: width 0.8s 0.6s, height 0.8s, 0.6s;
     opacity: 0;
 }
@@ -759,10 +759,10 @@
 .invest_wrap{
     display: flex;
     justify-content: space-around;
-    /* height: 300px; */
 }
 .invest_wrap > ul{
     width: 40%;
+    z-index: 20;
 }
 .invest_wrap .icon_area{
     display: flex;
@@ -776,11 +776,11 @@
     background: var(--primary_bg);
     padding: var(--line-height) 0;
     border-radius: 5px;
-    /* height: 33.3333%; */
-    transition: 0.3s;
+    transition: 1s;
 }
-.invest_wrap .icon_area li:hover{
-    box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+.invest_wrap .icon_area li:hover span{
+    display: inline-block;
+    transform: rotateX(45deg);
 }
 .invest_wrap .com_info{
     display: flex;
@@ -811,24 +811,6 @@
     justify-content: space-around;
     gap: 2vh;
 }
-.promotion .letter li{
-    position: relative;
-}
-.promotion .letter li:after{
-    /*content: '';*/
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 100%;
-    width: 0;
-    height: 2px;
-    background: var(--body-tc);
-    transition:0.4s;
-}
-.promotion .letter li:hover:after{
-    width: 100%;    
-}
 .promotion .letter li:nth-child(5){
     text-align: right;
 }
@@ -837,6 +819,7 @@
     position: fixed;
     bottom: 120px;
     right: 50px;
+    z-index: 10;
 }
 .custom span{
     display: inline-block;

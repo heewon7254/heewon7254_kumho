@@ -14,19 +14,19 @@ $(function(){
             },
             onSlideAfter:function($slideElement, oldIndex, newIndex){
                 console.log(newIndex); //현재 활성화된 슬라이드 번호
-                main.stopAuto();
                 bar.removeClass('active');
                 bar.eq(newIndex).addClass('active');    
             }
         }); //main slide
+
+        $('.bx-next, .bx-prev, .bx-pager a').click(function(){
+            // time to wait (in ms)
+            var wait = 400;
+            setTimeout(function(){
+                main.startAuto();
+            }, wait);
+        }); //main slide Restart auto slide after prev/next click
         
-        
-        // $('.slide').slick({
-        //     slidesToShow: 1,
-        //     slidesToScroll: 1,
-        //     autoplay: true,
-        //     autoplaySpeed: 2000,
-        // });
 
         $('.stop').click(function(){
            $('.autoplay_btn').addClass('active');
@@ -130,25 +130,7 @@ $(function(){
             }
             else{
                 $('.top').removeClass('active');
-            }
-            /* mini header
-            if($(window).width()>=922){
-                if(winSCT>100){
-                    $('header').fadeOut();
-                    $('.mini').addClass('active');
-                    $('.mini').fadeIn();
-                }
-                else if(winSCT<=100){
-                    $('.mini').fadeOut();
-                    $('header').fadeIn(300);
-                }
-            }
-            */
-        });
-        $('.menushow').click(function(e){
-            e.preventDefault();
-            // $('.mini').fadeOut();
-            $('html, body').animate({ scrollTop: 0 }, 400); 
+            } //top button
         });
 
         $('.top').click(function(e){
