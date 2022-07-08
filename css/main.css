@@ -122,16 +122,12 @@
 }
 .bar_wrap .slideinfo_list li{
     position: relative;
+    opacity: 0.6;
 }
 .bar_wrap .slideinfo_list li.active{
     transform: translateY(-5px);
     transition: 0.2s;
-}
-.bar_wrap .slideinfo_list li.active *{
-    color: var(--primary-c);
-}
-.bar_wrap .slideinfo_list li.active:after{
-    background: var(--primary-c);
+    opacity: 1;
 }
 .bar_wrap .slideinfo_list li:after{
     content: '';
