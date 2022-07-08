@@ -29,7 +29,7 @@
     --body-ff:'MinSans-Regular';
     --body-fz:1rem;
     --line-height:28px;
-    --primary-c :#1a9f95;
+    --primary-c :#2ab5ac;
     --secondary-c: rgba(1,175,149,0.5);
     --primary_bg:#ebebeb;
     --white : #fff;
@@ -300,10 +300,10 @@ header{
     overflow: hidden;
 }
 header.bg{
-    background: #000;
+    background: var(--black);
 }
 header:hover{
-    background: rgba(0, 0, 0, 0.9);
+    background: var(--black);
 }
 header .container{
     display: flex;
@@ -352,15 +352,12 @@ header .container{
     height: 40px;
 }
 header li a{
-    color: rgba(225,225,225,0.6);
+    color: var(--white);
     transition: 0.1s;
 }
 .page{
-    color: var(--white);
-}
-header li a:hover{
     color: var(--primary-c);
-}
+}   
 .target{
     position: absolute;
     border-bottom: 4px solid var(--primary-c);
