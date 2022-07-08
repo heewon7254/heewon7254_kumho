@@ -10,8 +10,9 @@
     border-radius:8px;
     z-index: 10;
     background: rgba(0,0,0,.9);
-    height: 45vh;
     overflow-y: auto;
+    max-width: 600px;
+    width: 80%;
 }
 .popup ul{
     padding: 10px 0;
