@@ -352,11 +352,14 @@ header .container{
     height: 40px;
 }
 header li a{
-    color: var(--white);
+    color: rgba(255,255,255,0.5);
     transition: 0.1s;
 }
-.page{
+header li a:hover{
     color: var(--primary-c);
+}
+.page{
+    color: var(--white);
 }   
 .target{
     position: absolute;
@@ -453,7 +456,7 @@ header li a{
     justify-content: space-between;
     text-align: center;
 }
-.toggle_wrap .main_menu2 > li{
+.toggle_wrap.active .main_menu2 > li{
     width: 20%;
     display: flex;
     flex-direction: column;
