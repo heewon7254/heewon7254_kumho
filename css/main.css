@@ -362,7 +362,7 @@
 }
 /* -------------------------- PRODUCT DESC ---------------------------*/
 .products_desc{
-    margin-bottom: calc(var(--line-height)*5);
+    margin-bottom: calc(var(--line-height) * 5);
 }
 .product_desc h2{
     text-align: left;
@@ -1456,6 +1456,13 @@ table tbody tr:hover{
     }
     .esg_list > .slick-next{
         margin-left: 40px;
+    }
+    .img_area li:before{
+        left: 0;
+        opacity: 1;
+    }
+    .img_area li p{
+        opacity: 1;
     }
     .top{
         display: none;  
