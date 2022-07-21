@@ -352,14 +352,14 @@ header .container{
     height: 40px;
 }
 header li a{
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.4);
     transition: 0.1s;
 }
 header li a:hover{
     color: var(--primary-c);
 }
 .page{
-    color: var(--white);
+    color: rgba(255,255,255,0.85);
 }   
 .target{
     position: absolute;
