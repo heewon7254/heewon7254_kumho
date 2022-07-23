@@ -187,7 +187,7 @@ $(function(){
                 esgSlide.not('.slick-initialized').slick(esgOptions);
             }
             else{
-                esgSlide.slick('unslick');
+                esgSlide.filter('.slick-initialized').slick('unslick');
             }
         });//esg responsive slide
 
