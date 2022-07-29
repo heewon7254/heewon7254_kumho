@@ -135,7 +135,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 20px;
+    bottom: 30px;
     display: flex;
     width: 60vw;
 }
@@ -199,10 +199,6 @@
     transform: translateY(-50%);
 }
 
-.inner_circle li {
-    display: flex;
-}
-
 .inner_circle:before {
     content: '';
     position: absolute;
@@ -245,108 +241,6 @@
         transform: rotate(0deg);
     }
 }
-/*
-
-
-
-
-
-
-.slide_wrapper .controls a {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 22px;
-    height: 36px;
-    background-repeat: no-repeat;
-    text-indent: -9999em;
-}
-
-.slide_wrapper .bar_wrap {
-    display: flex;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto 50px;
-    align-items: center;
-    justify-content: center;
-    gap: 2vw;
-}
-
-.bar_wrap .slideinfo_list {
-    display: flex;
-    gap: 15vw;
-    bottom: 20px;
-    white-space: nowrap;
-}
-
-.bar_wrap .slideinfo_list li {
-    position: relative;
-    opacity: 0.6;
-}
-
-.bar_wrap .slideinfo_list li.active {
-    transform: translateY(-5px);
-    transition: 0.2s;
-    opacity: 1;
-}
-
-.bar_wrap .slideinfo_list li:after {
-    content: '';
-    position: absolute;
-    width: 120px;
-    height: 5px;
-    top: 130%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--white);
-}
-
-.autoplay_btn {
-    display: flex;
-}
-
-.control .bx-controls a {
-    width: 22px;
-    height: 36px;
-    background: no-repeat 0 0 / 100% 100%;
-    text-indent: -9999em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.control .bx-controls .bx-prev {
-    background-image: url(../images/chevron\ left.png);
-    right: 87%;
-}
-
-.control .bx-controls .bx-next {
-    background-image: url(../images/chervron\ right.png);
-    left: 87%;
-}
-
-.autoplay_btn.active .play {
-    display: block;
-}
-
-.autoplay_btn.active .stop {
-    display: none;
-}
-
-.autoplay_btn .play {
-    display: none;
-}
-
-
-*/
-
-
-
-
-
 .inner_circle li {
     position: absolute;
     background: var(--white);
@@ -1010,18 +904,6 @@
 .report_area li span:first-child {
     position: relative;
 }
-/*
-.report_area li:hover span:first-child:before {
-    content: '';
-    position: absolute;
-    border-style: solid;
-    border-width: 14px;
-    border-color: transparent transparent transparent #707070;
-    left: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: 0.3s;
-}*/
 .report_area li:hover span:first-child{
     transform: rotateY(360deg);
     transition: 0.3s;
@@ -1032,6 +914,7 @@
 }
 .report_area li:hover span:last-child{
     opacity: 1;
+    color: var(--primary-c);
 }
 .invest_wrap .com_info {
     display: flex;
@@ -1047,7 +930,11 @@
 .invest_wrap .com_info li {
     width: 50%;
 }
-
+.invest_wrap .com_info li:hover span, 
+.invest_wrap .com_info li:hover h4{
+    color: var(--primary-c);
+    transition: 0.15s;
+}
 .invest_wrap .com_info li span , .report_area li span:first-child {
     font-weight: 500;
 }
@@ -1712,6 +1599,12 @@ table tbody tr:hover {
     .ceo2 ul,
     .ceo1 ul {
         font-size: 2vw;
+    }
+    .control .slide2{
+        background-position-x: 20%;
+    }
+    .control .slide3{
+        background-position: center;
     }
 }
 

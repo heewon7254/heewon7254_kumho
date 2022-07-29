@@ -71,22 +71,26 @@ $(function(){
       let searchIcon = $('.search');
       let modalWrap = $('.modal_wrap');
 
-      searchIcon.click(function(){
-          modalWrap.addClass('active');
-          modalWrap.find('#search').focus();
-          $('body').css({overflow:'hidden'});
-      });
+    searchIcon.click(function(){
+        modalWrap.addClass('active');
+        modalWrap.find('#search').focus();
+        $('body').toggleClass('active');
+    });
 
-      modalWrap.find('.close').click(function(){
-          modalWrap.removeClass('active');
-          modalWrap.fadeOut();
-      }); //search
+    modalWrap.find('.close').click(function(){
+        modalWrap.removeClass('active');
+        $('body').removeClass('active');
+    }); //search
 
-    //   $('.logo').click(function(){
-    //     location.href = 'index.html';
-    //   });
 
       $('.language').click(function(){
         $(this).toggleClass('active');
     });  //language
+
+    let fmSubmenu = $('.fsite > li');
+    let fSite = $('.fsite');
+
+    fmSubmenu.click(function(){
+        fSite.toggleClass('active');
+    });
 });
